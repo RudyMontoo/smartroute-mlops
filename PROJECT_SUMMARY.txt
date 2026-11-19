@@ -1,0 +1,104 @@
+SMARTROUTE — WHAT WE ACTUALLY HAVE
+====================================
+(Last updated: 2026-11-19)
+
+ONE-LINE PITCH
+--------------
+A FastAPI "LLM gateway" that classifies each incoming query (simple / moderate /
+complex), routes it to a cheap or expensive LLM accordingly, verifies the cheap
+answer and escalates if it looks wrong, and logs/exposes everything (cost saved,
+drift, security events) through a dashboard. Basically a cost-saving smart proxy
+in front of Groq, with full MLOps plumbing around it (DVC pipeline, MLflow model
+registry, drift detection, CI, Docker, a Render deploy).
+
+HOW A REQUEST ACTUALLY FLOWS (gateway/main.py)
+-----------------------------------------------
+1. Auth -> API key check + per-key rate limiting (token bucket).
+2. Security -> PII redaction (emails, cards w/ Luhn check, Aadhaar, PAN, phone)
+   BEFORE anything else sees the text, and a regex-based prompt-injection flag.
+3. Routing -> a trained scikit-learn classifier (router/) predicts
+   simple/moderate/complex + confidence. Policy (router/policy.py):
+     - simple   -> cheap model (gpt-oss-20b)
+     - complex  -> expensive model (gpt-oss-120b)
+     - moderate -> cheap model if confidence >= threshold (0.60), else expensive
+4. Call the provider (Groq, via gateway/providers.py) — mock fallback if no API key.
+5. Cascade check (gateway/cascade.py) — if the cheap model answered and the
+   answer looks like a refusal, a hedge ("I'm not sure"), is too short, or is a
+   numeric question answered without a number -> automatically retry on the
+   expensive model. Both calls get billed, so a bad cascade shows up as lower
+   savings instead of being hidden.
+6. Rehydrate PII placeholders back into the final answer.
+7. Log everything to SQLite (gateway/db.py) + Prometheus metrics
+   (gateway/metrics.py): cost, baseline "what if we always used the big model"
+   cost, latency, escalations, PII redactions, injection flags, drift score.
+
+WHAT'S MEASURABLE RIGHT NOW (models/metrics.json, last trained run)
+---------------------------------------------------------------------
+  - Classifier accuracy / macro-F1: ~92.9%
+  - Cost savings vs. always using the expensive model: ~11.5%
+  - ~61% of traffic gets routed to the cheap model
+
+MLOPS / INFRA PIECES
+---------------------
+- Model training: router/train.py, features.py, prepare_data.py, sweep.py
+  (threshold sweep to find the Pareto point between accuracy and savings).
+- Model registry: MLflow (docker-compose mlflow service), gateway loads the
+  "@champion" alias at startup (router/router_service.py).
+- Drift detection: router/drift.py — PSI (population stability index) comparing
+  recent live queries to the training reference distribution. Exposed at
+  GET /drift. There's also a synthetic drift injector
+  (POST /admin/simulate-drift) purely for demoing this without waiting for
+  real traffic to drift.
+- Live retrain: POST /admin/retrain — retrains, and only promotes the new
+  model if it beats the current champion; gateway reloads without a restart.
+- DVC pipeline (dvc.yaml): prepare_data -> build_drift_reference -> train ->
+  evaluate_baselines, so the whole data->model->eval chain is reproducible
+  and versioned.
+- Eval harness (eval/): run_baselines.py + judge.py compare routed vs. always-
+  cheap vs. always-expensive, with cached generations/judgments checked in so
+  CI doesn't need live API calls.
+- CI (.github/workflows/ci.yml): runs tests + a quality gate
+  (scripts/quality_gate.py) that fails a model change if accuracy holds but
+  cost savings secretly regress.
+- Containers: gateway/Dockerfile (bakes in a local model fallback so it can
+  run standalone), docker-compose.yml (dev stack: mlflow + trainer + gateway +
+  frontend) and docker-compose.prod.yml (published-image variant).
+- Public deploy: render.yaml — deploys just the gateway API to Render's free
+  tier (stateless API only; MLflow/Prometheus/Grafana stay local-only).
+- Monitoring: Prometheus + Grafana configs under monitoring/.
+- k8s/ and locust/ directories exist for k8s manifests and load testing.
+
+FRONTEND
+--------
+React 19 + Vite + Recharts dashboard (frontend/) — hero stats strip, live
+request feed, charts, and a control panel (presumably hits /stats,
+/requests/recent, /drift, /admin/*).
+
+TESTS
+-----
+tests/ covers the API, cascade logic, drift detection, quality gate, router,
+and security (PII/injection/rate-limit) — pytest, run via CI.
+
+SECURITY LAYER (recently added)
+--------------------------------
+Demo API keys (hashed, not stored in plaintext), per-key token-bucket rate
+limiting, regex PII redaction with Luhn validation for card numbers, and a
+narrow regex-based prompt-injection detector that flags but doesn't block
+(to favor precision over recall).
+
+WHAT THIS IS NOT (yet)
+-----------------------
+- Not a general-purpose LLM proxy — routing policy and prices are hardcoded
+  for two specific Groq models (gpt-oss-20b / gpt-oss-120b).
+- API keys are a hardcoded demo set, not a real auth/billing system.
+- PII redaction and injection detection are regex heuristics, not ML-based —
+  good enough for a demo, not a production-grade DLP/security product.
+- Render deploy is API-only (no MLflow/Grafana in that environment).
+
+TL;DR FOR THE TEAM
+-------------------
+We built a working "smart LLM router" with real cost savings, a trained
+classifier + cascade fallback, drift monitoring, a DVC-tracked training
+pipeline registered in MLflow, CI with a cost-regression gate, a React
+dashboard, basic security (auth/rate-limit/PII/injection), and a live public
+deploy on Render. It's demo/viva-ready end-to-end, not production-hardened.
