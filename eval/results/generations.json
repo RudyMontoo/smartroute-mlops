@@ -1,0 +1,555 @@
+{
+"openai/gpt-oss-20b:5f7bb4a3661329a4ef2f6809": {
+"text": "Below is a compact, well\u2011documented Python helper that tells you whether every tuple in a collection has the same length.\n\n```python\nfrom typing import Iterable, Tuple, Any\n\ndef all_tuples_equal_length(tuples: Iterable[Tuple[Any, ...]]) -> bool:\n    \"\"\"\n    Return True iff every tuple in *tuples* has the same number of elements.\n\n    Parameters\n    ----------\n    tuples : Iterable[Tuple[Any, ...]]\n        Any iterable that yields tuples (e.g. list, set, generator).\n\n    Returns\n    -------\n    bool\n        *True* if all tuples have the same length, *False* otherwise.\n        An empty iterable or an iterable containing only one tuple\n        is considered \u201cequal\u201d (returns True).\n\n    Raises\n    ------\n    TypeError\n        If an element in *tuples* is not a tuple.\n\n    Examples\n    --------\n    >>> all_tuples_equal_length([(1, 2), (3, 4), (5, 6)])\n    True\n    >>> all_tuples_equal_length([(1, 2), (3, 4, 5)])\n    False\n    >>> all_tuples_equal_length([])\n    True\n    \"\"\"\n    # Grab the first tuple (if any) to use its length as the reference.\n    iterator = iter(tuples)\n    try:\n        first = next(iterator)\n    except StopIteration:\n        # Empty iterable \u2013 nothing to compare, so we consider it equal.\n        return True\n\n    if not isinstance(first, tuple):\n        raise TypeError(f\"Expected a tuple, got {type(first).__name__}\")\n\n    first_len = len(first)\n\n    # Compare the rest of the tuples to the reference length.\n    for idx, t in enumerate(iterator, start=2):\n        if not isinstance(t, tuple):\n            raise TypeError(f\"Element {idx} is",
+"input_tokens": 87,
+"output_tokens": 512,
+"latency_ms": 962.6662450000367,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:c2173355ebb38b21736d823f": {
+"text": "",
+"input_tokens": 85,
+"output_tokens": 512,
+"latency_ms": 950.0353130001713,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:39a350f01a2510a21a6e8348": {
+"text": "",
+"input_tokens": 88,
+"output_tokens": 512,
+"latency_ms": 1067.0353010000326,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:61e1dec64cce1718683e6058": {
+"text": "",
+"input_tokens": 85,
+"output_tokens": 512,
+"latency_ms": 1110.6671180000376,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:acec1453fae552944a0e2a21": {
+"text": "Billy sold a total of **7 DVDs** on Tuesday.",
+"input_tokens": 123,
+"output_tokens": 77,
+"latency_ms": 479.7867419997601,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:514116d4c7e94bba35ec3abb": {
+"text": "Justin\u2019s jar contains:\n\n- **32 quarters**: \\(32 \\times \\$0.25 = \\$8.00\\)  \n- **95 dimes**: \\(95 \\times \\$0.10 = \\$9.50\\)  \n- **120 nickels**: \\(120 \\times \\$0.05 = \\$6.00\\)  \n- **750 pennies**: \\(750 \\times \\$0.01 = \\$7.50\\)\n\nAdding them together:\n\n\\[\n\\$8.00 + \\$9.50 + \\$6.00 + \\$7.50 = \\$31.00\n\\]\n\n**Total dollar amount in the jar: \\$31.00**",
+"input_tokens": 113,
+"output_tokens": 264,
+"latency_ms": 659.7317649998331,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:707de982fbc8f3d6df431980": {
+"text": "Here\u2019s a quick, language\u2011agnostic \u201cmaximum of two numbers\u201d routine.  \nBelow are three common implementations (Python, C, JavaScript) that all do the same thing: return the larger of the two inputs (or either one if they\u2019re equal).\n\n---\n\n## 1. Python\n\n```python\ndef max_of_two(a, b):\n    \"\"\"Return the larger of a and b.\"\"\"\n    return a if a > b else b\n\n# Example usage\nprint(max_of_two(7, 3))   # \u2192 7\nprint(max_of_two(-5, -10))  # \u2192 -5\n```\n\n> **Tip** \u2013 Python already has a built\u2011in `max()` that can take any number of arguments:  \n> `max(a, b)`.\n\n---\n\n## 2. C\n\n```c\n#include <stdio.h>\n\nint max_of_two(int a, int b) {\n    return (a > b) ? a : b;\n}\n\nint main(void) {\n    printf(\"%d\\n\", max_of_two(7, 3));   // 7\n    printf(\"%d\\n\", max_of_two(-5, -10)); // -5\n    return 0;\n}\n```\n\n> **Note**",
+"input_tokens": 81,
+"output_tokens": 512,
+"latency_ms": 840.6591109996953,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:0aae0aa7645d3732efdf3a0d": {
+"text": "Below is a small, self\u2011contained helper that does exactly what the wording asks for:\n\n*You give it an iterable of \u201c(element, count)\u201d pairs (or a dictionary), and it yields each element **count** times.*\n\n```python\nfrom collections.abc import Iterable\nfrom typing import Any, Iterator, Mapping, Tuple\n\ndef repeat_elements(\n    source: Iterable[Tuple[Any, int]] | Mapping[Any, int]\n) -> Iterator[Any]:\n    \"\"\"\n    Yield each element from *source* as many times as its associated count.\n\n    Parameters\n    ----------\n    source : Iterable[Tuple[Any, int]] | Mapping[Any, int]\n        * If a mapping (e.g. dict) is supplied, the key is the element\n          and the value is the count.\n        * If an iterable of 2\u2011tuples is supplied, the first item is the\n          element and the second is the count.\n\n    Yields\n    ------\n    Any\n        The element repeated ``count`` times",
+"input_tokens": 87,
+"output_tokens": 512,
+"latency_ms": 934.1638460000468,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:191ddec16cd4791adb2a2a2e": {
+"text": "First, add up the meals Mamou has already distributed:\n\n- Friday: 64 meals  \n- Saturday: 30 meals  \n- Sunday: 48 meals  \n\n\\[\n64 + 30 + 48 = 142 \\text{ meals}\n\\]\n\nNow subtract that from the total number of meals she has:\n\n\\[\n1,360 \\text{ meals} - 142 \\text{ meals} = 1,218 \\text{ meals}\n\\]\n\n**Mamou has 1,218 meals left to distribute.**",
+"input_tokens": 139,
+"output_tokens": 159,
+"latency_ms": 613.9257840000027,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d09082159697f5b59a4e0f7d": {
+"text": "",
+"input_tokens": 91,
+"output_tokens": 512,
+"latency_ms": 972.7447290001692,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d67f6fdc45e2b213b74b23b6": {
+"text": "John bought \\(2 \\times 3 = 6\\) pairs of shoes.  \nEach pair costs \\$60, so the total cost is  \n\n\\[\n6 \\times 60 = \\$360.\n\\]\n\n**Answer: \\$360.**",
+"input_tokens": 98,
+"output_tokens": 125,
+"latency_ms": 383.68910799999867,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ddef78a56f6431b5f7ee7058": {
+"text": "Below is a small, self\u2011contained Python helper that \u201cmaximises\u201d two tuples element\u2011wise.  \nIn other words, for every position *i* it picks the larger of the two values that appear in that position in the input tuples.\n\n```python\ndef elementwise_max(t1: tuple, t2: tuple) -> tuple:\n",
+"input_tokens": 81,
+"output_tokens": 512,
+"latency_ms": 836.6988409998157,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:7d0805096549d33a103907c3": {
+"text": "First find how much each girl received:\n\n\\[\n\\frac{1}{6}\\times 24 = 4 \\text{ liters}\n\\]\n\nSo the two girls together got:\n\n\\[\n4 \\text{ L} + 4 \\text{ L} = 8 \\text{ liters}\n\\]\n\nNext, the boy received 6 liters.  \nTotal water given away:\n\n\\[\n8 \\text{ L} + 6 \\text{ L} = 14 \\text{ liters}\n\\]\n\nSubtract this from the original 24 liters:\n\n\\[\n24 \\text{ L} - 14 \\text{ L} = 10 \\text{ liters}\n\\]\n\n\\[\n\\boxed{10 \\text{ liters}}\n\\]",
+"input_tokens": 105,
+"output_tokens": 392,
+"latency_ms": 675.881644999663,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:1ce808b899ebb575f0a92ae8": {
+"text": "Below is a compact, well\u2011documented Python function that returns the volume of a cuboid (rectangular prism).  \nFeel free to copy\u2011paste it into your own script or notebook.\n\n```python\ndef cuboid_volume(length: float, width: float, height: float) -> float:\n    \"\"\"\n    Calculate the volume of a cuboid.\n\n    Parameters\n    ----------\n    length : float\n        The length of the cuboid (along the x\u2011axis).\n    width : float\n        The width of the cuboid (along the y\u2011axis).\n    height : float\n        The height of the cuboid (along the z\u2011axis).\n\n    Returns\n    -------\n    float\n        The volume (length \u00d7 width \u00d7 height).\n\n    Raises\n    ------\n    ValueError\n        If any dimension is negative or zero \u2013 a cuboid cannot have a non\u2011positive side.\n\n    Examples\n    --------\n    >>> cuboid_volume(2, 3, 4)\n    24\n    >>> cuboid_volume(5.5, 2.0, 1.2)\n    13.2\n    \"\"\"\n    # Basic validation: dimensions must be positive\n    if length <= 0 or width <= 0 or height <= 0:\n        raise ValueError(\"All dimensions must be positive numbers.\")\n\n    return length * width * height\n```\n\n### Quick usage\n\n```python\n# Example 1: integer dimensions\nvolume1 = cuboid_volume(2, 3, 4)   # 24\n\n# Example 2: floating\u2011point dimensions\nvolume2 = cuboid_volume(5.5, 2.0, 1.2)  # 13.2\n\nprint(volume1, volume2)\n```\n\n### Why this implementation?\n\n| Feature | Why it matters |\n|---------|----------------|\n| **Type hints** | Helps static type checkers (",
+"input_tokens": 83,
+"output_tokens": 512,
+"latency_ms": 900.05858800032,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:3a8bfcb6189a8338cb888b7b": {
+"text": "Steve\u2019s bike is faster, so he reaches home first.  \n- Steve: \\(3\\text{ miles}=3\\times5280=15840\\text{ ft}\\).  \n  Time \\(=15840/440=36\\text{ min}\\).  \n- Tim: \\(2\\text{ miles}=2\\times5280=10560\\text{ ft}\\).  \n  Time \\(=10560/264=",
+"input_tokens": 160,
+"output_tokens": 512,
+"latency_ms": 897.4381829998492,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d74c52a87e06166e1b137c16": {
+"text": "First, find how many pencils are in each of Jam\u2019s boxes.\n\nLet \\(x\\) be the number of pencils in one box.\n\n\\[\n3x + 2 = 26 \\quad\\Longrightarrow\\quad 3x = 24 \\quad\\Longrightarrow\\quad x = 8\n\\]\n\nSo each box holds **8 pencils**.\n\nNow count all the pencils Jam and Meg have together:\n\n\\[\n\\text{Jam\u2019s pencils} = 26 \\\\\n\\text{Meg\u2019s pencils} = 46 \\\\\n\\text{Total} = 26 + 46 = 72\n\\]\n\nSince each box can hold 8 pencils, the number of boxes needed is\n\n\\[\n\\frac{72}{8} = 9\n\\]\n\nTherefore, **Jam and Meg need 9 boxes** to store all of their pencils.",
+"input_tokens": 117,
+"output_tokens": 478,
+"latency_ms": 907.2632040001736,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f6f0123d8cfb6b616d71e53b": {
+"text": "",
+"input_tokens": 89,
+"output_tokens": 512,
+"latency_ms": 995.1172529999894,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8ad0e019ed5286d97ca82b7d": {
+"text": "The answer to \u201cwho is the best football team in history\u201d is not a simple fact that can be pinned down to a single club or national side. It depends on how you define \u201cbest\u201d \u2013 are you looking at trophies, influence on the game, style of play, consistency, or the quality of the players? Because of that, most football historians, pundits, and fans will give you a list of several teams that could all make a case for the title. Below is a quick guide to some of the most frequently cited contenders, along with the criteria that make them stand out.\n\n| Team | Era | Major Achievements | Why They\u2019re Often Mentioned |\n|------|-----|--------------------|-----------------------------|\n| **Brazil (1958\u20111970)** | 1958\u20111970 | 3 World Cups (1958, 1962, 1970), 2 Copa Am\u00e9rica titles, 1 Confederations Cup | The \u201cSele\u00e7\u00e3o\u201d produced a generation of individual brilliance (Pel\u00e9, Garrincha, Jairzinho, etc.) and popularised the \u201csamba\u201d style of attacking football that still defines Brazil. |\n| **Real Madrid (1955\u20111960)** | 1955\u20111960 | 5 consecutive European Cups (now Champions League) | They were the first club to dominate Europe, setting the template for modern club success. |\n| **Barcelona (2008\u20112012)** | 2008\u20112012 | 4 Champions Leagues, 3 La Liga titles, 2 Copa del Rey, 2 FIFA Club World Cups | The \u201ctiki\u2011taka\u201d era under Pep Guardiola combined unprecedented domestic dominance with a revolutionary style that influenced football worldwide. |\n| **Bayern Munich (1970\u20111976)** | 1970\u20111976 | 3 consecutive European Cups, 4 Bundesliga titles, 2 European Cups (1974, 1975) | They were the first club to win",
+"input_tokens": 80,
+"output_tokens": 512,
+"latency_ms": 762.0813080002335,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ebb78eebeed15b1884d708e3": {
+"text": "",
+"input_tokens": 85,
+"output_tokens": 512,
+"latency_ms": 911.6506109999136,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:7d41f71c5b7d8e769151c8c3": {
+"text": "The region where one tectonic plate dives beneath another is called a **subduction zone**.  \nOften this zone is marked by a deep oceanic trench (the \u201ctrench\u201d is the surface expression of the subduction zone). In short, the area of plate subduction is referred to as a **subduction zone** (or simply a **trench** when describing the surface feature).",
+"input_tokens": 85,
+"output_tokens": 182,
+"latency_ms": 631.1505419998866,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:e31ae0a2344e854351248573": {
+"text": "",
+"input_tokens": 91,
+"output_tokens": 512,
+"latency_ms": 1016.5846740001143,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:39a350f01a2510a21a6e8348": {
+"text": "Below is a **self\u2011contained, well\u2011documented Python implementation** that checks whether one *nested* list (`sub`) is a subset of another (`sup`).  \n\n* \u201cSubset\u201d means **every element of `sub` appears in `sup`** (order does not matter).  \n* Elements can be atomic values (ints, strings, \u2026) **or other lists** of arbitrary depth.  \n* Duplicate elements are respected \u2013 an element that occurs\u202f`k`\u202ftimes in `sub` must occur at least\u202f`k`\u202ftimes in `sup`.  \n\nThe solution consists of three small helpers:\n\n| Function | Purpose |\n|----------|---------|\n| `is_atomic(x)` | Detects values that are *not* lists (including tuples, sets, etc.). |\n| `deep_equal(a, b)` | Recursively tests structural equality of two nested objects. |\n| `nested_subset(sub, sup)` | Main routine \u2013 returns `True` iff `sub` \u2286 `sup`. |\n\n```python\nfrom collections import Counter\nfrom typing import Any, List\n\n\ndef is_atomic(x: Any) -> bool:\n    \"\"\"\n    Return True if `x",
+"input_tokens": 88,
+"output_tokens": 512,
+"latency_ms": 1470.8016310000858,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:5f7bb4a3661329a4ef2f6809": {
+"text": "**Solution Overview**\n\nWe need a small utility that tells us whether *all* supplied tuples share the same length.  \nThe function should:\n\n1. Accept any number of tuples (via `*args` or a list/iterable).  \n2. Return `True` if every tuple has the same size, otherwise `False`.  \n3. Gracefully handle edge\u2011cases:\n   * No tuples at all \u2192 `True` (nothing contradicts the statement).  \n   * A single tuple \u2192 `True` (trivially equal to itself).  \n\nBelow are two idiomatic implementations in Python, followed by a quick test\u2011suite.\n\n---\n\n## 1\ufe0f\u20e3 Implementation \u2013 using `*args`\n\n```python\nfrom typing import Tuple, Any\n\ndef equal_tuple_lengths(*tuples: Tuple[Any, ...]) -> bool:\n    \"\"\"\n    Return True if all supplied tuples have the same length, False otherwise.\n\n    Parameters\n    ----------\n    *tuples : Tuple[Any, ...]\n        Any number of tuple objects.\n\n    Returns\n    -------\n    bool\n        True when every tuple length matches the first one, else False.\n    \"\"\"\n    # No tuples \u2192 vacuously true\n    if not tuples:\n        return True\n\n    # Length of the first tuple is the reference\n    first_len = len(tuples[0])\n\n    # All other tuples must match this length\n    return all(len(t) == first_len for t in tuples[1:])\n```\n\n### How it works\n* `len(tuples[0])` stores the reference length.\n* The generator expression `len(t) == first_len for t in tuples[1:]` checks each remaining tuple.\n* `all(...)` short\u2011circuits as soon as a mismatch is found, giving O(N) time where *N* is the number of tuples.\n\n---\n\n## 2\ufe0f\u20e3 Implementation \u2013 accepting an *iterable* of tuples\n\nIf you already have a list (or any iterable)",
+"input_tokens": 87,
+"output_tokens": 512,
+"latency_ms": 1544.1458999998758,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:c2173355ebb38b21736d823f": {
+"text": "**Solution Overview**\n\nFor an array `a` we want the number of unordered index\u2011pairs  \n\n```\n(i, j)   with   i < j   and   a[i] != a[j]\n```\n\nA na\u00efve double loop is *O(n\u00b2)* \u2013 far too slow for large inputs.  \nThe trick is to count **all** possible pairs and then subtract the pairs that are\n*equal* (i.e. both elements have the same value).\n\n* total number of unordered pairs = `n\u00b7(n\u20111) / 2`\n* for each distinct value `v` that appears `cnt[v]` times, the number of\n  equal\u2011value pairs contributed by `v` is `cnt[v]\u00b7(cnt[v]\u20111) / 2`\n\nHence  \n\n```\nunequal_pairs = total_pairs \u2013 \u03a3 (cnt[v]\u00b7(cnt[v]\u20111) / 2)\n```\n\nThe algorithm runs in linear time `O(n)` and uses `O(k)` extra space,\nwhere `k` is the number of distinct values (at most `n`).\n\n---\n\n### Code\n\n```python\nfrom collections import Counter\nfrom typing import List\n\ndef count_unequal_pairs(arr: List[int]) -> int:\n    \"\"\"\n    Return the number of unordered index pairs (i, j) with i < j and arr[i] != arr[j].\n\n    Parameters\n    ----------\n    arr : List[int]\n        Input array (can contain any hashable elements).\n\n    Returns\n    -------\n    int\n        Count of unequal element pairs.\n\n    Examples\n    --------\n    >>> count_unequal_pairs([1, 2, 3])\n    3               # (1,2), (1,3), (2,3)\n\n    >>> count_unequal_pairs([1, 1, 2, 2])\n    4               # pairs: (0,2), (0,3), (1,2), (1,3)\n\n    >>> count_unequal",
+"input_tokens": 85,
+"output_tokens": 512,
+"latency_ms": 1716.9963420001295,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:61e1dec64cce1718683e6058": {
+"text": "Below is a compact, well\u2011commented implementation that finds the **smallest missing (non\u2011negative) integer** in a **strictly increasing sorted array**.  \nThe algorithm runs in **O(log\u202fn)** time using binary search and O(1) extra space.\n\n---\n\n## Why binary search?\n\nIf the array were `[0,1,2,4,5,6]` the answer is `3`.  \nFor a sorted array with no duplicates, the value at index `i` should be exactly `i` (when the array starts at `0`).  \nWhenever `arr[i] > i`, a missing number appears **at or before** index `i`.  \nConversely, if `arr[i] == i`, everything up to `i` is present, so the missing element must be **after** `i`.\n\nThis monotonic property lets us locate the first index where `arr[i] != i` with binary search.\n\n---\n\n## Code (Python)\n\n```python\ndef smallest_missing(arr):\n    \"\"\"\n    Returns the smallest missing non\u2011negative integer in a sorted,\n    strictly increasing array `arr`.\n\n    Parameters\n    ----------\n    arr : List[int]\n        Sorted list of distinct integers (may start with any value).\n\n    Returns\n    -------\n    int\n        The smallest integer >= 0 that does not appear in `arr`.\n\n    Examples\n    --------\n    >>> smallest_missing([0, 1, 2, 4, 5])\n    3\n    >>> smallest_missing([1, 2, 3])\n    0\n    >>> smallest_missing([0, 1, 2, 3])\n    4\n    \"\"\"\n    n = len(arr)\n\n    # Edge case: if the first element is > 0, then 0 is missing.\n    if n == 0 or arr[0] > 0:\n        return 0\n\n    lo, hi = 0, n - 1\n    while lo <= hi:\n        mid = (lo + hi) // 2\n        # Expected value at this position if nothing were missing\n        expected = mid\n\n        if arr[mid] == expected:\n            # All numbers up to",
+"input_tokens": 85,
+"output_tokens": 512,
+"latency_ms": 1432.4046129995622,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:514116d4c7e94bba35ec3abb": {
+"text": "First, convert each type of coin to its dollar value:\n\n- **Quarters:** 32\u202f\u00d7\u202f$0.25 = $8.00  \n- **Dimes:** 95\u202f\u00d7\u202f$0.10 = $9.50  \n- **Nickels:** 120\u202f\u00d7\u202f$0.05 = $6.00  \n- **Pennies:** 750\u202f\u00d7\u202f$0.01 = $7.50  \n\nNow add them together:\n\n\\[\n8.00 + 9.50 + 6.00 + 7.50 = 31.00\n\\]\n\n\\[\n\\boxed{\\$31.00}\n\\]",
+"input_tokens": 113,
+"output_tokens": 246,
+"latency_ms": 925.8294760002173,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:707de982fbc8f3d6df431980": {
+"text": "Below is a tiny, self\u2011contained example that shows how to write a function that returns the larger of two numbers.  \nI\u2019ll give you the implementation in a few popular languages so you can pick the one that matches your project.\n\n---\n\n## Python\n\n```python\ndef max_of_two(a, b):\n    \"\"\"\n    Return the larger of a and b.\n    If the numbers are equal, the value is returned unchanged.\n    \"\"\"\n    return a if a > b else b\n\n\n# Example usage\nprint(max_of_two(7, 3))   # \u2192 7\nprint(max_of_two(-2, 5))  # \u2192 5\nprint(max_of_two(4, 4))   # \u2192 4\n```\n\n*Why it works*: The ternary expression `a if a > b else b` evaluates the condition `a > b`. If true, `a` is returned; otherwise `b` is returned.\n\n---\n\n## JavaScript (ES6)\n\n```javascript\n/**\n * Returns the larger of two numbers.\n * @param {number} a\n * @param {number} b\n * @returns {number}\n */\nconst maxOfTwo = (a, b) => (a > b ? a : b);\n\n// Example usage\nconsole.log(maxOfTwo(7, 3));   // 7\nconsole.log(maxOfTwo(-2, 5));  // 5\nconsole.log(maxOfTwo(4, 4));   // 4\n```\n\n---\n\n## Java\n\n```java\npublic class MaxUtil {\n    /**\n     * Returns the larger of two integers.\n     */\n    public static int maxOfTwo(int a, int b) {\n        return (a > b) ? a : b;\n    }\n\n    // Demo\n    public static void main(String[] args) {\n        System.out.println(maxOfTwo(7, 3));   // 7\n        System.out.println(maxOfTwo(-2, 5));  // 5\n        System.out.println(maxOfTwo(4, 4));   // 4\n    }\n}\n```\n\n---\n\n## C++\n\n```cpp\n#include <iostream>\n\nint max",
+"input_tokens": 81,
+"output_tokens": 512,
+"latency_ms": 1460.8618709999064,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:acec1453fae552944a0e2a21": {
+"text": "Billy sold  \n\n- \\(3 \\times 1 = 3\\) DVDs to the first three customers,  \n- \\(2 \\times 2 = 4\\) DVDs to the next two customers, and  \n- \\(3 \\times 0 = 0\\) DVDs to the last three customers.  \n\nAdding them up: \\(3 + 4 + 0 = 7\\).\n\n**Billy sold 7 DVDs on Tuesday.**",
+"input_tokens": 123,
+"output_tokens": 146,
+"latency_ms": 716.8028750002122,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:191ddec16cd4791adb2a2a2e": {
+"text": "Mamou started with **1,360 meals**.\n\nMeals already given out:\n- Friday: 64 meals  \n- Saturday: 30 meals  \n- Sunday: 48 meals  \n\nTotal meals distributed so far:\n\\[\n64 + 30 + 48 = 142 \\text{ meals}\n\\]\n\nMeals remaining:\n\\[\n1,360 - 142 = 1,218 \\text{ meals}\n\\]\n\n**Mamou has 1,218 meals left to distribute.**",
+"input_tokens": 139,
+"output_tokens": 148,
+"latency_ms": 682.5462070000867,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:0aae0aa7645d3732efdf3a0d": {
+"text": "Below is a compact, well\u2011documented implementation in Python that does exactly what you asked for:\n\n* **Goal** \u2013 Given any iterable, produce an iterator that yields each *distinct* element as many times as it appears in the original data.\n* **Order** \u2013 The elements are emitted in the order of their **first appearance** (so the result is deterministic even for unordered collections like `set` or when the input is a generator).\n\n```python\nfrom collections import Counter\nfrom typing import Iterable, Iterator, TypeVar, Dict, List\n\nT = TypeVar(\"T\")   # generic element type\n\n\ndef repeat_by_count(iterable: Iterable[T]) -> Iterator[T]:\n    \"\"\"\n    Yield each distinct element from *iterable* exactly as many times as it occurs.\n\n    Parameters\n    ----------\n    iterable : Iterable[T]\n        Any container, generator, or other iterable producing hash\u2011able items.\n\n    Yields\n    ------\n    T\n        Elements repeated according to their frequency.\n\n    Example\n    -------\n    >>> list(repeat_by_count([1, 2, 2, 3, 3, 3]))\n    [1, 2, 2, 3, 3, 3]\n\n    >>> list(repeat_by_count(\"abca\"))\n    ['a', 'a', 'b', 'c', 'c']\n    \"\"\"\n    # 1\ufe0f\u20e3  Count frequencies \u2013 O(N) time, O(K) extra space (K = #unique items)\n    freq: Counter = Counter(iterable)\n\n",
+"input_tokens": 87,
+"output_tokens": 512,
+"latency_ms": 1486.5554709999742,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:d67f6fdc45e2b213b74b23b6": {
+"text": "John buys \\(2 \\times 3 = 6\\) pairs of shoes.  \nEach pair costs \\$60, so the total cost is  \n\n\\[\n6 \\times \\$60 = \\$360.\n\\]\n\n**He paid \\$360.**",
+"input_tokens": 98,
+"output_tokens": 120,
+"latency_ms": 785.8935999997811,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:7d0805096549d33a103907c3": {
+"text": "The total amount of water is **24\u202fL**.\n\n1. Each girl receives \\(\\frac16\\) of the 24\u202fL:  \n   \\[\n   \\frac16 \\times 24 = 4\\text{\u202fL}\n   \\]\n   Two girls together get \\(2 \\times 4 = 8\\)\u202fL.\n\n2. The boy then receives 6\u202fL.\n\n3. Total water taken out:\n   \\[\n   8\\text{\u202fL} + 6\\text{\u202fL} = 14\\text{\u202fL}\n   \\]\n\n4. Water remaining:\n   \\[\n   24\\text{\u202fL} - 14\\text{\u202fL} = 10\\text{\u202fL}\n   \\]\n\n**Answer: 10 liters of water are left.**",
+"input_tokens": 105,
+"output_tokens": 316,
+"latency_ms": 1092.3180069999034,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:d09082159697f5b59a4e0f7d": {
+"text": "Below is a **self\u2011contained, well\u2011documented** Python implementation that does exactly what you asked for:\n\n* It receives two *numeric* ranges (each given as a tuple/list of the form `(low, high)` \u2013 inclusive on both ends).\n* It picks a requested number of points from each range **without ever selecting a point that belongs to the overlap of the two ranges**.\n* If the ranges do not overlap, the function simply draws points from the original intervals.\n* If the overlap is larger than the number of points you ask for, the function raises a clear `ValueError` \u2013 you can\u2019t avoid the overlap in that case.\n* The implementation works for **integers** and **floats** (the latter via `random.uniform`).  \n* The function is pure\u2011Python, has no external dependencies, and includes a small test\u2011suite at the bottom.\n\n```python\nimport random\nfrom typing import Tuple, List, Union\n\nNumber = Union[int, float]\nRange = Tuple[Number, Number]\n\ndef _validate_range(r: Range) -> Tuple[Number, Number]:\n    \"\"\"Make sure a range is well\u2011formed (low <= high) and return a sorted tuple.\"\"\"\n    low, high = r\n    if low > high:\n        raise ValueError(f\"Invalid range {r}: low must be <= high.\")\n    return low, high\n\ndef _intersection(r1",
+"input_tokens": 91,
+"output_tokens": 512,
+"latency_ms": 1604.7442089998185,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:ddef78a56f6431b5f7ee7058": {
+"text": "Below is a **self\u2011contained, well\u2011documented Python implementation** that \u201cmaximizes\u201d two tuples \u2013 i.e. it builds a new tuple whose *i*\u2011th element is the larger of the two input tuples\u2019 *i*\u2011th elements.\n\n```python\nfrom __future__ import annotations\n\nfrom typing import Tuple, Iterable, TypeVar, overload\n\nT = TypeVar(\"T\", int, float, complex)  # numeric types that support > comparison\n\n\ndef _validate_lengths(a: Tuple[T, ...], b: Tuple[T, ...]) -> None:\n    \"\"\"Raise a ValueError if the two tuples do not have the same length.\"\"\"\n    if len(a) != len(b):\n        raise ValueError(\n            f\"Tuples must be of equal length: len(a)={len(a)} vs len(b)={len(b)}\"\n        )\n\n\n@overload\ndef max_tuples(a: Tuple[T, ...], b: Tuple[T, ...]) -> Tuple[T, ...]:\n    ...\n\n\n@overload\ndef max_tuples(a: Iterable[T], b: Iterable[T]) -> Tuple[T, ...]:\n    ...\n\n\ndef max_tuples(a: Iterable[T], b: Iterable[T]) -> Tuple[T, ...]:\n    \"\"\"\n    Return a new tuple containing the element\u2011wise maximum of ``a`` and ``b``.\n\n    Parameters\n    ----------\n    a, b :\n        Two iterables (most commonly tuples) of the same length containing\n        comparable numeric values (int,",
+"input_tokens": 81,
+"output_tokens": 512,
+"latency_ms": 1488.0208519998632,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:1ce808b899ebb575f0a92ae8": {
+"text": "Below is a simple, reusable function that computes the volume of a cuboid (rectangular prism).  \nThe volume is the product of its three edge lengths: **length \u00d7 width \u00d7 height**.\n\n---\n\n## Python implementation\n\n```python\ndef cuboid_volume(length: float, width: float, height: float) -> float:\n    \"\"\"\n    Calculate the volume of a cuboid.\n\n    Parameters\n    ----------\n    length : float\n        Length of the cuboid (along the x\u2011axis).\n    width : float\n        Width of the cuboid (along the y\u2011axis).\n    height : float\n        Height of the cuboid (along the z\u2011axis).\n\n    Returns\n    -------\n    float\n        The volume of the cuboid.\n\n    Raises\n    ------\n    ValueError\n        If any of the dimensions are negative.\n    \"\"\"\n    # Validate input\n    if length < 0 or width < 0 or height < 0:\n        raise ValueError(\"All dimensions must be non\u2011negative numbers.\")\n\n    return length * width * height\n\n\n# Example usage\nif __name__ == \"__main__\":\n    # Sample dimensions\n    l, w, h = 5.0, 3.0, 2.0\n    vol = cuboid_volume(l, w, h)\n    print(f\"The volume of a {l}\u00d7{w}\u00d7{h} cuboid is {vol}\")\n```\n\n### How it works\n1. **Input validation** \u2013 The function checks that none of the supplied dimensions are negative, because a physical length cannot be negative. If a negative value is found, a `ValueError` is raised.\n2. **Computation** \u2013 The volume is simply `length * width * height`.\n3. **Return** \u2013 The result is returned as a `float`.\n\n---\n\n## Equivalent versions in other popular languages\n\n### JavaScript (ES6)\n\n```javascript\n/**\n * Compute the volume of a cuboid.\n * @param {number} length\n * @param {number} width\n * @param {number} height\n * @returns {number} volume\n * @throws {Error} if any dimension is negative\n */\nfunction cuboidVolume(length, width, height",
+"input_tokens": 83,
+"output_tokens": 512,
+"latency_ms": 1539.9030690000473,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:3a8bfcb6189a8338cb888b7b": {
+"text": "Steve\u2019s trip:  \n\n- Distance\u202f=\u202f3\u202fmi\u202f=\u202f3\u202f\u00d7\u202f5280\u202fft\u202f=\u202f15\u202f840\u202fft  \n- Speed\u202f=\u202f440\u202fft/min  \n- Time\u202f=\u202f15\u202f840\u202fft \u00f7 440\u202fft/min\u202f=\u202f36\u202fmin  \n\nTim\u2019s trip:  \n\n- Distance\u202f=\u202f2\u202fmi\u202f=\u202f2\u202f\u00d7\u202f5280\u202fft\u202f=\u202f10\u202f560\u202fft  \n- Speed\u202f=\u202f264\u202fft/min  \n- Time\u202f=\u202f10\u202f560\u202fft \u00f7 264\u202fft/min\u202f=\u202f40\u202fmin  \n\nSteve arrives first after 36\u202fminutes, while Tim arrives after 40\u202fminutes.  \n\n**Waiting time for the winner = 40\u202fmin\u202f\u2212\u202f36\u202fmin = 4\u202fminutes.**",
+"input_tokens": 160,
+"output_tokens": 414,
+"latency_ms": 1366.8818539999847,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:f6f0123d8cfb6b616d71e53b": {
+"text": "**Solution Overview**\n\nFor a binary string `s` we consider all its *cyclic rotations*:\n\n```\nrotation 0 : s[0] s[1] \u2026 s[n\u20111]\nrotation 1 : s[1] s[2] \u2026 s[n\u20111] s[0]\nrotation 2 : s[2] \u2026 s[n\u20111] s[0] s[1]\n\u2026\nrotation n\u20111 : s[n\u20111] s[0] \u2026 s[n\u20112]\n```\n\nA binary number is **odd** iff its least\u2011significant bit (the right\u2011most character) is `1`.  \nIn rotation `k` (`0 \u2264 k < n`) the right\u2011most character is `s[k\u20111]` (with the convention `s[-1] = s[n\u20111]`).  \nTherefore a rotation is odd **exactly when the character that",
+"input_tokens": 89,
+"output_tokens": 512,
+"latency_ms": 1496.6952810000294,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:b921f344bdd631db8f5bf330": {
+"text": "Cindy has 4 pets.  \nMarcia has 2 more than Cindy: \\(4 + 2 = 6\\) pets.  \nJan has three times as many as Marcia: \\(3 \\times 6 = 18\\) pets.\n\nTotal pets = \\(4 + 6 + 18 = 28\\).\n\n**Answer: 28 pets.**",
+"input_tokens": 107,
+"output_tokens": 146,
+"latency_ms": 528.2161009999982,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:bb8d31cab832ca8779a84159": {
+"text": "Here\u2019s a compact, Pythonic way to add two lists element\u2011by\u2011element using **`map`** together with a **`lambda`** expression.\n\n```python\ndef add_lists(a, b):\n    \"\"\"\n    Return a new list containing the element\u2011wise sum of `a` and `b`.\n\n    Parameters\n    ----------\n    a : list of numbers\n    b : list of numbers\n\n    Returns\n    -------\n    list of numbers\n        Each element is a[i] + b[i].  The length of the result is the length\n        of the shorter input list (the same behaviour as the built\u2011in `map`).\n\n    Example\n    -------\n    >>> add_lists([1, 2, 3], [4, 5, 6])\n    [5, 7, 9]\n    \"\"\"\n    # map applies the lambda to each pair of items taken from a and b\n    return list(map(lambda x, y: x + y, a, b))\n\n\n# ----------------------------------------------------------------------\n# Demo / quick test\nif __name__ == \"__main__\":\n    # Same length\n    print(add_lists([1, 2, 3], [4, 5, 6]))          # \u2192 [5, 7, 9]\n\n    # Different lengths \u2013 map stops at the shorter list\n    print(add_lists([10, 20, 30, 40], [1, 2, 3]))   # \u2192 [11, 22, 33]\n\n    # Works with any numeric type (int, float, complex, Decimal, etc.)\n    print(add_lists([1.5, 2.5], [3, 4]))            # \u2192 [4.5, 6.5]\n```\n\n### How it works\n- `map` takes a function (here a `lambda`) and one or more iterables.\n- For each position `i`, `map` calls the lambda with the `i`\u2011th element from each iterable.\n- The lambda `lambda x, y: x + y` simply returns the sum of",
+"input_tokens": 84,
+"output_tokens": 512,
+"latency_ms": 1513.7832790001085,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:a43a9c75aab7aa477a6ac51d": {
+"text": "Below is a simple implementation of a **\u201cminimum of two numbers\u201d** function in a few popular programming languages.  \nThe logic is the same everywhere: compare the two values and return the smaller one.\n\n---\n\n## Python\n\n```python\ndef min_of_two(a, b):\n    \"\"\"\n    Return the smaller of a and b.\n\n    Parameters\n    ----------\n    a, b : int or float\n        Numbers to compare.\n\n    Returns\n    -------\n    int or float\n        The smaller value.\n    \"\"\"\n    return a if a < b else b\n\n\n# Example usage\nprint(min_of_two(10, 5))   # \u2192 5\nprint(min_of_two(-3, 7))   # \u2192 -3\n```\n\n*Python already provides `min(a, b)`, but the custom function shows the underlying comparison.*\n\n---\n\n## JavaScript\n\n```javascript\n/**\n * Returns the smaller of two numbers.\n * @param {number} a\n * @param {number} b\n * @returns {number}\n */\nfunction minOfTwo(a, b) {\n    return (a < b) ? a : b;\n}\n\n// Example usage\nconsole.log(minOfTwo(10, 5));   // 5\nconsole.log(minOfTwo(-3, 7));   // -3\n```\n\n---\n\n## C\n\n```c\n#include <stdio.h>\n\n/* Returns the smaller of two integers */\nint min_of_two(int a, int b) {\n    return (a < b) ? a : b;\n}\n\n/* For floating\u2011point numbers you could use double instead */\ndouble min_of_two_double(double a, double b) {\n    return (a < b) ? a : b;\n}\n\nint main(void) {\n    printf(\"%d\\n\", min_of_two(10, 5));      // 5\n    printf(\"%d\\n\", min_of_two(-3, 7));      // -3\n    printf(\"%f\\n\", min_of_two_double(2.5, 3.1)); // 2.5\n    return 0;\n}\n```\n\n---\n\n## Java\n\n```java\npublic class MinUtil {\n\n    /** Returns the smaller of two numbers (",
+"input_tokens": 81,
+"output_tokens": 512,
+"latency_ms": 1294.4615779997548,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:fc3b2a2e5481c61788c9a974": {
+"text": "Below is a **self\u2011contained, well\u2011documented Python function** that counts how many *bidirectional* tuple pairs appear in an iterable of 2\u2011element tuples.\n\nA *bidirectional pair* is a pair of distinct elements `a` and `b` such that **both** `(a, b)` **and** `(b, a)` are present in the input collection.  \nThe function returns the number of **unique** bidirectional pairs, i.e. the pair `{a, b}` is counted only once even if the input contains several copies of `(a, b)` or `(b, a)`.\n\n---\n\n## Implementation\n\n```python\nfrom typing import Iterable, Tuple, Set\n\ndef count_bidirectional_pairs(pairs: Iterable[Tuple[int, int]]) -> int:\n    \"\"\"\n    Count the number of unique bidirectional tuple pairs in *pairs*.\n\n    Parameters\n    ----------\n    pairs : iterable of tuple[int, int]\n        An iterable (list, generator, set, \u2026) containing 2\u2011element tuples.\n        The elements can be any hashable type (int, str, etc.).\n\n    Returns\n    -------\n    int\n        The number of distinct unordered pairs {a, b} for which both\n        (a, b) and (b, a) appear in *pairs*.\n\n    How it works\n    -------------\n    1. Convert the input into a **set** `pair_set`.  This removes duplicate\n       tuples and gives O(1) membership tests.\n    2. Iterate over the set.  For each tuple (a, b) with a != b we check\n       whether its reverse (b, a) is also in the set.\n    3. To avoid counting the same unordered pair twice we only count it\n       when `a < b` (or any deterministic ordering).  This works because\n       the elements are hashable and comparable; if they are not comparable\n       we fall back to using the tuple's id ordering",
+"input_tokens": 81,
+"output_tokens": 512,
+"latency_ms": 1450.62917200039,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:c5614122fc840d9e0033fb82": {
+"text": "People from the Netherlands are called **Dutch** in English.  \n\nThe term \u201cDutch\u201d serves as both the adjective (e.g., Dutch language, Dutch culture) and the demonym (e.g., \u201cthe Dutch are known for their cycling culture\u201d).  \n\nA less common but still correct alternative is **Netherlander(s)**, but \u201cDutch\u201d is the standard and widely used term.",
+"input_tokens": 82,
+"output_tokens": 144,
+"latency_ms": 540.0033039995833,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:495b5eb8ce0f7a8172b6a02d": {
+"text": "**Current members of the European Union (27 countries \u2013\u202fas of\u202f2026)**  \n\n| Country | Year of accession |\n|---------|-------------------|\n| Austria | 1995 |\n| Belgium | 1958 (founding member) |\n| Bulgaria | 2007 |\n| Croatia | 2013 |\n| Cyprus | 2004 |\n| Czech Republic | 2004 |\n| Denmark | 1973 |\n| Estonia | 2004 |\n| Finland | 1995 |\n| France | 1958 (founding member) |\n| Germany | 1958 (founding member) |\n| Greece | 1981 |\n| Hungary | 2004 |\n| Ireland | 1973 |\n| Italy | 1958 (founding member) |\n| Latvia | 2004 |\n| Lithuania | 2004 |\n| Luxembourg | 1958 (founding member) |\n| Malta | 2004 |\n| Netherlands | 1958 (founding member) |\n| Poland | 2004 |\n| Portugal | 1986 |\n| Romania | 2007 |\n| Slovakia | 2004 |\n| Slovenia | 2004 |\n| Spain | 1986 |\n| Sweden | 1995 |\n\n**Notes**\n\n* The United Kingdom left the EU on\u202f31\u202fJanuary\u202f2020 (Brexit) and is therefore no longer a member.  \n* Several countries are officially recognized as EU",
+"input_tokens": 79,
+"output_tokens": 512,
+"latency_ms": 1448.7733139999364,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:2da14c56447aaf8ddf8261c8": {
+"text": "Here are five of the most effective, easy\u2011to\u2011remember practices for keeping your houseplants healthy and thriving:\n\n| # | Care Tip | Why It Matters | Quick How\u2011To |\n|---|----------|----------------|--------------|\n| **1. Light the Right Way** | Plants need the right amount (and quality) of light for photosynthesis. | \u2022 **Identify the plant\u2019s light rating** \u2013 low, medium, or bright indirect. <br>\u2022 **Place near a suitable window** (south\u2011facing for bright\u2011light lovers, east/west for medium, north or a few feet back for low\u2011light). <br>\u2022 **Rotate the pot** a quarter turn every 1\u20132 weeks so all sides get even exposure. |\n| **2. Water Wisely** | Over\u2011 or under\u2011watering is the #1 cause of houseplant problems. | \u2022 **Check the soil** before you water \u2013 stick your finger 1\u20132\u202finches down; if it feels dry, water. <br>\u2022 **Water thoroughly** until water drains out the bottom, then empty the saucer. <br>\u2022 **Adjust frequency** with season, temperature, and pot size (plants need less water in winter). |\n| **3. Use Proper Soil & Potting Mix** | The right medium provides drainage, aeration, and nutrients. | \u2022 **Choose a mix** suited to the plant type (e.g., cactus/succulent mix for drought\u2011tolerant species, peat\u2011based mix for tropical foliage). <br>\u2022 **Add perlite or orchid bark** for extra drainage if the mix feels heavy. <br>\u2022 **Repot every 12\u201324\u202fmonths** (or when roots outgrow the pot) to refresh nutrients and prevent root\u2011bound growth. |\n| **4. Feed with Balanced Fertilizer** | Nutrients support new growth, flowering, and overall vigor. | \u2022 **Select a balanced, water\u2011soluble fertilizer** (e.g., 20\u201120\u201120 or a \u201chouseplant\u201d blend). <br>\u2022 **Dilute to half the recommended strength** and feed every 4\u20136\u202fweeks during the active growing season (spring\u2011fall). <br>\u2022 **Skip fertilizing in winter** when most plants are",
+"input_tokens": 88,
+"output_tokens": 512,
+"latency_ms": 1629.6558100002585,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:da18b09b73cc6c17e523cebf": {
+"text": "**Quick\u2011Start Checklist**\n\n| Step | What to do | Why it matters | Who should do it |\n|------|------------|----------------|------------------|\n| 1\ufe0f\u20e3 | **Secure the scene** \u2013 turn on hazard lights, place reflective triangles or flares at least 30\u202fm (100\u202fft) behind the truck, and block off traffic. | Prevents secondary accidents. | Driver & any nearby workers. |\n| 2\ufe0f\u20e3 | **Call for help** \u2013 dial the local highway\u2011patrol/road\u2011maintenance number (or 911 if it\u2019s a public road). Give exact location, truck description, and that it\u2019s loaded. | Professionals have the right equipment and legal authority. | Driver or any by\u2011stander with a phone. |\n| 3\ufe0f\u20e3 | **Assess the clearance** \u2013 measure the vertical gap between the truck\u2019s highest point (usually the cargo or the cab roof) and the underside of the bridge. | Determines whether a simple \u201cwiggle\u2011out\u201d is possible. | Driver (use a tape measure or a long pole). |\n| 4\ufe0f\u20e3 | **Check load stability** \u2013 if the cargo is shiftable (e.g., pallets, barrels), see if you can safely redistribute weight to lower the highest point. | Even a few centimeters can make the difference. | Driver + any qualified loading crew. |\n| 5\ufe0f\u20e3 | **Attempt a controlled reverse** \u2013 with the engine at low RPM, gently back the truck straight out while a spotter watches for contact. Use the parking brake to hold the truck steady once it clears. | The fastest \u201cdo\u2011it\u2011yourself\u201d solution if clearance is marginal. | Driver only; **do not** attempt if any part of the truck is already scraping the bridge. |\n| 6\ufe0f\u20e3 | **If the truck is still stuck** \u2013 do **not** try to lift the bridge or force the vehicle. Call one of the following services (depending on jurisdiction):<br>\u2022 **Road\u2011maintenance crew** (has a hydraulic jack or lift\u2011truck).<br>\u2022 **Tow\u2011away/road\u2011side\u2011recovery company** (has a heavy\u2011duty winch",
+"input_tokens": 94,
+"output_tokens": 512,
+"latency_ms": 1441.5219310003522,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:c8382cf54a1955220cda5807": {
+"text": "**Distributed Adaptive Message\u2011Block Switching (DAMB)** was a research\u2011level switching concept that emerged in the late\u20111970s and early\u20111980s while engineers were trying to figure out how to make large, geographically\u2011dispersed data\u2011communication networks both **fast** and **robust**.  \nIt never became a commercial standard on its own, but the ideas it introduced fed directly into the design of later packet\u2011switched networks (X.25, the ARPANET, and eventually the modern Internet).\n\nBelow is a concise, \u201cwhat\u2011it\u2011did\u201d overview, followed by a deeper dive into the technical mechanisms, the problems it was trying to solve, and the legacy it left behind.\n\n---\n\n## TL;DR (One\u2011sentence answer)\n\n*Distributed Adaptive Message\u2011Block Switching broke",
+"input_tokens": 79,
+"output_tokens": 512,
+"latency_ms": 1509.1621850001502,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:7ce80923512d2b75e04e541d": {
+"text": "The Rhine enters North\u202fRhine\u2011Westphalia near the town of **Krefeld** (just downstream of the Dutch border) and then flows east\u2011northeast across the state, passing through major cities such as **D\u00fcsseldorf**, **Cologne (K\u00f6ln)**, **Bonn**, and **Koblenz** (where it meets the Moselle).  \n\nIn short, the **middle\u2011section** of the Rhine\u2014roughly the stretch from Krefeld through D\u00fcsseldorf, Cologne, Bonn, and up to Koblenz\u2014runs through North\u202fRhine\u2011Westphalia. This segment is the part of the river that lies within the state\u2019s borders.",
+"input_tokens": 84,
+"output_tokens": 207,
+"latency_ms": 868.5409760000766,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:3420ac088f73d55657d33056": {
+"text": "**Short answer**\n\n- **North\u2011western Victoria (the \u201cMallee\u201d and \u201cWimmera\u201d area)** \u2013 the **National Party** is the strongest party, with the Liberal Party usually coming second and Labor a distant third.  \n- **Eastern Victoria (the \u201cGippsland\u201d, \u201cAlpine\u201d and outer\u2011eastern Melbourne fringe)** \u2013 the **Liberal Party",
+"input_tokens": 84,
+"output_tokens": 512,
+"latency_ms": 1524.4767419999334,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:efb5bf74817e05ad15170e98": {
+"text": "**Overview**\n\nThe Amazon rainforest is a dynamic ecosystem, and its vegetation has been changing for a variety of interconnected reasons.  Scientists identify three broad categories of drivers:\n\n| Category | Main mechanisms | Typical impact on vegetation |\n|----------|----------------|------------------------------|\n| **Human\u2011driven land\u2011use change** | \u2022 Large\u2011scale clearing for cattle ranching, soybeans, palm oil, timber, and mining  <br>\u2022 Road building and infrastructure projects  <br>\u2022 Urban expansion and settlement | \u2022 Direct loss of forest cover (deforestation) <br>\u2022 Conversion to pasture, cropland, or degraded secondary forest <br>\u2022 Fragmentation that isolates patches, altering edge microclimates |\n| **Climate\u2011related stressors** | \u2022 Rising temperatures and altered precipitation patterns (global warming) <br>\u2022 More frequent and severe droughts (e.g., 2005, 2010, 2015\u20112020 events) <br>\u2022 Increased fire frequency and intensity (often human\u2011ignited) | \u2022 Tree mortality, especially of moisture\u2011sensitive species <br>\u2022 Shift from dense, evergreen canopy to more open, savanna\u2011like vegetation in the most stressed areas <br>\u2022 Reduced recruitment of shade\u2011requiring seedlings |\n| **Ecological feedbacks & natural processes** | \u2022 Changes in fire regimes (fire\u2011tolerant species become more common) <br>\u2022 Invasion by non\u2011native or opportunistic species (e.g., *Myrtaceae* shrubs, grasses) <br>\u2022 Altered seed dispersal and pollination networks (loss of animal vectors) <br>\u2022 CO\u2082 fertilization (enhanced growth for some fast\u2011growing species) | \u2022 Shifts in species composition (more pioneer, fast\u2011growing, fire\u2011adapted plants) <br>\u2022 Decline of large\u2011seeded, shade\u2011tolerant trees <br>\u2022 Potential \u201cregeneration debt\u201d where",
+"input_tokens": 80,
+"output_tokens": 512,
+"latency_ms": 1432.3816690002786,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f912d325b50ee2538f449078": {
+"text": "Jordan needs a total of  \n\n- 20\u202fmin to make the batter  \n- 30\u202fmin to bake  \n- 120\u202fmin (2\u202fh) to cool  \n- 10\u202fmin to frost  \n\nAdding those together:  \n\n\\(20 + 30 + 120 + 10 = 180\\)\u202fminutes, which is **3 hours**.\n\nIf she wants the cake ready by **5:00\u202fpm**, she must finish",
+"input_tokens": 170,
+"output_tokens": 256,
+"latency_ms": 813.6170689999744,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:b921f344bdd631db8f5bf330": {
+"text": "Cindy has 4 pets.  \nMarcia has two more, so \\(4 + 2 = 6\\) pets.  \nJan has three times Marcia\u2019s number, so \\(3 \\times 6 = 18\\) pets.  \n\nTotal pets = \\(4 + 6 + 18 = 28\\).  \n\n**Answer: 28 pets.**",
+"input_tokens": 107,
+"output_tokens": 150,
+"latency_ms": 507.68897199986895,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:6ffa4a5a2ff87906ae8ad038": {
+"text": "Below is a compact, self\u2011contained Python function that takes a *list of tuples* and returns the **total",
+"input_tokens": 92,
+"output_tokens": 256,
+"latency_ms": 801.8885100000261,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f50cc0f50fe23d3408ad718d": {
+"text": "She paid $80 (four\u202f$20 bills) for a $70 hat, so she received **$10 in change**.",
+"input_tokens": 108,
+"output_tokens": 70,
+"latency_ms": 559.7618770002555,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:85653199a0dddf2375b6df95": {
+"text": "First, find how much money Ali has in total.\n\n- Four $10 bills: \\(4 \\times 10 = \\$40\\)\n- Six $20 bills: \\(6 \\times 20 = \\$120\\)\n\n\\[\n\\text{Total money} = \\$40 + \\$120 = \\$160\n\\]\n\n**Step 1 \u2013 Give half to his sister**\n\nHalf of \\$160",
+"input_tokens": 134,
+"output_tokens": 256,
+"latency_ms": 791.3284080000267,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:29496b94a95603af12daad2a": {
+"text": "Here\u2019s a tiny, self\u2011contained Python function that returns the larger of two numbers.  \nIt works for any comparable numeric type (int, float, Decimal, etc.) and includes a short docstring and type hints for clarity.\n\n```python\ndef max_of_two(a: float, b: float) -> float:\n    \"\"\"\n    Return the larger of two numbers.\n\n    Parameters\n    ----------\n    a : float\n        First number.\n    b : float\n        Second number.\n\n    Returns\n    -------\n    float\n        The maximum of a and b.\n    \"\"\"\n    return a if a > b else b\n```\n\n### How it works\n* The expression `a if a > b else b` is a concise ternary operator:  \n  * If `a` is greater than `b`,",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 735.177670000212,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:5dc76d774bd01a74954bc2ac": {
+"text": "Kim: \\(430 + 320 = 750\\)  \nAlexandra: \\(430\\)  \nSarah: \\(300\\)  \nMaryam: \\(300 + 400 = 700\\)\n\nTotal raised:  \n\\(750 + 430 + 300 + 700 = 2{,}180\\)\n\n\\[\n\\boxed{2180}\n\\]",
+"input_tokens": 124,
+"output_tokens": 205,
+"latency_ms": 495.4117740003312,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:692db99fc7438c97fd3ee1ac": {
+"text": "",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 1378.264057999786,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:9572ca84d4afcb2b7a00e335": {
+"text": "First, find the number of students who passed in each grade:\n\n- **Third\u2011graders:** \\(340\\) out of \\(500\\) passed.  \n- **Fourth\u2011graders:** \\(40\\) out of \\(100\\) passed.  \n- **Fifth\u2011graders:** The pass rate is twice that of the fourth\u2011graders.  \n  - Fourth\u2011grader pass rate = \\(\\frac{40}{100}=0.",
+"input_tokens": 136,
+"output_tokens": 256,
+"latency_ms": 768.0485549999503,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:bb8d31cab832ca8779a84159": {
+"text": "Below is a compact, idiomatic Python implementation that adds two lists element\u2011wise using `map()` and a `lambda` expression.  \nThe function assumes that the two input lists are of the same length; if they differ, it will only sum up to the length of the shorter list (just like `zip()` does).\n\n```python\ndef add_lists(a, b):\n    \"\"\"\n    Return a new list containing the element\u2011wise sum of `a` and `b`.\n\n    Parameters\n    ----------\n    a : list of numbers\n    b : list of numbers\n\n    Returns\n    -------\n    list\n        A list where each element is a[i] + b[i].\n\n   ",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 817.9831620000186,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:fd16f6f6c74a4875271a3085": {
+"text": "",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 614.8790339998413,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:e3950d3fd72cfdcac1773a65": {
+"text": "",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 729.5050349998746,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2e0145f069f7862bf5526730": {
+"text": "Below is a compact, \u201clambda\u2011only\u201d implementation that takes a list of lists of strings and returns a **new** list where every inner list is sorted alphabetically.  \nIf you prefer to sort the sub\u2011lists **",
+"input_tokens": 91,
+"output_tokens": 256,
+"latency_ms": 683.2178550002936,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:76893d2e42b98878514e009c": {
+"text": "Below is a compact, well\u2011documented **Python** implementation that counts the number of ways to make change for a given amount",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 634.3116809998719,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:18becb25c8a05be72a1e2e95": {
+"text": "Each flagstone weighs 75\u202flb, so 80 flagstones weigh\n\n\\[\n80 \\times 75 = 6000 \\text{ lb}.\n\\]\n\nA single truck can carry at most 2000\u202flb.  \nTo find the number of trucks needed, divide the total weight by the capacity of one truck:\n\n\\[\n\\frac{6000 \\text{",
+"input_tokens": 123,
+"output_tokens": 256,
+"latency_ms": 2457.7680019997388,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:793a34c05c5eddf18044e9ad": {
+"text": "$6.",
+"input_tokens": 140,
+"output_tokens": 255,
+"latency_ms": 827.3690119999628,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8c0bb115ed1bd33d48bbba0d": {
+"text": "",
+"input_tokens": 182,
+"output_tokens": 256,
+"latency_ms": 709.3822700003329,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:c0eefac05d0cb3d1daab792d": {
+"text": "The bakery\u2019s stock is described as \u201c40 less than seven times as many loaves as Sam had.\u201d  \nLet \\(S\\) be the number of loaves Sam had last Friday.\n\n\\[\n\\text{Bakery loaves} = 7S - 40\n\\]\n\nGiven \\(S = 70\\):\n\n\\[\n\\text{Bakery loaves} = 7 \\times 70 - 40 = 490 - 40 = 450\n\\]\n\n\\[\n\\boxed{450}\n\\]",
+"input_tokens": 114,
+"output_tokens": 198,
+"latency_ms": 668.4031649997451,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:60344a1dd742ef9071852ff2": {
+"text": "",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 762.7105410001604,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:5655fe19c585f99fcb2664d6": {
+"text": "Below is a small, self\u2011contained module that shows a handful of ways to compute the \u201cdifference\u201d between two lists in Python.  \nThe idea of a \u201cdifference\u201d can mean a few different things, so the module contains:\n\n| Function | What it returns | Typical use\u2011case |\n|----------|-----------------|------------------|\n| `list_diff(a, b)` | Elements that appear in `a` but **not** in `b` (preserves order, keeps duplicates). | \u201cWhat did the first list contain that the second one didn\u2019t?\u201d |\n| `list_diff_set(a, b)` | Same as above but uses a `",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 717.9710089999389,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:b0f085ddef8d14750ca41b7c": {
+"text": "Below is a small, self\u2011contained helper that tells you whether one list (or any sequence) appears as a **contiguous sub\u2011array** of another.  \nThe implementation is intentionally simple, but it works for any hashable element type (strings, ints, tuples, \u2026).\n\n```python\ndef is_subarray(sub, arr):\n    \"\"\"\n    Return True iff the sequence `sub` occurs as a contiguous block inside `arr`.\n\n    Parameters\n    ----------\n    sub : Sequence\n        The candidate sub\u2011array (e.g. a list, tuple, or string).\n    arr : Sequence\n        The array in which we look for `sub`.\n\n    Returns\n    -------\n    bool\n        True if `sub` is a contiguous sub\u2011array of `arr`, False otherwise.\n\n    Examples\n    --------\n    >>> is_subarray([2, 3], [1, 2",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 510.7741219999298,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:6590d4492d61fd1932b100e8": {
+"text": "",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 715.9207049999168,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f6b5ea1822952cbc224eec70": {
+"text": "",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 512.7985369999806,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8eb95bfddb03ad1c6272eb7b": {
+"text": "Below is a compact, well\u2011documented Python helper that returns the product of the *k*\u2011th element of every tuple in a sequence.  \nIt works for any iterable of tuples (lists, tuples, etc.), accepts negative indices, and gracefully skips tuples that are too short.\n\n```python\nfrom __future__ import annotations\nfrom functools import reduce\nfrom operator import mul\nfrom typing import Iterable, Sequence, Any\n\ndef product_of_kth(seq:",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 714.7525039999891,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:7b14e69209bbd92cca4bb2df": {
+"text": "",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 651.4230090001547,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:cbf0e9e214fe1c5c6ba1547e": {
+"text": "Below is a compact, well\u2011documented Python implementation that returns the difference between every pair of consecutive numbers in a list.  \nFeel free to drop it into any script or notebook \u2013 it works out\u2011of\u2011the\u2011box for integers, floats, or any objects that support the `-` operator.\n\n```python\nfrom typing import Iterable, List, TypeVar\n\nT = TypeVar('T', int, float)   # extendable to any numeric type\n\ndef consecutive_differences(nums: Iterable[T]) -> List[T]:\n    \"\"\"\n    Return a list containing the difference between each pair of consecutive\n    elements in *nums*.\n\n    Parameters\n    ----------\n    nums : Iterable[T]\n        A sequence of numbers (int, float, Decimal, etc.).  The function\n        accepts any iterable \u2013 lists,",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 626.4774470000702,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:a43a9c75aab7aa477a6ac51d": {
+"text": "Here\u2019s a tiny, self\u2011contained function that returns the smaller of two numbers.  \nI\u2019ll show it in **Python** (the most common language for quick demos), and then give a quick equivalent in a few other popular languages so you can copy\u2011paste it into whatever stack you\u2019re using.\n\n---\n\n## 1. Python\n\n```python\ndef min_two(a, b):\n    \"\"\"\n    Return the smaller of a and b.\n\n    Parameters\n    ----------\n    a, b : int | float\n        Numbers to compare.\n\n    Returns\n    -------\n    int | float\n        The minimum of a and b.\n    \"\"\"\n    return a if a < b else b\n\n\n# Quick sanity check\nif __name__ == \"__main__\":\n    print(min_two(10, 5))   # \u2192 5\n    print(min_two(-3, 2))   # \u2192 -3",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 673.4038370000235,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:75e1abc9bbacdb540af0bc3a": {
+"text": "Below is a very small, self\u2011contained Python routine that returns the **minimum number of \u201cstep\u201d operations** needed to make two integers equal when the only allowed operation is to **increment or decrement a number by\u202f1**.\n\n```python\ndef min_steps_to_equal(a: int,",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 710.4627270000492,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:caee9465f1b169ccdfeb853b": {
+"text": "",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 823.474828000144,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2c20f2439feabe3891271918": {
+"text": "First count the total days in the period:\n\n- March has 31 days.",
+"input_tokens": 145,
+"output_tokens": 256,
+"latency_ms": 715.5609280002864,
+"provider": "groq"
+}
+}

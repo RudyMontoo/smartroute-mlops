@@ -11,19 +11,24 @@ from __future__ import annotations
 import os
 from dataclasses import dataclass
 
-CHEAP = "llama-3.1-8b-instant"
-EXPENSIVE = "llama-3.3-70b-versatile"
+CHEAP = os.getenv("MODEL_CHEAP", "openai/gpt-oss-20b")
+EXPENSIVE = os.getenv("MODEL_EXPENSIVE", "openai/gpt-oss-120b")
 
-# Published Groq per-million-token rates in USD. Override via env if they change --
-# the point of the project is the pipeline, not these specific constants.
+# Per-million-token rates in USD, from the provider's published price list.
+#
+# These are the one set of numbers in the project that cannot be derived from the code
+# or the data, so they are isolated here, overridable from the environment, and quoted
+# with their source in RESULTS.md. Every cost figure the project reports is a function
+# of exactly these six constants and measured token counts -- change them and every
+# reported number moves consistently, because nothing else hard-codes a price.
 PRICING: dict[str, dict[str, float]] = {
     CHEAP: {
-        "input": float(os.getenv("PRICE_CHEAP_IN", "0.05")),
-        "output": float(os.getenv("PRICE_CHEAP_OUT", "0.08")),
+        "input": float(os.getenv("PRICE_CHEAP_IN", "0.10")),
+        "output": float(os.getenv("PRICE_CHEAP_OUT", "0.50")),
     },
     EXPENSIVE: {
-        "input": float(os.getenv("PRICE_EXPENSIVE_IN", "0.59")),
-        "output": float(os.getenv("PRICE_EXPENSIVE_OUT", "0.79")),
+        "input": float(os.getenv("PRICE_EXPENSIVE_IN", "0.15")),
+        "output": float(os.getenv("PRICE_EXPENSIVE_OUT", "0.75")),
     },
 }
 

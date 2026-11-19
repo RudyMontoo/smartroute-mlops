@@ -9,18 +9,28 @@ from __future__ import annotations
 import json
 import subprocess
 import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
 
 GOOD = {"macro_f1": 0.93, "accuracy": 0.93, "cost_savings_pct": 31.4}
+
+
+def _run(*args: str) -> subprocess.CompletedProcess:
+    # cwd is pinned to the repo root so `-m scripts.quality_gate` resolves no matter
+    # where pytest itself was invoked from.
+    return subprocess.run(
+        [sys.executable, "-m", "scripts.quality_gate", *args],
+        capture_output=True,
+        text=True,
+        cwd=ROOT,
+    )
 
 
 def run_gate(tmp_path, metrics: dict, *extra: str) -> subprocess.CompletedProcess:
     path = tmp_path / "metrics.json"
     path.write_text(json.dumps(metrics))
-    return subprocess.run(
-        [sys.executable, "-m", "scripts.quality_gate", "--metrics", str(path), *extra],
-        capture_output=True,
-        text=True,
-    )
+    return _run("--metrics", str(path), *extra)
 
 
 def test_a_healthy_model_passes(tmp_path):
@@ -43,12 +53,7 @@ def test_a_savings_regression_fails_even_when_accuracy_is_fine(tmp_path):
 
 def test_missing_metrics_fail_closed(tmp_path):
     """If training never ran, the gate must not wave the build through."""
-    result = subprocess.run(
-        [sys.executable, "-m", "scripts.quality_gate", "--metrics", str(tmp_path / "nope.json")],
-        capture_output=True,
-        text=True,
-    )
-    assert result.returncode == 1
+    assert _run("--metrics", str(tmp_path / "nope.json")).returncode == 1
 
 
 def test_floors_are_configurable(tmp_path):

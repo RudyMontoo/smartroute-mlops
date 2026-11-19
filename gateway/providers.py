@@ -96,17 +96,26 @@ class GroqProvider:
             headers={"Authorization": f"Bearer {api_key}"},
         )
 
-    async def complete(self, model: str, prompt: str) -> Completion:
+    #: Rate-limit headers from the most recent response, so callers that need to pace
+    #: themselves (the eval harness) can do so from real numbers rather than guesswork.
+    last_rate_limit: dict[str, str] = {}
+
+    async def complete(self, model: str, prompt: str, max_tokens: int | None = None) -> Completion:
         started = time.perf_counter()
         response = await self._client.post(
             "/chat/completions",
             json={
                 "model": model,
                 "messages": [{"role": "user", "content": prompt}],
-                "max_tokens": settings.max_output_tokens,
+                "max_tokens": max_tokens or settings.max_output_tokens,
                 "temperature": 0.2,
             },
         )
+        self.last_rate_limit = {
+            key: value
+            for key, value in response.headers.items()
+            if key.lower().startswith("x-ratelimit") or key.lower() == "retry-after"
+        }
         response.raise_for_status()
         payload = response.json()
         usage = payload.get("usage", {})
