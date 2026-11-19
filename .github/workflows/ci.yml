@@ -87,6 +87,7 @@ jobs:
           curl -sf localhost:8000/health | tee /dev/stderr | grep -q '"status":"ok"'
           curl -sf -X POST localhost:8000/v1/chat \
             -H 'content-type: application/json' \
+            -H 'X-API-Key: demo-key-smartroute' \
             -d '{"query":"Who wrote Pride and Prejudice?"}' \
             | tee /dev/stderr | grep -q 'gpt-oss-20b'
           docker rm -f gw

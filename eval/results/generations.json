@@ -348,5 +348,845 @@
 "output_tokens": 256,
 "latency_ms": 712.9388740004288,
 "provider": "groq"
+},
+"openai/gpt-oss-20b:f8fc73f303ad37ca920987cd": {
+"text": "Jack had $100.  \nSophia gives him \\( \\frac{1}{5}\\) of her $100, which is\n\n\\[\n\\frac{1}{5}\\times 100 = 20 \\text{ dollars}.\n\\]\n\nAdding that to what he already had:\n\n\\[\n100 + 20 = 120.\n\\]\n\n**Jack now has $120.**",
+"input_tokens": 96,
+"output_tokens": 111,
+"latency_ms": 513.4904879996611,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f9f8c22051fb964319620d4b": {
+"text": "Below is a compact, regex\u2011based implementation that turns a snake_case string into camelCase (the first word stays lower\u2011case).  \nThe function works for any string that contains only ASCII letters, digits and underscores.\n\n```python\nimport re\n\ndef snake_to_camel(s: str) -> str:\n    \"\"\"\n    Convert a snake_case string to camelCase.\n\n    Parameters\n    ----------\n    s : str\n        Input string in snake_case (e.g. 'my_variable_name').\n\n    Returns\n    -------\n    str\n        The string converted to camelCase (e.g. 'myVariableName').\n\n    Examples\n    --------\n    >>> snake_to_camel('hello_world')\n    'helloWorld'\n    >>> snake_to_camel('convert_this_string')\n    'convertThisString'\n    >>> snake_to_camel('alreadyCamel')\n    'alreadyCamel'          # unchanged\n    \"\"\"\n    # Pattern matches an underscore followed by a lowercase letter.\n    # The lambda turns that letter into its uppercase counterpart.\n    return re.sub(r'_([a-z])', lambda m",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 824.7216990002926,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:7aad89ca93ce9188e4ea13a9": {
+"text": "Here\u2019s a compact, well\u2011documented Python function that rotates a list to the right by a given number of positions.  \nIt works for any iterable that can be indexed (lists, tuples, strings, etc.) and handles negative or oversized shift values gracefully.\n\n```python\ndef rotate_right(seq, n):\n    \"\"\"\n    Return a new sequence that is the original sequence rotated to the right\n    by `n` positions.\n\n    Parameters\n    ----------\n    seq : sequence (list, tuple, str, etc.)\n        The sequence to rotate.\n    n : int\n        Number of positions to rotate to the right.  \n        Positive values rotate right, negative values rotate left.\n\n    Returns\n    -------\n    same type as `seq`\n        Rotated sequence.\n\n    Examples\n    --------\n    >>> rotate_right([1, 2, 3, 4, 5], 2)\n    [4, 5, 1, 2, 3]\n\n    >>> rotate_right('abcdef', 3)\n    'defabc'\n\n    >>> rotate_right([1, 2, 3], -1)   # left rotation\n",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 2403.584747000423,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:e25f37ac1e43c2abc4b4c285": {
+"text": "Adrianne\u2019s total number of beads is:\n\n- Mother\u2019s beads: **20**  \n- Sister\u2019s beads: \\(20 + 10 = 30\\)  \n- Friend\u2019s beads: \\(2 \\times 20 = 40\\)\n\nAdding them together:  \n\\(20 + 30 + 40 = 90\\).\n\nSo Adrianne had **90 beads** altogether.",
+"input_tokens": 126,
+"output_tokens": 118,
+"latency_ms": 555.6384900000921,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:b03a404f690052ca9b148570": {
+"text": "Let  \n\n- \\(L\\) = cost of the lot  \n- \\(H\\) = cost of the house  \n\nWe\u2019re told the house costs three times as much as the lot:\n\n\\[\nH = 3L\n\\]\n\nThe total cost of the house and the lot is \\$120,000:\n\n\\[\nL + H = 120{,}000\n\\]\n\nSubstitute \\(H = 3L\\) into the total:\n\n\\[\nL + 3L = 120{,}000 \\;\\;\\Longrightarrow\\;\\; 4L = 120{,}000\n\\]\n\nSolve for \\(L\\):\n\n\\[\nL = \\frac{120{,}000}{4} = 30{,}000\n\\]\n\nNow find the house price:\n\n\\[\nH = 3L = 3 \\times 30{,}000 = 90{,}000\n\\]\n\n\\[\n\\boxed{\\$90{,}000}\n\\]",
+"input_tokens": 101,
+"output_tokens": 247,
+"latency_ms": 722.7474319997782,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:535bde2edc01b1a318b4158b": {
+"text": "",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 813.6492459998408,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:97ce0a53823c73f1623a9f5d": {
+"text": "First, let\u2019s break the trip into the three parts described:\n\n| Part | Distance (miles) | Speed (mph) | Time (hours) |\n|------|------------------|-------------|--------------|\n| 1. Swim 60\u202f% of the lake | 0.60\u202f\u00d7\u202f20 = **12** | 2 | 12 \u00f7 2 = **6** |\n| 2. Rest on the island | \u2013 | \u2013 | \u00bd\u202f\u00d7\u202ftime of part\u202f1 = \u00bd\u202f\u00d7\u202f6 = **3** |\n| 3. Finish the remaining 40\u202f% at half the speed | 0.40\u202f\u00d7\u202f20 = **8** | 2 \u00f7 2 = **1** | 8 \u00f7 1 = **8** |\n\nNow add",
+"input_tokens": 152,
+"output_tokens": 256,
+"latency_ms": 717.325388000063,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8a08e60bfea43f038d236062": {
+"text": "**Solution Explanation**\n\nFor every two consecutive integers `i` and `i",
+"input_tokens": 92,
+"output_tokens": 256,
+"latency_ms": 738.6902930002179,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:25ec02c9ceb870ce04ab2c1a": {
+"text": "Below is a simple, language\u2011agnostic implementation of a function that returns the perimeter of a regular polygon.  \nA regular polygon is defined by:\n\n* `n` \u2013 the number of sides (must be an integer \u2265\u202f3)  \n* `s` \u2013 the length of each side (a positive real number)\n\nThe perimeter is simply `n * s`.\n\n---\n\n## 1. Python implementation\n\n```python\ndef regular_polygon_perimeter(n: int, s: float) -> float:\n    \"\"\"\n    Calculate the perimeter of a regular polygon.\n\n    Parameters\n    ----------\n    n : int\n        Number of sides (must be >= 3).\n    s : float\n        Length of one side (must be > 0).\n\n    Returns\n    -------\n    float\n        The perimeter of the polygon.\n\n    Raises\n    ------\n    ValueError\n        If n < 3 or s <= 0.\n    \"\"\"\n    if n < 3:\n        raise ValueError(\"A polygon must have at least 3 sides.\")\n    if s <= 0:\n        raise ValueError(\"Side length must be positive.\")\n\n    return n * s\n```\n\n### Usage example",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 511.71312800033775,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:76faa618a3d910aa961028df": {
+"text": "Each blouse originally costs \\$20.  \nA 30\u202f% discount removes \\(0.30 \\times 20 = \\$6\\) from each blouse, so the sale price per blouse is\n\n\\[\n20 - 6 = \\$14.\n\\]\n\nMisha buys 4 blouses, so the total cost is\n\n\\[\n4 \\times 14 = \\$56.\n\\]\n\n**Answer: \\$56**",
+"input_tokens": 109,
+"output_tokens": 124,
+"latency_ms": 512.5292820002869,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:c8aa7593bf521617dafa9ae8": {
+"text": "First, let\u2019s work out how much money John has left after each expense:\n\n| Item | Cost | Money left |\n|------|------|------------|\n| **Earnings** | \\(50 \\text{ dollars/hour} \\times 6 \\text{ hours} = 300\\) | 300 |\n| **Gas** | 50 | \\(300 - 50 = 250\\) |\n| **Deposit** | 100 | \\(250 - 100 = 150\\) |\n| **Pencils** | \\(5 \\times 10 = 50\\) | \\(150 - 50 = 100\\) |\n\nAfter buying the pencils, John has **$100** remaining.\n\nEach pen costs **$25**.  \nNumber of pens he can buy:\n\n\\[\n\\frac{100}{25} = 4\n\\]\n\nSo John",
+"input_tokens": 128,
+"output_tokens": 256,
+"latency_ms": 715.6780290006282,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d01bab71cf2003251a0b1d47": {
+"text": "Here\u2019s a compact, Pythonic way to check whether all elements in a list are unique:\n\n```python\ndef all_unique(seq):\n    \"\"\"\n    Return True if every element in *seq* appears only once, otherwise False.\n\n    Parameters\n    ----------\n    seq : iterable\n        The sequence (list, tuple, set, etc.) to test for uniqueness.\n\n    Examples\n    --------\n    >>> all_unique([1, 2, 3, 4])\n    True\n    >>> all_unique([1, 2, 2, 3])\n    False\n    >>> all_unique('abcde')\n    True\n    >>> all_unique('aabb')\n    False\n    \"\"\"\n    # Using a set to keep track of seen items\n    seen = set()\n    for item in seq:\n        if item in seen:\n            return False          # duplicate found\n        seen.add(item)\n    return True\n```\n\n### Why this works\n\n* A `set` in Python stores only unique items and offers O(1) average\u2011time membership tests.\n* As we iterate through the sequence, we check if the current item is already in `seen`.  \n  * If it",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 715.6814079999094,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:a6d3a04eaa27136fb27acc18": {
+"text": "- Mike: 21 \u2192 +1 (since >20) = **22**  \n- Jim: 18 \u2192 no extra point = **18**  \n- Tony: 42 \u2192 +1 (since >20) = **43**\n\nTotal points after the extra points are distributed:\n\n\\(22 + 18 + 43 = \\boxed{83}\\)",
+"input_tokens": 150,
+"output_tokens": 160,
+"latency_ms": 613.0398289997174,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:47484d317509112369ed2917": {
+"text": "Melanie has already saved\n\n\\[\n10 \\text{ toothpicks/week} \\times 12 \\text{ weeks} = 120 \\text{ toothpicks}.\n\\]\n\nShe needs a total of 200 toothpicks, so she still needs\n\n\\[\n200 - 120 = 80 \\text{ toothpicks}.\n\\]\n\nAt the same rate of 10 toothpicks per week, the number of additional weeks required is\n\n\\[\n\\frac{80}{10} = 8 \\text{ weeks}.\n\\]\n\n\\[\n\\boxed{8}\n\\]",
+"input_tokens": 161,
+"output_tokens": 167,
+"latency_ms": 615.7746459994087,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:fc3b2a2e5481c61788c9a974": {
+"text": "Below is a compact, well\u2011documented Python function that counts the number of **bidirectional tuple pairs** in a list of tuples.\n\n```python\nfrom collections import Counter\nfrom typing import Iterable, Tuple, List\n\ndef count_bidirectional_pairs(pairs: Iterable[Tuple[int, int]]) -> int:\n    \"\"\"\n    Count the number of unordered pairs (a, b) such that both (a, b) and (b, a)\n    appear in the input iterable.\n\n    Parameters\n    ----------\n    pairs : Iterable[Tuple[int, int]]\n        A sequence (list, set, generator, \u2026) of 2\u2011tuples.  The tuples are\n        interpreted as directed edges in a graph.\n\n    Returns\n    -------\n    int\n        The number of distinct unordered pairs that are bidirectional.\n\n    Notes\n    -----\n    * Each unordered pair is counted **once**, even if the input contains\n      multiple copies of the same directed edge.\n    * Self\u2011loops (a, a) are ignored",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 717.048149999755,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:4124ee3d3777ee50b706d3cb": {
+"text": "Here\u2019s a small, self\u2011contained Python function that rounds any numeric value to the nearest multiple of a given step.  \nIt works for integers, floats, and even `Decimal` objects, and it handles positive, negative, and zero steps.\n\n```python\nfrom decimal import Decimal, getcontext\nfrom typing import Union\n\nNumber = Union[int, float, Decimal]\n\ndef round_to_multiple(value: Number, step: Number) -> Number:\n    \"\"\"\n    Round *value* to the nearest multiple of *step*.\n\n    Parameters\n    ----------\n    value : int | float | Decimal\n        The number to round.\n    step : int | float | Decimal\n        The multiple to round to. Must be non\u2011zero.\n\n    Returns\n    -------\n    int | float | Decimal\n        The rounded value, with the same type as *value*.\n\n    Examples\n    --------\n    >>> round_to_multiple(12.3, 5)\n    10\n    >>> round_to_multiple(12.3, 0.5)\n    12.5\n    >>> round_to_multiple(12.3, Decimal('0.1'))\n    Decimal('12",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 700.030943999991,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:145fabfb6a9ca8f0d7d568aa": {
+"text": "**Actresses Who Won an Oscar (Best Actress or Best Supporting Actress) in the Last Five Years (2020\u20112024)**  \n\n| Year | Category | Actress | Film | Notes |\n|------|----------|---------|------|-------|\n| **2024** | Best Actress | **Cate Blanchett** | *T\u00e1r* | First Oscar for Blanchett; she had previously won Best Supporting Actress in 2000. |\n| | Best Supporting Actress | **Angela Bassett** | *Black Panther: Wakanda Forever* | First Oscar for Bassett; she had been nominated several times before. |\n| **2023** | Best Actress | **Michelle Yeoh** | *Everything Everywhere All at Once* | First Oscar for Yeoh; she had previously won a BAFTA for the same film. |\n| | Best Supporting Actress | **Angela Bassett** | *Black Panther: Wakanda Forever* | (Same as 2024; she won again in 2024 for the same film). |\n| **2022** | Best Actress | **Jessica",
+"input_tokens": 97,
+"output_tokens": 256,
+"latency_ms": 633.1459670000186,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:e8ea75f42956ece14fcaf546": {
+"text": "### Short answer  \n**Lunar eclipses are more common than solar eclipses because the geometry of the Earth\u2013Moon\u2013Sun system makes the conditions for a lunar eclipse easier to satisfy and the eclipse is visible from a much larger area of the Earth.**\n\n---\n\n## 1.  The geometry that matters\n\n| Event | Alignment needed | Where on Earth it can be seen | How long the eclipse lasts |\n|-------|------------------|------------------------------|----------------------------|\n| **Solar eclipse** | Sun\u2013Moon\u2013Earth in a straight line (Moon between Earth and Sun) | Only the narrow \u201cpath of totality\u201d (or annular path) \u2013 a few hundred km wide | A few minutes (totality) to an hour (partial) |\n| **Lunar eclipse** | Sun\u2013Earth\u2013Moon in a straight line (Earth between Sun and Moon) | The entire night\u2011side hemisphere (half the Earth) | 1\u20132 hours (",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 816.8782709999505,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:07b8f0af40edc22b34b37f33": {
+"text": "Camels are the \u201cships of the desert\u201d because they have evolved a suite of anatomical, physiological, and behavioral traits that let them survive for weeks\u2014sometimes months\u2014without drinking water.  Here\u2019s a quick rundown of the main reasons:\n\n| Adaptation | How it helps | Key facts |\n|------------|--------------|-----------|\n| **Water\u2011retaining kidneys** | Produce extremely concentrated urine (up to 1,000\u202f\u00d7 normal) and very dry feces. | Saves ~90\u202f% of the water that other mammals would lose in waste. |\n| **Large body mass & low surface\u2011area\u2011to\u2011volume ratio** | Reduces heat loss and evaporative water loss. | A 600\u2011kg camel can lose only ~0.5\u202f% of its body weight per day in a hot environment. |\n| **Fat\u2011storing humps** | Stores energy as fat, not water. | Fat can be metabolized to produce water (\u22481\u202fL of water per 1\u202fkg of fat). |\n| **Specialized blood & skin** | Blood vessels in the extremities can be constricted to reduce heat loss; skin has a thick,",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 655.8687309998277,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ebbe97b8f66b7d3912c3b86f": {
+"text": "Here are some notable rap albums that dropped in 2022:\n\n| Artist | Album | Release Date | Label |\n|--------|-------|--------------|-------|\n| **Drake** | *Honestly, Nevermind* | March\u202f4 | OVO |\n| **Kendrick\u202fLamar** | *Mr. Morale & the Big Steppers* | March\u202f18 | Top Dawg |\n| **Lil\u202fUzi\u202fVert** | *The Perfect LUV Tape* | March\u202f25 | 1017 |\n| **Megan\u202fThee\u202fStallion** | *Good News* | April\u202f8 | 100% |\n| **J\u202fCole** | *The Off\u2011Season* | May\u202f6 | Dreamville |\n| **Ty\u202fDolla\u202fZ** | *The Big 3* | May\u202f20 | 4AD |\n| **SZA** | *SOS* (hip\u2011hop\u2011influenced tracks) | May\u202f27 | Top Dawg |\n| **Lil\u202fBaby** | *The Last* | June\u202f3 | 4AD |\n| **Young\u202fBoy\u202fZ",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 573.5699789993305,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8fa2d34b689d8e36cf68054f": {
+"text": "Here are five of the most iconic archaeological sites in Mexico that are well worth a visit:\n\n| # | Site | Location | Highlights |\n|---|------|----------|------------|\n| 1 | **Teotihuacan** | Near Mexico City | The massive Pyramids of the Sun and Moon, the Avenue of the Dead, and the intricate murals in the Temple of the Feathered Serpent. |\n| 2 | **Chich\u00e9n\u202fItz\u00e1** | Yucat\u00e1n Peninsula | The iconic El Castillo (Temple of Kukulc\u00e1n), the Great Ball Court, and the Observatory (El Caracol). |\n| 3 | **Palenque** | Chiapas | A stunning Mixtec city with the Temple of the Inscriptions, the Palace, and lush jungle surroundings. |\n| 4 | **Monte Alb\u00e1n** | Oaxaca | One of the earliest Zapotec capitals, featuring pyramids, plazas, and a panoramic view of the surrounding valleys. |\n| 5 | **Tulum** | Riviera Maya | A walled Mayan city perched on cliffs overlooking the Caribbean Sea, famous for its seaside temples and well",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 823.3543490005104,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:645caf61efd28ffa81e6fd6f": {
+"text": "I\u2019m sorry, but I can\u2019t help with that.",
+"input_tokens": 87,
+"output_tokens": 32,
+"latency_ms": 401.0696679997636,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8ad0e019ed5286d97ca82b7d": {
+"text": "The question of the \u201cbest football team in history\u201d is one of those perennial debates that never has a single, universally accepted answer. It depends on how you define \u201cbest\u201d (tournament wins, dominance over a period, influence on the game, etc.) and which level of football you\u2019re talking about (club or national team). Below are some of the most frequently cited contenders, each with a brief case for why they\u2019re considered the greatest.\n\n| Category | Team | Era | Key Achievements | Why They\u2019re Often Mentioned |\n|----------|------|-----|------------------|-----------------------------|\n| **Club \u2013 European** | **Real Madrid (1955\u20111960)** | 1955\u20111960 | 5 consecutive European Cups (now Champions League) | First to win the European Cup, set a standard for continental dominance. |\n| | **AC\u202fMilan (1988\u20111990)** | 1988\u20111990 | 3 consecutive European Cups, 5\u2011in\u2011a\u2011row Serie A titles | A tactical masterclass under Arrigo Sacchi and later Fabio Capello. |\n| | **Bayern Munich (1970\u20111974)** |",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 515.9417200002281,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:e3c9002cb012ad831f1c30b7": {
+"text": "The hottest planet in our solar system is **Venus**. Despite being farther from the Sun than Mercury, Venus has a thick, carbon\u2011dioxide\u2011rich atmosphere that creates a runaway greenhouse effect, trapping heat and raising surface temperatures to an average of about **460\u202f\u00b0C (860\u202f\u00b0F)**\u2014hot enough to melt lead. This makes Venus the hottest planet in the solar system.",
+"input_tokens": 81,
+"output_tokens": 93,
+"latency_ms": 618.9507590006542,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d5777edf399d8e1ce6e50566": {
+"text": "Education is often framed as a ticket to a better job, higher salary, or a more stable future. While those outcomes are undeniably valuable, the significance of learning stretches far beyond the r\u00e9sum\u00e9. Here are several reasons why education matters in ways that go well past career opportunity:\n\n| Why Education Matters | What It Looks Like in Everyday Life | Why It\u2019s Important |\n|------------------------|-------------------------------------|--------------------|\n| **Critical Thinking & Problem\u2011Solving** | You\u2019re able to evaluate a news article, spot logical fallacies, or troubleshoot a household appliance. | In a world saturated with information, the ability to sift fact from fiction and devise solutions is essential for personal safety, civic engagement, and lifelong learning. |\n| **Civic Literacy & Engagement** | You understand how elections work, can read a bill, and know why voting matters. | A well\u2011educated electorate is the backbone of a functioning democracy; informed citizens help shape policies that affect everyone. |\n| **Social & Emotional Development** | You learn empathy, conflict resolution, and teamwork in classrooms or clubs. | These skills build healthier relationships, reduce prejudice, and foster community cohesion. |\n| **Health & Well\u2011Being",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 815.3460539997468,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:379de7b0cc3ab0e14215135c": {
+"text": "If I could never fill a pool with water, I\u2019d turn it into a **\u201cdream\u2011tank\u201d**\u2014a liquid of imagination.\n\n### What it would be\n- **A translucent, iridescent fluid** that shifts color with the viewer\u2019s mood.\n- **Light\u2011weight, non\u2011toxic, and self\u2011healing**\u2014any splashes or spills would instantly re\u2011form.\n- **Capable of holding memories**: you could dip a hand in and feel the echo of a childhood beach, a distant city, or a quiet forest.\n\n### How it would work\n1. **Molecular \u201cmemory\u201d**: Tiny, programmable nanobots embedded in the fluid store sensory data (sound, scent, temperature). When you touch it, the bots release a corresponding sensory overlay.\n2. **Dynamic surface**: The fluid\u2019s surface can ripple to mimic waves, or flatten to become a calm lake, all controlled by a subtle magnetic field.\n3. **Interactive storytelling**: By placing objects in the pool\u2014an old toy, a photograph, a piece of music\u2014the fluid reacts, creating a multisensory narrative.\n\n### Why it matters\n- **Therapeut",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 822.5896590001867,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:fc2be30389e4a6c6d40c13a6": {
+"text": "### When to Work Out or Do Yoga?  \nThe \u201cright\u201d time really depends on your goals, schedule, body chemistry, and personal preference. Below is a quick guide that breaks it down by **time of day**, **type of activity**, and **what you\u2019re hoping to get out of it**.\n\n| Time of Day | Typical Energy Levels | Ideal Activities | Why It Works |\n|-------------|-----------------------|------------------|--------------|\n| **Early Morning (5\u20117\u202fam)** | Low body temperature, low cortisol, but high focus if you\u2019re a \u201cmorning person\u201d | Light to moderate cardio, gentle yoga, mobility drills | Boosts metabolism, sets a positive tone for the day, and frees up the rest of your schedule. |\n| **Mid\u2011Morning (8\u201110\u202fam)** | Body temperature rising, cortisol high | Strength training, HIIT, power yoga | Hormonal peak (cortisol & testosterone) supports muscle growth and fat oxidation. |\n| **Midday (12\u20112\u202fpm)** | Energy dip after lunch | Short, high\u2011intensity cardio, quick yoga flow, or a brisk walk | Helps counteract the post\u2011l",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 817.0865590000176,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:584c809be466600fc35e97e9": {
+"text": "Belize was granted independence on **21\u202fSeptember\u202f1981**.",
+"input_tokens": 82,
+"output_tokens": 34,
+"latency_ms": 311.22753800082137,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:03ef6d309c10832e7c79df8c": {
+"text": "Getting in shape is a fantastic goal, and the best plan is one that\u2019s tailored to your current fitness level, goals, preferences, and any medical considerations. Below is a flexible framework you can adapt, but I strongly recommend checking in with a qualified health professional (doctor, registered dietitian, or certified personal trainer) before you start, especially if you have any health conditions or injuries.\n\n---\n\n## 1. Set Clear, Measurable Goals\n\n| Goal | Example | Why It Helps |\n|------|---------|--------------|\n| **Weight loss** | Lose 1\u20132\u202flb per week | Safe, sustainable |\n| **Muscle gain** | Add 1\u20132\u202flb of lean mass | Improves strength & metabolism |\n| **Cardiovascular fitness** | Run 5\u202fkm in <30\u202fmin | Improves heart health |\n| **Flexibility** | Touch toes without bending knees | Reduces injury risk |\n\nWrite them down, track progress, and adjust as needed.\n\n---\n\n## 2. Nutrition Blueprint\n\n| Component | What to Focus On | Sample Daily Plan |\n|-----------|------------------|-------------------|\n| **Calories**",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 808.2829209997726,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d6cc66779f7e5f26430683e0": {
+"text": "Here are a handful of creative, practical, and even eco\u2011friendly ways you can repurpose old books:\n\n| # | Idea | Why it\u2019s cool | Quick Tips |\n|---|------|---------------|------------|\n| 1 | **Book\u2011shelf d\u00e9cor** | Turn a stack of old books into a living wall or a \u201cbook lamp\u201d by inserting a light behind the spines. | Use a sturdy frame or a reclaimed pallet as a base. |\n| 2 | **Garden planters** | Hollow out the center of a thick book, fill with soil, and plant succulents or herbs. | Seal the book with a waterproof sealant to keep it from rotting. |\n| 3 | **Coasters & placemats** | Cut out pages, laminate or glue them to cork, and you\u2019ve got unique, literary coasters. | Add a protective coating to prevent stains. |\n| 4 | **Paper mache projects** | Tear pages into strips, mix with glue, and mold into bowls, masks, or sculptures. | Let them dry completely before painting. |\n| 5 | **DIY journals or sketchbooks** | Bind a few pages",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 826.432873000158,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:c5614122fc840d9e0033fb82": {
+"text": "People from the Netherlands are called **Dutch** in English.",
+"input_tokens": 82,
+"output_tokens": 26,
+"latency_ms": 504.354219000561,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:3311e9b0232120765d3202b3": {
+"text": "Sure\u2014while CRISPR and related gene\u2011editing tools hold tremendous promise, they also come with several notable drawbacks:\n\n| # | Disadvantage | Why it matters |\n|---|--------------|----------------|\n| **1. Off\u2011target effects & unintended mutations** | CRISPR\u2019s guide RNA can sometimes bind to sequences that are similar but not identical to the intended target. This can lead to cuts in the wrong place, creating insertions, deletions, or rearrangements that may have harmful consequences (e.g., disrupting tumor\u2011suppression genes or creating new disease\u2011causing mutations). | Off\u2011target edits can compromise safety, especially in therapeutic contexts, and may produce unpredictable phenotypes that are hard to reverse. |\n| **2. Ethical and societal concerns** | Editing germline cells (i.e., sperm, eggs, or embryos) raises profound ethical questions: who decides what traits are acceptable, how to prevent \u201cdesigner\u2011baby\u201d practices, and whether we should alter the human gene pool. Even somatic edits can spark debates about equity, access, and the potential for \u201cgenetic enhancement\u201d beyond disease treatment. | These concerns can lead to regulatory restrictions, public",
+"input_tokens": 86,
+"output_tokens": 256,
+"latency_ms": 514.6389120000094,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:601a35b26fc17cf3d179c6c4": {
+"text": "### 1. What they are\n\n| Feature | Solar Power (Photovoltaic) | Hydrogen Fuel Cell |\n|---------|---------------------------|--------------------|\n| **Primary energy source** | Sunlight (solar radiation) | Hydrogen gas (H\u2082) |\n| **Energy conversion** | Light \u2192 electricity (direct) | Chemical energy of H\u2082 \u2192 electricity (via electrochemical reaction) |\n| **Typical form** | Panels on roofs, ground\u2011mounted arrays, solar farms | Portable or stationary fuel cell stacks (PEM, SOFC, etc.) |\n| **By\u2011product** | None (just heat) | Water (H\u2082O) and heat (in most cells) |\n\n---\n\n### 2. How each works\n\n| Solar PV | Hydrogen Fuel Cell |\n|----------|--------------------|\n| Photons hit semiconductor \u2192 electron\u2011hole pairs \u2192 current flows through an external circuit. | Hydrogen + oxygen \u2192 water + electrons. Electrons flow through an external circuit, producing electricity; the reaction takes place in the fuel cell stack. |\n| No moving parts. | Some moving parts (compressors, pumps) in a complete hydrogen system (production, storage, delivery). |\n",
+"input_tokens": 90,
+"output_tokens": 256,
+"latency_ms": 640.0542150004185,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:6c112f019543ad2f89c6c2c1": {
+"text": "### The Ultimate Bolognese Sauce: A Step\u2011by\u2011Step Guide\n\nBolognese (or *rag\u00f9 alla bolognese*) is a slow\u2011cooked, meat\u2011based sauce that\u2019s all about depth of flavor, texture, and patience. Below is a recipe\u2011style guide that covers the essentials, plus a handful of \u201csecret\u201d tips that will elevate your sauce from good to unforgettable.\n\n---\n\n## 1. The Foundation: Ingredients & Prep\n\n| Category | Typical Amount (for 6 servings) | Notes |\n|----------|---------------------------------|-------|\n| **Meat** | 400\u202fg ground beef (80/20) + 200\u202fg ground pork | The pork adds fat and flavor; you can also use a mix of veal or beef\u2011pork. |\n| **Vegetables** | 1 onion, 1 carrot, 1 celery stalk (finely diced) | Classic \u201csoffritto\u201d \u2013 the base of most Italian sauces. |\n| **Aromatics** | 2 cloves garlic (minced) | Optional \u2013 some chefs skip it to keep the sauce pure. |\n| **Liquids**",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 743.1663679999474,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2a38ecd9e217f17e07bcda88": {
+"text": "Finding a perfect rhyme for \u201corange\u201d is famously difficult in English, but there are a few words and phrases that come close\u2014either by sharing the same ending sound or by using a near\u2011rhyme (also called a slant rhyme). Below is a quick guide to the most common options, grouped by how closely they match the \u201corange\u201d sound.\n\n| Category | Word / Phrase | How it rhymes | Notes |\n|----------|---------------|---------------|-------|\n| **Exact rhymes** | *sporange* | Shares the \u201c\u2011orange\u201d ending. | A rare, botanical term for a type of fern. |\n| | *blorenge* | Same ending. | A hill in Wales; used in poetry for its exotic feel. |\n| | *door\u2011hinge* (pronounced \u201cdoor\u2011hinge\u201d) | The \u201c\u2011hinge\u201d part mimics the vowel and final consonant. | Often cited in jokes about rhyming with orange. |\n| | *foreign* (in some accents) | The \u201c\u2011eign\u201d sound can approximate the \u201c\u2011ange\u201d ending. | Works better in non\u2011rh",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 712.772579000557,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:0d997f5ed6b0c8dcaf48329c": {
+"text": "Kids take tests in school for a handful of practical and developmental reasons.  Think of a test as a quick snapshot that helps teachers, parents, and the students themselves see how well the learning is going.  Here are the main reasons:\n\n| Why | What it means for a student |\n|-----|------------------------------|\n| **Measure learning** | Tests give a concrete way to see if a child has understood a lesson or concept.  They\u2019re a quick check\u2011in that tells the teacher whether the class is on track or if something needs to be revisited. |\n| **Guide instruction** | If many students score low on a particular topic, the teacher knows to spend more time on that area.  Tests help teachers adjust their lesson plans to meet the class\u2019s needs. |\n| **Encourage study habits** | Knowing there will be a test motivates students to review material, organize notes, and practice skills.  It turns learning into a goal\u2011oriented activity. |\n| **Provide feedback** | After a test, students see where they did well and where they need improvement.  That feedback is essential for growth and helps them focus their efforts. |\n| **Build assessment skills** | Tests",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 612.0272300004217,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d4c27956417a20d9b0fcbad6": {
+"text": "Here are a mix of thoughtful, practical, and fun gift ideas that can suit a wide range of interests and budgets. Feel free to mix and match or tweak them to fit your sister\u2019s personality!\n\n| Category | Gift Idea | Why It\u2019s Great | Quick Customization Tips |\n|----------|-----------|----------------|--------------------------|\n| **Personalized & Sentimental** | \u2022 Custom photo\u2011album or scrapbook<br>\u2022 Engraved jewelry (e.g., a necklace with her initials)<br>\u2022 Personalized star map of a special date | Keeps memories alive, shows you care | Add a handwritten note or a favorite quote on the cover |\n| **Experience\u2011Based** | \u2022 Spa day or massage voucher<br>\u2022 Cooking or art class together<br>\u2022 Concert or theater tickets | Creates lasting memories, encourages bonding | Book a date that works for both of you; include a \u201cdate night\u201d card |\n| **Tech & Gadgets** | \u2022 Smart speaker (Amazon Echo, Google Nest)<br>\u2022 Wireless earbuds or noise\u2011cancelling headphones<br>\u2022 Portable phone charger with a fun design | Practical, stylish, and useful | Pair with a favorite playlist or a custom charging",
+"input_tokens": 86,
+"output_tokens": 256,
+"latency_ms": 641.2848469999517,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:495b5eb8ce0f7a8172b6a02d": {
+"text": "As of 2026, the European Union (EU) consists of **27 member countries**. Here is the full list:\n\n| # | Country |\n|---|---------|\n| 1 | Austria |\n| 2 | Belgium |\n| 3 | Bulgaria |\n| 4 | Croatia |\n| 5 | Cyprus |\n| 6 | Czech Republic |\n| 7 | Denmark |\n| 8 | Estonia |\n| 9 | Finland |\n|10 | France |\n|11 | Germany |\n|12 | Greece |\n|13 | Hungary |\n|14 | Ireland |\n|15 | Italy |\n|16 | Latvia |\n|17 | Lithuania |\n|18 | Luxembourg |\n|19 | Malta |\n|20 | Netherlands |\n|21 | Poland |\n|22 | Portugal |\n|23 | Romania |\n|24 | Slovakia |\n|25 | Slovenia |\n|26 | Spain |\n|27 | Sweden |\n\nThese are the countries that are full members of the EU, participating in its institutions, policies, and the single market.",
+"input_tokens": 79,
+"output_tokens": 222,
+"latency_ms": 588.0645380002534,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8801cdbb3ab68e0015a66b4f": {
+"text": "## The \u201cHoly Grail\u201d of Neapolitan Pizza Dough  \n*(A step\u2011by\u2011step guide that turns your kitchen into a tiny pizzeria)*  \n\n---\n\n### 1. The Core Principles\n\n| Principle | Why it matters | How to achieve it |\n|-----------|----------------|-------------------|\n| **High\u2011quality flour** | Gives the right gluten structure and flavor | Use 00 flour (Italian \u201c00\u201d is the gold standard). If you can\u2019t find it, a blend of 00 + a bit of bread flour works. |\n| **Water temperature** | Controls yeast activity | 20\u201322\u202f\u00b0C (68\u201372\u202f\u00b0F) \u2013 lukewarm, not hot. |\n| **Salt** | Balances flavor & controls fermentation | 2\u202f% of flour weight (\u2248\u202f2\u202fg per 100\u202fg flour). |\n| **Yeast** | Drives rise & flavor | 0.5\u202f% of flour weight (\u2248\u202f0.5\u202fg per 100\u202fg flour). Use fresh active dry or instant yeast. |\n| **Fermentation time** | Builds flavor & digestibility",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 720.0434520000272,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:5addf406126c3fc7c48371e4": {
+"text": "Here are a mix of classic, quirky, and unforgettable spots that can set the perfect backdrop for asking your partner out. Pick one that matches your vibe, the season, and what makes your relationship special.\n\n| # | Location | Why It Works | Tips for the Moment |\n|---|----------|--------------|---------------------|\n| 1 | **Sunset Rooftop** | A panoramic view, city lights, and a sense of intimacy. | Bring a cozy blanket, a small bottle of sparkling wine, and let the sunset be the backdrop. |\n| 2 | **Hidden Garden Caf\u00e9** | Intimate, lush, and a touch of romance. | Order a dessert to share; the sweet setting mirrors the sweetness of your ask. |\n| 3 | **Stargazing Spot (e.g., a hilltop or a quiet beach)** | The vastness of the sky can make the moment feel epic. | Pack a telescope or a blanket, and maybe a small portable speaker for soft music. |\n| 4 | **Art Gallery Opening** | A cultured vibe, and you can talk about the art as a metaphor for your relationship. | Choose a piece that resonates with both of you",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 500.9185590006382,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:02b2db6bb6b569c70eeaebea": {
+"text": "### The \u201cBest\u201d Electrical System for an RV  \nThere isn\u2019t a one\u2011size\u2011fits\u2011all answer\u2014what\u2019s \u201cbest\u201d depends on how you\u2019ll use the RV, how long you\u2019ll be off\u2011grid, and your budget. Below is a quick\u2011reference guide that breaks down the most common options, their pros/cons, and the scenarios where each shines.\n\n| System | Typical Power Source | Capacity | Key Advantages | Key Drawbacks | Ideal Use\u2011Case |\n|--------|----------------------|----------|----------------|---------------|----------------|\n| **Standard 12\u202fV DC (Battery\u2011Only)** | Lead\u2011acid or AGM batteries | 100\u2013400\u202fAh (typical) | \u2022 Simple, inexpensive<br>\u2022 Works everywhere (no shore power needed) | \u2022 Limited runtime<br>\u2022 Batteries degrade quickly with deep cycles | Short trips, low\u2011power use (lights, small appliances) |\n| **12\u202fV DC + 120\u202fV AC (Hybrid)** | Batteries + shore power or generator | 120\u202fV AC up to 200\u202fW (or more with larger inverter) | \u2022 Runs most home appliances<br>\u2022 Batteries provide backup | \u2022",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 510.33819999975094,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:28adb7e7083ab7a21c7b1418": {
+"text": "Rudy\u202fStevens became famous under the stage name **\u201cRudy\u201d** (often billed simply as *Rudy*).",
+"input_tokens": 79,
+"output_tokens": 145,
+"latency_ms": 671.0454350004511,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f129a0daf835d872dbb501dc": {
+"text": "The debate over the greatest NFL quarterback of all time is as lively today as it was when the league\u2019s early legends were still setting records. While there are many strong contenders, most analysts, historians, and fans converge on **Tom Brady** as the definitive answer. Here\u2019s why:\n\n| Category | Tom Brady | Key Points |\n|----------|-----------|------------|\n| **Career Longevity & Consistency** | 23 seasons (2000\u20112022) | 7 Super Bowl titles, 5 Super Bowl MVPs, 3 MVP awards, 14 Pro\u202fBowls, 3 NFL MVPs. |\n| **Statistical Dominance** | 7,000+ career passing yards per season (average 4,500+), 600+ career touchdown passes, 30,000+ career passing yards, 300+ career passing touchdowns. | Holds records for most career touchdown passes, most career passing yards, most career wins as a starter. |\n| **Clutch Performance** | 10 playoff games with 400+ yards, 5 playoff MVPs, 3 playoff MVP awards. | Known for \u201cThe Comeback\u201d (2007), \u201cThe Defiant\u201d",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 821.6204730006211,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:1708a9724fb321ddf8b43ecb": {
+"text": "### Edible Weeds That Grow Well in Maryland\n\nMaryland\u2019s climate (humid summers, cold winters, and a mix of coastal and inland soils) supports a wide variety of \u201cweed\u201d species that are not only hardy but also tasty and nutritious. Below is a handy guide to some of the most common edible weeds you\u2019ll find in Maryland gardens, yards, and even roadside ditches. For each plant, I\u2019ve included a quick description, what part of the plant is edible, how to harvest it, and a few simple recipe ideas.\n\n| # | Weed | What Part(s) Are Edible | Harvest Tips | Quick Recipe Ideas |\n|---|------|------------------------|--------------|--------------------|\n| 1 | **Dandelion (Taraxacum officinale)** | Leaves (young, tender), flowers, roots | Pick leaves in the morning after rain; roots in late fall or early spring. | **Salad** with lemon vinaigrette; **saut\u00e9ed** with garlic; **tea** from dried roots. |\n| 2 | **Plantain (Plantago spp.)** | Leaves, young shoots | Harvest young, soft",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 512.0238609997614,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:86ad3abd215aeef10312e4d3": {
+"text": "Yes \u2013 Delta\u202fLake is built to work with Spark Structured\u202fStreaming, so you can **write** streaming data directly into a Delta table and **read** from a Delta table as a streaming source.  \nBelow is a quick\u2011start guide that shows the most common patterns, the caveats, and the best\u2011practice settings.\n\n---\n\n## 1. Writing a streaming source to a Delta table\n\n```python\nfrom pyspark.sql import SparkSession\nfrom pyspark.sql.functions import *\n\nspark = SparkSession.builder \\\n    .appName(\"DeltaStreamingWrite\") \\\n    .getOrCreate()\n\n# 1. Read a streaming source (Kafka, socket, file, etc.)\ndf_stream = spark.readStream \\\n    .format(\"kafka\") \\\n    .option(\"kafka.bootstrap.servers\", \"host1:9092,host2:9092\") \\\n    .option(\"subscribe\", \"topic1\") \\\n    .load()\n\n# 2. Transform / cast the data as needed\ndf_parsed = df_stream.selectExpr(\"CAST(key AS STRING)\", \"CAST(value AS STRING)\")\n\n# 3",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 664.7448680005255,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:90fcc334faa494f435e53b40": {
+"text": "## Quick Take\u2011away\n\n| Question | Short answer |\n|----------|--------------|\n| **Should I use microservices?** | Only if the benefits (scalability, team autonomy, technology diversity, fault isolation, continuous delivery) outweigh the added complexity (distributed systems, ops overhead, data consistency, testing). |\n| **How many microservices?** | There\u2019s no magic number. Start with a *small, bounded\u2011context* per business capability, then split only when you hit real pain points (team size, deployment frequency, scaling needs, or cross\u2011cutting concerns). |\n\n---\n\n## 1. When Microservices Make Sense\n\n| Pain Point | Microservice Benefit | Typical Scenario |\n|------------|----------------------|------------------|\n| **Large, evolving codebase** | Independent deploys keep the repo manageable | 10+ developers, 5+ teams |\n| **Different tech stacks** | Each service can use the best language/DB for its domain | AI/ML service in Python, payment gateway in Go |\n| **Scalable workloads** | Scale hot services without touching the rest | Video transcoding, real\u2011time analytics |\n| **Fault isolation** |",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 627.4984009996842,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ba44a7363b9d625cb0567e5c": {
+"text": "### The Ultimate U.S. Golf Trip Guide  \n*(Ranked by a blend of course quality, scenery, amenities, and overall experience)*  \n\n| Rank | Destination | Why It\u2019s a Must\u2011Visit | Iconic Courses | Best Time to Go |\n|------|-------------|----------------------|----------------|-----------------|\n| **1** | **Pebble Beach, California** | Legendary West\u2011Coast links, world\u2011class service, and breathtaking Pacific views. | Pebble Beach Golf Links, Spyglass Hill, Cypress Point | May\u2011September (warm, dry) |\n| **2** | **Scottsdale, Arizona** | Desert\u2011style courses, year\u2011round sunshine, and a vibrant golf\u2011culture scene. | TPC Scottsdale (The Stadium), Grayhawk, Troon North | October\u2011April (cooler) |\n| **3** | **St. Augustine, Florida** | Historic charm, tropical climate, and a mix of links and parkland styles. | Old Fort, The Links at St. Augustine, TPC St. Augustine | November\u2011April (mild) |\n| **4** | **Bandon, Oregon**",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 589.8164749996795,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:be2aeb575039032d04271bbc": {
+"text": "Deserts are typically characterized by **hot, dry, and arid** weather. They receive very little rainfall, have high daytime temperatures (often well above 30\u202f\u00b0C/86\u202f\u00b0F), and can experience significant temperature swings between day and night. The skies are usually clear and sunny, with low humidity and minimal cloud cover.",
+"input_tokens": 82,
+"output_tokens": 95,
+"latency_ms": 467.88839799955895,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f9a6a86fca621ed4040e78ab": {
+"text": "Here\u2019s a quick, handy list of common items you might find tucked away in a fridge:\n\n| Category | Typical Items | Why They\u2019re There |\n|----------|---------------|-------------------|\n| **Dairy** | Milk, cheese, yogurt, butter, sour cream | Keeps them fresh and prevents spoilage. |\n| **Proteins** | Eggs, leftover cooked meats, deli meats, tofu, fish | Refrigeration slows bacterial growth. |\n| **Produce** | Lettuce, spinach, carrots, bell peppers, cucumbers, tomatoes, fruit (berries, grapes, apples) | Keeps crisp and extends shelf life. |\n| **Condiments** | Ketchup, mustard, mayonnaise, salad dressings, hot sauce, soy sauce | Many are perishable or benefit from a cool environment. |\n| **Beverages** | Water, juice, soda, beer, wine (if you keep it chilled) | Keeps drinks cold and refreshing. |\n| **Leftovers** | Cooked pasta, rice, casseroles, soups, pizza, pizza slices | Refrigeration preserves food safety and flavor. |\n| **Miscellaneous** | Pickles, olives, hummus, salsa, dips, sauces",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 725.0804919995062,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:cfa7c633ffdd1fb9e8cd1e13": {
+"text": "Below is a snapshot of some of the highest\u2011rated *The X\u2011Files* episodes according to major viewer\u2011rating sites (IMDb, Rotten\u202fTomatoes, and TV\u2011Guide).  The list is sorted roughly by average rating, and it includes the episode title, season/episode number, original air date, and the rating source(s).  (Ratings are current as of early\u202f2026; they can fluctuate slightly over time.)\n\n| # | Episode | Season / Episode | Air Date | IMDb | Rotten\u202fTomatoes (Critics) | Rotten\u202fTomatoes (Audience) | TV\u2011Guide |\n|---|---------|------------------|----------|------|---------------------------|----------------------------|----------|\n| 1 | **\"The Host\"** | S1\u202fE3 | 9\u202fSep\u202f1993 | 9.0 | 100\u202f% | 98\u202f% | 9.5/10 |\n| 2 | **\"The Erlenmeyer Flask\"** | S1\u202fE4 | 16\u202fSep\u202f1993 | 8.9 | 100\u202f% | 97\u202f% | 9",
+"input_tokens": 91,
+"output_tokens": 256,
+"latency_ms": 706.9163259993729,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:e79f9af7d3c77d04ebdcd856": {
+"text": "The charging port on a Tesla Model\u202fY is located on the **left side of the rear bumper** (the side that faces the driver when you\u2019re in the car).  \n\n- **Where to look:**  \n  - Stand in front of the vehicle and look at the rear bumper.  \n  - On the left side (driver\u2019s side) you\u2019ll see a small, recessed panel that\u2019s the charging port cover.  \n  - The cover is usually a dark gray or black panel with a small \u201cT\u201d or \u201cTesla\u201d logo on it.\n\n- **How to open it:**  \n  1. Press the button on the cover (or swipe the cover with your hand if it\u2019s a touch\u2011sensitive panel).  \n  2. The cover will pop up or slide out, revealing the charging inlet.  \n  3. Insert the charging cable into the inlet and it will lock in place.\n\nIf you\u2019re having trouble finding it, you can also use the Tesla mobile app or the in\u2011car touchscreen:  \n- Go to **Controls \u2192 Charge \u2192 Open Charge Port**.  \n- The app will guide you with a visual cue or a short video showing the",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 715.4612750000524,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:9020e7289ce46331caca122f": {
+"text": "The \u201cbest\u201d part of having children varies from person to person, but many parents point to a few common themes that capture the joy and fulfillment of raising kids:\n\n| Aspect | Why it feels special |\n|--------|----------------------|\n| **Unconditional love** | Children give a love that\u2019s pure, immediate, and often feels like a mirror of your own heart. |\n| **Learning and growth** | Watching a child\u2019s mind expand\u2014first words, first steps, first ideas\u2014offers a front\u2011row seat to the wonder of learning. |\n| **Shared moments** | From bedtime stories to backyard adventures, those everyday moments become treasured memories that last a lifetime. |\n| **Legacy and continuity** | Children carry forward family stories, traditions, and values, creating a living bridge between generations. |\n| **Personal transformation** | Parenting forces you to become more patient, creative, and present, often leading to a deeper sense of purpose. |\n| **Joy in small victories** | A child\u2019s first \u201cI can do it!\u201d or a new skill mastered brings a unique, almost childlike excitement. |\n| **Future hope** | Knowing that your child will one day shape the world gives a",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 758.869878999576,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:b9ea979fa22596896831eb9b": {
+"text": "One dollar and thirty\u2011five cents.",
+"input_tokens": 104,
+"output_tokens": 95,
+"latency_ms": 516.6843409997455,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2349606d7c8e578c062be94c": {
+"text": "**Short answer:**  \nA nuclear explosion can, in principle, change the Earth\u2019s rotation, but the effect is astronomically tiny\u2014far below any measurable threshold.\n\n---\n\n## 1.  The physics behind the effect\n\nThe Earth\u2019s rotation is governed by **conservation of angular momentum**:\n\n\\[\nL = I\\,\\omega = \\text{constant}\n\\]\n\nwhere  \n\n* \\(I\\) = moment of inertia of the Earth (depends on how mass is distributed),  \n* \\(\\omega\\) = angular velocity (rotation rate).\n\nIf a mass is moved or redistributed, \\(I\\) changes, and \\(\\omega\\) must adjust to keep \\(L\\) constant. A nuclear detonation can:\n\n1. **Move mass** (e.g., eject a small amount of material into space or loft it high into the atmosphere).  \n2. **Heat and expand** the surrounding air, slightly changing the Earth\u2019s density distribution.\n\nBoth actions alter \\(I\\) and thus \\(\\omega\\).\n\n---\n\n## 2.  How big is the",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 724.1230090003228,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2da14c56447aaf8ddf8261c8": {
+"text": "Here are the five most effective ways to keep your houseplants thriving:\n\n1. **Light\u2011appropriate placement**  \n   *Match the plant\u2019s natural habitat to the light level in your home.*  \n   - **Low\u2011light species** (e.g., snake plant, philodendron) thrive near north\u2011facing windows or in shaded corners.  \n   - **Bright\u2011light species** (e.g., pothos, spider plant) need east or south\u2011facing windows with indirect light.  \n   - Rotate plants every 4\u20136 weeks to promote even growth and prevent leaning.\n\n2. **Consistent watering routine**  \n   - **Check soil moisture**: Stick a finger 1\u20132\u202finches deep; if dry, water.  \n   - **Avoid over\u2011watering**: Ensure pots have drainage holes and use a saucer that you empty after watering.  \n   - **Seasonal adjustment**: Reduce watering in winter when many plants enter dormancy; increase during active growth (spring/summer).\n\n3. **Proper humidity and temperature**  \n   - **Humidity**: Many tropical plants need 40\u201360\u202f% humidity. Use a pebble tray with",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 715.1397410007121,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:64d490bd38b3955044d99e90": {
+"text": "**Traditional French Cr\u00eape Recipe**\n\n*Yield:* About 12\u201315 thin cr\u00eapes (\u2248 1\u202fcm thick)\n\n---\n\n### Ingredients\n\n| Ingredient | Amount | Notes |\n|------------|--------|-------|\n| All\u2011purpose flour | 125\u202fg (\u2248 1 cup) | Sifted to avoid lumps |\n| Eggs | 3 large | Room temperature |\n| Milk | 300\u202fml (\u2248 1\u202f\u00bc cups) | Whole milk gives richer flavor; you can use 2% or skim if you prefer |\n| Water | 75\u202fml (\u2248 \u00bd cup) | Adds a bit of lightness |\n| Butter | 30\u202fg (\u2248 2\u202fTbsp) | Melted, plus extra for cooking |\n| Sugar | 1\u202fTbsp | Optional (for sweet cr\u00eapes) |\n| Salt | \u00bc\u202ftsp | Enhances flavor |\n| Vanilla extract | \u00bd\u202ftsp | Optional, for sweet cr\u00eapes |\n| Optional: zest of 1 lemon or orange | 1\u202fTbsp | Adds bright aroma |\n\n---\n\n### Equipment\n\n- Non\u2011stick skillet or cr\u00eape",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 517.0272880004632,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:e69cc4629b5ebcd24d0f9b91": {
+"text": "**National Payments Corporation of India (NPCI)** is a non\u2011profit organization established in 2008 by the Reserve Bank of India (RBI) and the Indian Banks\u2019 Association (IBA) to develop and manage a unified payments ecosystem for India. Its primary goal is to promote financial inclusion, improve payment infrastructure, and foster innovation in the country\u2019s digital payments landscape.\n\n---\n\n### Key Functions and Responsibilities\n\n| Area | What NPCI Does |\n|------|----------------|\n| **Payments Infrastructure** | Operates and maintains a range of payment systems, including real\u2011time gross settlement (RTGS), national electronic funds transfer (NEFT), and the Unified Payments Interface (UPI). |\n| **Inter\u2011Bank Connectivity** | Provides a common platform for banks to interconnect, enabling seamless fund transfers across institutions. |\n| **Digital Wallets & UPI** | Runs the UPI platform, which allows instant, person\u2011to\u2011person and person\u2011to\u2011merchant payments via mobile phones. It also manages the National Electronic Funds Transfer (NEFT) and Immediate Payment Service (IMPS). |\n| **Innovation & Standards** | Sets industry standards, promotes new payment technologies, and collaborates with",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 722.112207000464,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:0759ac1563f09e5963d18828": {
+"text": "King Charles\u202fIII was born on 14\u202fNovember\u202f1948, and his full name is **Charles Philip Arthur George**.",
+"input_tokens": 85,
+"output_tokens": 59,
+"latency_ms": 425.1224390000061,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:073cb4b5734000b51b6076df": {
+"text": "The nickname \u201chand\u2011grenade\u201d for a pomegranate comes from a combination of visual, cultural, and linguistic factors that have evolved over centuries.\n\n---\n\n## 1. The Visual Analogy\n\n| Feature | Pomegranate | Hand\u2011Grenade |\n|---------|-------------|--------------|\n| **Shape** | Roughly round, about 6\u20138\u202fcm in diameter | Roughly round, about 5\u20136\u202fcm in diameter |\n| **Surface** | Covered in a thick, textured rind with a \u201ccracked\u201d look | Rough, textured metal shell |\n| **Core** | Contains many seeds (seeds = \u201cprojectiles\u201d) | Contains a fuse and explosive charge |\n| **Color** | Deep red or orange | Often painted red or orange for visibility |\n\nThe pomegranate\u2019s hard, segmented rind and the way its seeds are packed inside resemble the way a grenade\u2019s shell contains a charge that \u201cexplodes\u201d into many fragments. The visual similarity is strong enough that people in many cultures have used the fruit as a metaphor for a grenade.\n\n---\n\n## 2. Historical and Cultural Roots\n\n### 2.1. Ancient Symbolism\n\n- **Ancient Persia & India",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 699.4890850000957,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8016a74643d6813d1cadf188": {
+"text": "**Kim\u202fStanley\u202fRobinson** is a prolific science\u2011fiction author whose work blends hard science, ecological concern, and richly drawn characters.  While \u201cbest\u201d is always a matter of taste, the following five novels are widely regarded as his most influential, critically acclaimed, and beloved by readers:\n\n| # | Title | Year | Why it\u2019s a \u201cbest\u201d |\n|---|-------|------|-------------------|\n| 1 | **The Mars Trilogy** (Red Mars, Green Mars, Blue Mars) | 1992\u20131996 | A sweeping, meticulously researched saga that follows the colonization and terraforming of Mars.  It\u2019s celebrated for its scientific realism, complex politics, and deep exploration of human ambition and identity. |\n| 2 | **The Years of Rice and Salt** | 2002 | A speculative alternate\u2011history novel that imagines a world where the Black Death never struck Europe, allowing the Islamic Golden Age to flourish.  The book is praised for its sweeping scope, lyrical prose, and thoughtful examination of culture, science, and gender. |\n| 3 | **Aurora** | ",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 758.0086250000022,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ec8edad8928ccba870993a42": {
+"text": "The Philippine House Committee on Public Works and Highways was elevated to a **standing committee in 1907**.",
+"input_tokens": 82,
+"output_tokens": 119,
+"latency_ms": 520.5153879996942,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:61003842c1cc09fedf4a474a": {
+"text": "The U.S. House of Representatives is composed of **435** voting members. This number is set by law and has been in place since 1911 (with a brief increase to 437 during the 1913\u20131915 period).",
+"input_tokens": 81,
+"output_tokens": 64,
+"latency_ms": 185.22303600002488,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:36361044e4de36abea95f457": {
+"text": "The New England region of the United States consists of six states:\n\n1. **Maine**  \n2. **New Hampshire**  \n3. **Vermont**  \n4. **Massachusetts**  \n5. **Rhode Island**  \n6. **Connecticut**",
+"input_tokens": 81,
+"output_tokens": 86,
+"latency_ms": 644.007013999726,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2265917492d9f463db602ff3": {
+"text": "- **Narendra\u202fModi** \u2013 2014\u202f\u2013\u202fpresent  \n- **Manmohan\u202fSingh** \u2013 2004\u202f\u2013\u202f2014  \n- **Atal\u202fBihari\u202fVajpayee** \u2013 1998\u202f\u2013\u202f2004 (also 1996 and 1991\u20111996)  \n- **H.\u202fD.\u202fDeve\u202fGowda** \u2013 1996  \n- **P.\u202fV.\u202fNarasimha\u202fRao** \u2013 1991\u202f\u2013",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 609.2373109995606,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:4915ea618ddf7a13343836ca": {
+"text": "### Campfire Cooking: A Quick Guide\n\n| Category | What You Can Cook | Tips & Tricks |\n|----------|------------------|---------------|\n| **Basic Grilling** | \u2022 Hot dogs, sausages, burgers, veggie patties<br>\u2022 Skewered kebabs (chicken, beef, tofu, veggies) | Use a sturdy grill grate or a makeshift one on a metal rack. Keep the coals at a steady, moderate heat. |\n| **Roasting** | \u2022 Corn on the cob<br>\u2022 Whole potatoes, sweet potatoes, carrots, onions, mushrooms<br>\u2022 Whole chicken or turkey (if you have a large fire) | Wrap in foil or place in a cast\u2011iron pot. Rotate often for even cooking. |\n| **Saut\u00e9ing / Stir\u2011Frying** | \u2022 Stir\u2011fried veggies with soy sauce or teriyaki<br>\u2022 Quick pasta or rice dishes | Use a cast\u2011iron skillet or a heavy pan. Keep the fire low to avoid burning. |\n| **Baking** | \u2022 Banana bread, scones, muffins (in a Dutch oven or foil packet)<br>\u2022 Pizza (flatbread topped with",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 534.2471469994052,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:47b91fcf721ebde9df05fa15": {
+"text": "**Short answer:**  \nNo, there is no practical or legal reason to bring a gun to the Moon.\n\n---\n\n### Why a gun makes no sense in a lunar environment\n\n| Factor | Why a gun is useless or problematic |\n|--------|-------------------------------------|\n| **No wildlife or hostile humans** | The Moon has no animals, insects, or other people to threaten you. |\n| **Zero gravity & vacuum** | A firearm relies on a propellant that expands rapidly in air. In vacuum the powder would not burn properly, and the recoil would be unpredictable. |\n| **Regulatory constraints** | The Outer Space Treaty (1967) and national space agency regulations (NASA, ESA, Roscosmos, etc.) prohibit the transport of weapons into space. Any payload must be approved and inspected. |\n| **Mass and volume penalties** | Every kilogram on a launch vehicle costs millions of dollars. A gun, even a lightweight one, would add unnecessary mass and volume that could be used for scientific instruments or life",
+"input_tokens": 90,
+"output_tokens": 256,
+"latency_ms": 714.6013990004576,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d90036c019776ae011f64468": {
+"text": "### The \u201cHip\u201d Cities of the United States (2024)\n\n| Rank | City | State | Why It\u2019s Hip |\n|------|------|-------|--------------|\n| 1 | **Austin** | Texas | 1. **Live\u2011Music Capital** \u2013 400+ venues, SXSW, Austin City Limits.<br>2. **Tech & Startup Hub** \u2013 \u201cSilicon Hills\u201d with companies like Dell, Apple, and a booming venture\u2011capital scene.<br>3. **Cultural Fusion** \u2013 Food trucks, vegan bars, and a thriving arts district. |\n| 2 | **Portland** | Oregon | 1. **Sustainability First** \u2013 Bike\u2011friendly streets, eco\u2011caf\u00e9s, and a strong local\u2011producer movement.<br>2. **Microbrewery & Food Scene** \u2013 200+ breweries, food carts, and a reputation for \u201chipster\u201d coffee shops.<br>3. **Creative Community** \u2013 Street art, indie theaters, and a vibrant music scene. |\n| 3 | **Brooklyn (NYC)** | New York | 1. **Neighborhood Diversity** \u2013 Williamsburg, Bushwick,",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 484.1690869998274,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:57cd1cd8c659afcfaf4a4ab3": {
+"text": "### 1. Clarify Your \u201cWhy\u201d and Set a Goal\n\n| What to do | Why it matters | How to start |\n|------------|----------------|--------------|\n| **Define your motivation** | Knowing *why* you want tech (curiosity, higher salary, impact, flexibility) keeps you focused. | Write a one\u2011sentence \u201cmission statement\u201d (e.g., \u201cI want to build products that help people manage their finances.\u201d) |\n| **Pick a niche** | Tech is huge\u2014software dev, data science, cybersecurity, UX, DevOps, etc. | List 3\u20135 areas that excite you. Do a quick online search (Google, LinkedIn, Reddit) to see what people in those roles actually do. |\n| **Set a concrete goal** | A clear target (e.g., \u201cBecome a junior front\u2011end developer at a SaaS company by Q4 2025\u201d) gives you a roadmap. | Use the SMART framework: Specific, Measurable, Achievable, Relevant, Time\u2011bound. |\n\n---\n\n### 2. Build a Foundation of Technical Skills\n\n| Skill | Why it\u2019s core | Resources (free/low",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 526.5446040002644,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d235e2a10c619eba9d50b4f7": {
+"text": "In economics, a **monopoly** is a market structure in which a single firm (or a single entity) is the sole producer or supplier of a product or service that has no close substitutes. Because it is the only source of that good or service, the monopolist has significant control over the market price and can influence supply, demand, and overall market outcomes. Key characteristics of a monopoly include:\n\n1. **Single Seller** \u2013 Only one firm supplies the entire market.\n2. **No Close Substitutes** \u2013 Consumers cannot easily switch to another product or service.\n3. **High Barriers to Entry** \u2013 Structural, legal, technological, or economic obstacles prevent other firms from entering the market.\n4. **Price Maker** \u2013 The firm can set prices above marginal cost, often leading to higher prices and lower output than in competitive markets.\n5. **Market Power** \u2013 The firm can influence market conditions, such as pricing, output, and product quality.\n\nMonopolies can arise naturally (e.g., due to unique resources or technology) or be created by government regulation (e.g., public utilities). They are often scrutinized by antitrust laws because they can lead to inefficiencies, higher",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 695.0091859998793,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:1b16b1b8936bbee37f979268": {
+"text": "**Short answer:**  \nYes\u2014many Gen\u202fZ listeners appreciate Radio\u202fHead, but the degree varies widely.  \n\n---\n\n### Why Gen\u202fZ might gravitate toward Radio\u202fHead\n\n| Factor | How it resonates with Gen\u202fZ |\n|--------|-----------------------------|\n| **Digital\u2011native discovery** | Radio\u202fHead\u2019s catalog is everywhere on streaming platforms (Spotify, Apple\u202fMusic, YouTube). Playlists like \u201cAlternative Rock Classics\u201d or \u201cIndie Essentials\u201d often feature their tracks, making it easy for younger listeners to stumble upon them. |\n| **Emotional depth & authenticity** | Gen\u202fZ values music that feels real and introspective. Albums such as *OK Computer* and *Kid A* explore alienation, technology, and anxiety\u2014topics that echo the concerns of a generation growing up in a hyper\u2011connected, uncertain world. |\n| **Genre\u2011blending & experimentation** | Radio\u202fHead\u2019s willingness to mix rock, electronica, ambient, and experimental sounds aligns with Gen\u202fZ\u2019s eclectic tastes. They\u2019re less likely to be confined to a single genre, so the band\u2019s evolution keeps them engaged. |\n| **Social and political commentary** | Songs",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 733.2374950001395,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:3df09ce667f0f834c66375cb": {
+"text": "Roger likes **strawberries** least among those three.",
+"input_tokens": 111,
+"output_tokens": 93,
+"latency_ms": 585.7567600005495,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:fa47dc909a075d4071f358da": {
+"text": "Balancing capitalism\u2019s drive for efficiency and innovation with the goal of economic equality is a perennial policy challenge.  No single formula works for every country, but a mix of market\u2011friendly institutions, progressive redistribution, and social safety nets can create a more inclusive system.  Below is a practical framework that policymakers, businesses, and civil society can use to sketch that balance.\n\n---\n\n## 1. Core Principles\n\n| Principle | What it Means | Why It Matters |\n|-----------|---------------|----------------|\n| **Market Efficiency** | Allow competition, price signals, and private ownership to allocate resources. | Drives innovation, productivity, and wealth creation. |\n| **Progressive Redistribution** | Use taxes, transfers, and public services to reduce inequality. | Ensures that the benefits of growth reach all segments of society. |\n| **Rule of Law & Property Rights** | Secure contracts, enforceable rights, and transparent regulations. | Builds trust and attracts investment. |\n| **Social Safety Net** | Provide basic income, healthcare, education, and unemployment support. | Protects the vulnerable and reduces poverty spikes. |\n| **Participatory Governance** | Involve workers, communities, and consumers in decision\u2011making.",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 716.585144000419,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:da18b09b73cc6c17e523cebf": {
+"text": "I\u2019m sorry, but I can\u2019t help with that.",
+"input_tokens": 94,
+"output_tokens": 31,
+"latency_ms": 666.6442590003498,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8e9ceac0869f03e131c51e61": {
+"text": "Here are four solid reasons to install solar panels and a Tesla Powerwall (or any home battery) at your house:\n\n| # | Reason | Why it matters |\n|---|--------|----------------|\n| **1. Lower and predictable energy bills** | Solar panels generate electricity on your own roof, so you\u2019re not buying every kilowatt from the grid. A Powerwall lets you store excess daytime production and use it at night or during peak\u2011rate periods, further reducing your monthly bill. Over a 20\u201130\u2011year horizon, the savings can easily offset the upfront cost. |\n| **2. Energy independence & resilience** | With a battery you\u2019re no longer fully reliant on the utility. In case of a power outage, the Powerwall can keep critical loads (fridge, lights, HVAC) running for hours or even days, depending on your setup. It also protects you from rate hikes, grid instability, or supply disruptions. |\n| **3. Environmental impact & carbon footprint** | Solar electricity is clean\u2014no CO\u2082 or pollutants are emitted during generation. Storing that clean energy in a battery means you\u2019re using renewable power even when the sun isn\u2019t shining.",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 621.2085110000771,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ebb78eebeed15b1884d708e3": {
+"text": "**World\u2019s Most Popular Leaders (as of late\u202f2024)**  \n*(Popularity measured by global media coverage, public approval in their own countries, and influence on international affairs. The list is not exhaustive and is subject to change.)*\n\n| # | Leader | Country | Why They\u2019re Popular | Key Achievements / Notable Actions |\n|---|--------|---------|---------------------|------------------------------------|\n| 1 | **Joe Biden** | United States | Long\u2011standing political career, \u201cAmerica First\u201d reversal, and a focus on restoring alliances. | Re\u2011joined the Paris Climate Agreement, re\u2011engaged with NATO, and pushed for infrastructure and climate legislation. |\n| 2 | **Xi Jinping** | China | Strong domestic control, economic reforms, and a clear vision for China\u2019s global role. | Consolidated power, launched the \u201cMade in China 2025\u201d plan, and led China\u2019s push for technological self\u2011reliance. |\n| 3 | **Narendra Modi** | India | Charismatic leadership, economic reforms, and a focus on national identity. | Implemented GST, Digital India, and a major push",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 488.6641499997495,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2d1075672a019238b9137454": {
+"text": "Based on the description\u2014brown fur, a broad, somewhat flattened shoulder profile, and noticeably large ears\u2014the animal you\u2019re looking at is most likely a **brown bear (Ursus arctos)**, commonly known as a grizzly bear in North America. These bears have a broad, somewhat flattened shoulder area and relatively large ears that help them detect prey and navigate their environment.",
+"input_tokens": 98,
+"output_tokens": 150,
+"latency_ms": 592.010991999814,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:60f2c58f0e78bac12399ab47": {
+"text": "### Compostable \u2013 What It Really Means\n\n**Compostable** is a label that tells you a product (or its packaging) can be turned into a useful, nutrient\u2011rich soil amendment\u2014**compost**\u2014under the right conditions. It\u2019s more specific than \u201cbiodegradable\u201d and requires that the material breaks down into natural components without leaving harmful residues.\n\n---\n\n## 1. The Core Definition\n\nA material is **compostable** if it meets the following criteria:\n\n| Criterion | What it means |\n|-----------|---------------|\n| **Complete Decomposition** | The material fully disintegrates into organic matter (soil, water, CO\u2082) within a specified time frame. |\n| **No Toxic Residues** | The end product contains no harmful chemicals, heavy metals, or additives that could harm plants, animals, or humans. |\n| **Standard\u2011Based** | It meets a recognized composting standard (e.g., ASTM D6400, EN 13432, ISO 14001). |\n\n---\n\n## 2. How Composting Works\n\n1. **Microbial Action** \u2013 Bacteria, fungi, and other microorganisms consume the",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 509.6696050004539,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:6cc5917834fa1d1d6a00c1ee": {
+"text": "### The \u201cBest\u201d Guitarists of All Time  \n*(in no particular order \u2013 the list is a blend of technical mastery, influence, and innovation across genres)*  \n\n| Guitarist | Genre(s) | Why They\u2019re Legendary |\n|-----------|----------|-----------------------|\n| **Jimi Hendrix** | Psychedelic rock, blues | Revolutionized electric guitar with feedback, wah\u2011wah, and a lightning\u2011fast, expressive style. |\n| **Eric Clapton** | Blues rock, classic rock | Mastery of blues phrasing, soulful solos, and a career spanning six decades. |\n| **Jimmy Page** | Hard rock, heavy metal | Iconic riffs, innovative studio techniques, and the quintessential \u201crock guitarist\u201d image. |\n| **Stevie Ray Vaughan** | Texas blues, blues rock | Revived electric blues with scorching licks and a fiery, soulful tone. |\n| **Eddie Van Halen** | Hard rock, heavy metal | Invented two\u2011hand tapping, rapid legato, and a high\u2011energy, virtuosic style. |\n| **David Gilmour** | Progressive rock, psychedelic | Melodic, emotive solos and a signature",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 714.5388179997099,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2b92a485e04be071e13b1d69": {
+"text": "House\u202fTeague of the Reach was founded by **Lord Targaryen**.",
+"input_tokens": 90,
+"output_tokens": 238,
+"latency_ms": 730.4099249995488,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:6ea23790800a74750b26bb31": {
+"text": "",
+"input_tokens": 94,
+"output_tokens": 256,
+"latency_ms": 705.8082440007638,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:610206bedab40c0950eaec49": {
+"text": "",
+"input_tokens": 91,
+"output_tokens": 256,
+"latency_ms": 625.5177130005904,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:599c390ed210ff328f5726e2": {
+"text": "Here\u2019s a mix of practical, experiential, and creative gifts that tap into his interests and give him something memorable for his birthday:\n\n| Category | Gift Idea | Why It Fits | How to Personalize |\n|----------|-----------|-------------|--------------------|\n| **Travel** | **Scratch\u2011off world map** | Lets him track places he\u2019s visited and plan future trips. | Add a custom title (\u201c[Name]\u2019s Adventures\u201d) or a photo of a favorite destination. |\n| | **Portable travel journal** | He can jot down memories, sketch scenes, or keep receipts. | Choose a leather\u2011bound edition and emboss his initials. |\n| | **Noise\u2011cancelling earbuds** | Great for flights, trains, or quiet moments while traveling. | Pair with a travel\u2011friendly charging case. |\n| | **Travel\u2011size toiletry kit** | Compact, TSA\u2011approved, and stylish. | Include a monogrammed pouch. |\n| | **Digital luggage scale** | Avoid overweight fees and keep packing stress-free. | Opt for a sleek, battery\u2011free model. |\n| **Reading** | **First edition or signed copy of a favorite author** | A collector",
+"input_tokens": 104,
+"output_tokens": 256,
+"latency_ms": 856.4443819996086,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:65acef76b57741310c65da41": {
+"text": "",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 678.4699090003414,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2d81626a64740396731b65b2": {
+"text": "The city in Victoria known as the sporting capital of Australia is **Melbourne**.",
+"input_tokens": 83,
+"output_tokens": 32,
+"latency_ms": 291.72837500027526,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:7c69bd4d24a26fa2834998c5": {
+"text": "**Going to jail is a strategic choice in civil\u2011disobedience campaigns, and it serves several key goals:**\n\n| Goal | Why jail matters | How it works in practice |\n|------|------------------|--------------------------|\n| **Demonstrate genuine commitment** | By willingly accepting the legal consequences, activists show that they are not merely protesting for personal gain but are willing to bear the cost of their convictions. | A protester is arrested, charged, and serves a sentence (or is released on bail). The act is publicized, often through media or social media, highlighting the protester's resolve. |\n| **Create moral legitimacy** | The law is portrayed as unjust when the state punishes peaceful, non\u2011violent dissent. The protester\u2019s willingness to suffer for a cause signals that the cause is morally right. | Courts and juries see the protester\u2019s conduct; the public sees the contrast between the protester\u2019s peaceful actions and the state\u2019s punitive response. |\n| **Generate publicity and sympathy** | Arrests and jail time",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 654.9975249999989,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:55e04728373f7d31eaf6316d": {
+"text": "**Air Force Message Delivery \u2013 A Quick Overview**\n\nThe U.S. Air Force (USAF) uses a layered, secure, and redundant set of communication systems to deliver messages\u2014whether they\u2019re routine status reports, tactical orders, or emergency alerts. Below is a concise guide to the main delivery methods, the technologies involved, and the typical use\u2011cases.\n\n| Delivery Method | Typical Medium | Key Features | Common Use\u2011Cases |\n|-----------------|----------------|--------------|------------------|\n| **Secure Voice & Data (SATCOM)** | Satellite links (e.g., Milstar, AESA) | 24/7 global coverage, high\u2011bandwidth, encrypted | Long\u2011range command & control, real\u2011time video, large data transfers |\n| **Line\u2011of\u2011Sight (LOS) Radio** | HF, VHF, UHF, SATCOM\u2011backed | Rapid, low\u2011latency, suitable for aircraft & ground units | Tactical orders, aircraft\u2011to\u2011aircraft comms, ground\u2011to\u2011aircraft |\n| **Secure Network (AFNET, AFNET\u2011S)** | Fiber, microwave, satellite backhaul |",
+"input_tokens": 77,
+"output_tokens": 256,
+"latency_ms": 415.41821000009804,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ff024723b8b7a5fd5078ee81": {
+"text": "**Short\u2011answer:**  \nA \u201cdrug\u201d (small\u2011molecule drug, peptide, protein, or biologic) can elicit a neutralizing immune response when it is large enough to be recognized as a foreign antigen by the immune system. In practice, this means:\n\n| Category | Typical size | Immunogenicity (without help) | How to make it immunogenic |\n|----------|--------------|------------------------------|----------------------------|\n| Small\u2011molecule drug (\u2264 1\u202fkDa) | < 1\u202fkDa | Usually non\u2011immunogenic (hapten) | Conjugate to a carrier protein (e.g., keyhole limpet hemocyanin, KLH) or use a carrier\u2011free adjuvant |\n| Peptide drug (1\u20135\u202fkDa) | 10\u201350 aa | Can be immunogenic if > 10 aa; often poorly immunogenic alone | Conjugate to carrier protein, add T\u2011cell epitopes, or use adjuvants |\n| Protein biologic (\u2265 ",
+"input_tokens": 86,
+"output_tokens": 256,
+"latency_ms": 415.14198200002284,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:69f4ceb0c8ee79dc1c3f9f45": {
+"text": "The Ottoman Empire reached its zenith under **Sultan\u202fSuleiman\u202fthe\u202fMagnificent** (reigned 1520\u202f\u2013\u202f1566). During his reign the empire expanded dramatically\u2014conquering much of the Balkans, Hungary, and parts of Italy, while also solidifying its dominance in the eastern Mediterranean and the Middle East. Suleiman\u2019s military successes, administrative reforms, and patronage of the arts made him the most powerful and celebrated ruler of the Ottoman age.",
+"input_tokens": 86,
+"output_tokens": 125,
+"latency_ms": 603.0470229998173,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:76d7032a4fd3336322c37b73": {
+"text": "",
+"input_tokens": 78,
+"output_tokens": 256,
+"latency_ms": 722.3232180003833,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ae15d2c6afca4727a640d519": {
+"text": "**BSkyB (now Sky) \u2013 Electronic Programme Guide (EPG) Access**\n\n| Service | Typical Cost | Notes |\n|---------|--------------|-------|\n| **Free EPG (Basic)** | **\u00a30** | \u2022 Available to all Sky TV subscribers (including those on the \u201cSky Basic\u201d package). <br>\u2022 Shows programme titles, times, brief synopses, and channel line\u2011ups. <br>\u2022 Accessible via the Sky remote, the Sky Q app, and the Sky website. |\n| **Enhanced EPG (with additional data)** | **\u00a30 \u2013 \u00a35 per month** | \u2022 Some third\u2011party apps (e.g., \u201cTV Guide\u201d, \u201cMy Sky\u201d) bundle Sky\u2019s EPG data with extra features (e.g., recording reminders, social sharing). <br>\u2022 These apps may charge a small subscription fee or offer a free tier with ads. |\n| **Sky Q \u201cSky Guide\u201d (full\u2011screen, interactive)** | **Included in Sky Q subscription** | \u2022 No separate fee; part of the Sky Q hardware and service package.",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 652.5746099996468,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:c8382cf54a1955220cda5807": {
+"text": "**Distributed Adaptive Message Block Switching (DABMS)** was a research\u2011grade networking concept that emerged in the early 2000s as part of the *Adaptive Networking* research program at the University of Cambridge (and later at the University of Oxford).  It was designed to address two of the most pressing challenges in large\u2011scale, high\u2011performance data\u2011center and wide\u2011area networks:\n\n| Problem | Why it mattered |\n|---------|-----------------|\n| **Dynamic traffic patterns** | Modern workloads (cloud services, big\u2011data analytics, machine\u2011learning pipelines) generate traffic that changes on a sub\u2011second timescale. |\n| **Scalability of control plane** | Traditional routing protocols (e.g., OSPF, BGP) are too slow and generate too much state for the millions of flows that pass through a data\u2011center. |\n| **Quality\u2011of\u2011Service (QoS) guarantees** | Applications increasingly demand strict latency, jitter, and bandwidth guarantees that static routing cannot provide. |\n\n---\n\n## 1. Core Idea\n\nDABMS treats the network as a **distributed, self\u2011organising system of \u201cmessage blocks\u201d**.  Each block",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 457.74743299989495,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:065c5d4e01d4e7559afaf2bb": {
+"text": "",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 709.5263029996204,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:59433c616fdbdd0cb737918b": {
+"text": "**Cilia** are microscopic, hair\u2011like projections that extend from the surface of many eukaryotic cells. They serve a variety of functions depending on the cell type and organism. Here\u2019s a quick rundown of the main roles they play:\n\n| **Type of Cilium** | **Location** | **Primary Function** | **Key Features** |\n|--------------------|--------------|----------------------|------------------|\n| **Motile cilia** | \u2022 Respiratory tract (trachea, bronchi) <br>\u2022 Fallopian tubes (ovary) <br>\u2022 Ependymal cells lining brain ventricles <br>\u2022 Some sperm cells | \u2022 Move fluid or mucus over the cell surface <br>\u2022 Propel eggs or sperm <br>\u2022 Circulate cerebrospinal fluid | \u2022 9+2 microtubule arrangement (axoneme) <br>\u2022 Powered by dynein arms that slide microtubules |\n| **Non\u2011motile (primary) cilia** | \u2022 Almost all vertebrate cells (e.g., kidney epithelial cells, neurons, skin cells) | \u2022 Sensory organelles that detect mechanical, chemical, or",
+"input_tokens": 78,
+"output_tokens": 256,
+"latency_ms": 781.7336349999096,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:9e1b8370aafb440efa9bb0ef": {
+"text": "**Latin Honors (U.S. Colleges & Universities)**  \n\n| Rank | Latin Phrase | Typical Cut\u2011off | What It Means |\n|------|--------------|-----------------|---------------|\n| **1st** | **Summa cum laude** | ~top 4\u20135\u202f% of the class | \u201cWith highest praise.\u201d  The most prestigious honor, awarded to the very best students. |\n| **2nd** | **Magna cum laude** | ~next 10\u201315\u202f% | \u201cWith great praise.\u201d  Recognizes strong academic achievement. |\n| **3rd** | **Cum laude** | ~next 20\u201330\u202f% | \u201cWith praise.\u201d  A solid honor for above\u2011average performance. |\n\n**Why the top 4\u20135\u202f%?**  \n- Most institutions set the \u201csumma cum laude\u201d threshold at roughly the top 4\u20135\u202f% of the graduating class.  \n- This",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 812.4606969995511,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:bbe9ceb7e27c07a7afeb0e16": {
+"text": "The name **\u201cBlack Death\u201d** is credited to the 19th\u2011century historian **William R. Shepherd**. He popularized the term in his writings on the pandemic, and it has since become the standard label for the 14th\u2011century plague outbreak.",
+"input_tokens": 79,
+"output_tokens": 168,
+"latency_ms": 1331.7773250000755,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:da948436b3db55eca765874b": {
+"text": "The basic unit of territorial division in Poland is the **gmina** (plural: *gminy*). It is the lowest-level administrative unit, similar to a municipality or commune, and serves as the primary level of local government.",
+"input_tokens": 82,
+"output_tokens": 63,
+"latency_ms": 404.8087539995322,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:fcf038c134cd37cb68d06062": {
+"text": "According to Oxfam\u2019s latest report, the combined wealth of the world\u2019s 85 richest individuals is roughly equivalent to the total wealth of **about 1.5\u202fmillion average people**.",
+"input_tokens": 91,
+"output_tokens": 164,
+"latency_ms": 648.3029569999417,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:cd7499b7ed6e102019ea4882": {
+"text": "The **Botanic Garden** in Warsaw is a **public botanical garden** \u2013 a large, professionally managed green space that serves both scientific research and public recreation.  \nThe **University Library garden** is a **university (campus) garden** \u2013 a green area located on the university campus, primarily used for study, relaxation, and sometimes for small-scale research or educational activities.",
+"input_tokens": 87,
+"output_tokens": 124,
+"latency_ms": 361.2725049997607,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:606150f1cab1747bbf3b8ee2": {
+"text": "**Answer:**  \nThe \u201cOld Briton\u201d called *Britain* (or *Britannia*) home.\n\n**Why?**  \n- The term \u201cBriton\u201d literally means a person from Britain.  \n- Historically, the ancient Britons were the Celtic peoples who inhabited the island of Great Britain before and during the Roman period.  \n- So, when we refer to an \u201cOld Briton,\u201d we\u2019re talking about someone from the old Celtic tribes of Britain, whose homeland was the island itself\u2014modern\u2011day England, Scotland, Wales, and Northern Ireland.  \n\nIn short, the Old Briton\u2019s home was the island of Britain.",
+"input_tokens": 79,
+"output_tokens": 223,
+"latency_ms": 557.4618689997806,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:577f8481808fa7dc22a647ed": {
+"text": "Warsaw\u2019s National Museum is one of the **most important and most visited museums in Poland**.",
+"input_tokens": 83,
+"output_tokens": 95,
+"latency_ms": 598.6886529999538,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f8ae52ec90e003d8a9f7ae07": {
+"text": "A killer (cytotoxic) T\u2011cell is activated by the binding of **one** MHC\u2011peptide complex to its T\u2011cell receptor (TCR).  In practice, additional co\u2011stimulatory signals (e.g., CD28\u2013B7) are also required for full activation, but the minimal requirement for the antigen\u2011specific signal is a single MHC\u2011peptide complex.",
+"input_tokens": 95,
+"output_tokens": 133,
+"latency_ms": 611.0080270000253,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:51ef90c3a8e6b6face35691c": {
+"text": "**Propulsion engines that dominated maritime traffic during the 20th\u202fcentury**\n\n| Era (approx.) | Engine type | Key characteristics | Typical ship classes | Why it prevailed |\n|---------------|-------------|---------------------|----------------------|------------------|\n| **1900\u20111930** | **Steam turbines** (and earlier, reciprocating steam engines) | \u2022 High power\u2011to\u2011weight ratio<br>\u2022 Smooth operation, low vibration<br>\u2022 Steam generated by coal\u2011 or oil\u2011fired boilers | \u2022 Large ocean liners (e.g., RMS\u202fOlympic, SS\u202fNormandie)<br>\u2022 Early warships (e.g., dreadnoughts) | \u2022 Existing steam infrastructure<br>\u2022 Ability to produce large continuous power for high\u2011speed vessels |\n| **1930\u20111950** | **Diesel engines** (mainly medium\u2011speed, two\u2011stroke and four\u2011stroke) | \u2022 Direct\u2011drive, high thermal efficiency<br>\u2022 Lower fuel consumption than steam<br>\u2022 Easier to maintain and operate |",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 716.1114979999184,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ed5f489992eca24b93cc1cbf": {
+"text": "The Dutch name for the Rhine is **Rijn**.",
+"input_tokens": 80,
+"output_tokens": 26,
+"latency_ms": 561.5272739996726,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:0131d5ebe51d4a37fc277bf2": {
+"text": "The Ispah Rebellion was led by the **Ispah**, a group of Iranian soldiers who rose against the Sasanian Empire in the 7th\u202fcentury.",
+"input_tokens": 82,
+"output_tokens": 212,
+"latency_ms": 657.0823060001203,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:e03d8d627813fc01bc20bda8": {
+"text": "It would break down if the key fact that \u201cevery composite number \u2264\u202fN has a prime factor \u2264\u202f\u221aN\u201d were false. In other words, if there existed a composite number that has no prime factor less than or equal to its square\u2011root, the Sieve of Eratosthenes would no longer be valid.",
+"input_tokens": 88,
+"output_tokens": 185,
+"latency_ms": 684.0980189999755,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ffffb7166899a2b13797154c": {
+"text": "The drop in demand for rentals can usually be traced to a combination of economic, demographic, and market\u2011specific factors. Below are the most common drivers that tend to pull the demand curve to the left:\n\n| Category | Typical Causes | How It Reduces Demand |\n|----------|----------------|-----------------------|\n| **Economic Conditions** | \u2022 **Higher interest rates** \u2013 Mortgage rates rise, making buying more attractive relative to renting.<br>\u2022 **Inflation & cost of living spikes** \u2013 Renters feel squeezed by higher utilities, groceries, and transportation costs.<br>\u2022 **Unemployment or wage stagnation** \u2013 People are less willing or able to commit to a long\u2011term lease. | Renters either postpone moving or look for cheaper options, shrinking the pool of potential tenants. |\n| **Housing Supply Dynamics** | \u2022 **New construction or conversion of rentals to owner\u2011occupied homes** \u2013 More units available for purchase.<br>\u2022 **Shortage of rental inventory** \u2013 When supply is tight, landlords can raise rents, pushing out price\u2011sensitive renters. | A tighter rental market can either push demand up (if rents stay low) or down (",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 497.21592199966835,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:5391751ad3de4d8cf1815540": {
+"text": "The city is **Auckland**. It is one of New\u202fZealand\u2019s largest cities, alongside Hamilton, Wellington, and Christchurch.",
+"input_tokens": 91,
+"output_tokens": 43,
+"latency_ms": 629.0261690000989,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:a7ae033b92f82b6d70afdc3b": {
+"text": "In a progressive tax system, the **marginal tax rate** (the rate applied to the next dollar of income) rises as the taxable base amount (income) increases. Consequently, the **total tax liability** also grows, but the key feature is that the rate itself escalates with higher income brackets.",
+"input_tokens": 85,
+"output_tokens": 122,
+"latency_ms": 761.5819929997087,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:7ce80923512d2b75e04e541d": {
+"text": "The entire stretch of the **Rhine River that lies within the German state of North Rhine\u2011Westphalia** is what you\u2019re asking about.  \nIn practical terms, this is the section of the Rhine that runs from the state\u2019s western border with the Netherlands (near the town of **Emmerich am Rhein**) eastward to the state\u2019s eastern border with Rhineland\u2011Palatinate (near the town of **Koblenz**).  \n\nKey cities along this North Rhine\u2011Westphalian segment include:\n\n- **Emmerich am Rhein** (western terminus of the state\u2019s section)\n- **D\u00fcsseldorf**\n- **Cologne (K\u00f6ln)**\n- **Bonn**\n- **Koblenz** (eastern terminus, where the Rhine meets the Moselle)\n\nSo, the \u201cpart of the Rhine that flows through",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 2550.6169319996843,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f12dbdfdb9f467cf91aef5e1": {
+"text": "England formally declared war on France on **13\u202fJune\u202f1337**.  \nOn that day King Edward\u202fIII of England issued a proclamation announcing the war, marking the beginning of the Hundred Years\u2019 War.",
+"input_tokens": 80,
+"output_tokens": 95,
+"latency_ms": 559.2641150005875,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:88f2e373dac1490b976468cd": {
+"text": "When a Member State fails to transpose a Directive by the deadline set in the Directive itself, the European Union has a clear, step\u2011by\u2011step procedure to address the non\u2011compliance. The process is designed to give the Member State a chance to correct the situation while also protecting the interests of the Union and its citizens.\n\n---\n\n## 1. **Initial Notification**\n\n1. **Commission\u2019s Observation**  \n   - The European Commission monitors the implementation of directives.  \n   - If a deadline is missed, the Commission will usually first send a **letter of formal notice** to the Member State, reminding it of its obligations and requesting an explanation.\n\n2. **Member State\u2019s Response**  \n   - The Member State must reply within a specified period (often 30 days).  \n   - The reply should explain why the deadline was missed and outline a concrete plan (including a new deadline) for full implementation.\n\n---\n\n## 2. **Second Step \u2013 Formal Investigation**\n\nIf the Commission is not satisfied with the Member State\u2019s explanation or if the Member State fails to",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 717.1969110004284,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:1b0533f843f901b65c9ece9a": {
+"text": "None of the major classes of biomolecules\u2014proteins, nucleic acids, carbohydrates, or lipids\u2014are completely devoid of oxygen. Even the simplest amino acids contain a carbonyl oxygen, nucleic acids have phosphate and ribose oxygens, carbohydrates are rich in oxygen, and most lipids contain oxygen in their glycerol backbone or fatty\u2011acid side chains. Thus, there are no biomolecules that contain absolutely no oxygen.",
+"input_tokens": 79,
+"output_tokens": 206,
+"latency_ms": 615.3555799992318,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:3dead0535cfb59dc1bc73e8d": {
+"text": "The armed protest you\u2019re referring to is the **Ballarat Riots of 1854**.  \n- **Date:** The main confrontation took place on **12\u201313\u202fMarch\u202f1854**.  \n- **Context:** Miners in Ballarat (and the surrounding goldfields) were protesting a new mining tax imposed by the Victorian colonial government. The protest turned violent when the authorities attempted to enforce the tax, leading to an armed clash between miners and government forces.",
+"input_tokens": 84,
+"output_tokens": 189,
+"latency_ms": 576.2869410000349,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:dc579e274cb65177cb0e792c": {
+"text": "BSkyB\u2019s first fully\u2011digital television service, **Sky Digital**, was launched on **15\u202fSeptember\u202f1995**. This marked the company\u2019s transition from analogue to digital broadcasting, offering a wider range of channels and interactive features to subscribers.",
+"input_tokens": 81,
+"output_tokens": 111,
+"latency_ms": 652.3122690005039,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:04944650aedba2b9cedfa747": {
+"text": "**Erg\u00e4nzungsschulen** (also called *supplementary schools*, *after\u2011school programs*, *enrichment schools*, *tutoring centers*, etc.) are institutions that provide additional educational support outside the regular school day.  The most common types of Erg\u00e4nzungsschulen can be grouped into a few broad categories:\n\n| Category | Typical Offerings | Typical Target Group | Typical Setting |\n|----------|-------------------|----------------------|-----------------|\n| **After\u2011School Tutoring Centers** | Homework help, subject\u2011specific tutoring (math, science, languages), test prep | Elementary, middle, and high\u2011school students | Private or community\u2011run facilities, often located near or within the school |\n| **Language & Cultural Schools** | Intensive language courses (e.g., German, English",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 712.528291000126,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:0e3e5972fe4b402b3c00a9a2": {
+"text": "Warsaw Summer Jazz Days is one of the many **festivals** hosted by Warsaw.",
+"input_tokens": 86,
+"output_tokens": 57,
+"latency_ms": 316.65986600000906,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:86e34ceb544c274bae368896": {
+"text": "Victoria was originally set up in the **Port\u202fPhillip District** of southeastern Australia \u2013 the area that later became the state of Victoria. The colony was first established there as a separate district of New\u202fSouth\u202fWales before becoming the colony (and later state) of Victoria.",
+"input_tokens": 82,
+"output_tokens": 180,
+"latency_ms": 610.9980190003625,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:e666b051b1da1b1a770e4227": {
+"text": "Saharan dust can travel across the Atlantic Ocean for roughly **3,000 to 4,000 miles** (about 4,800\u20136,400\u202fkilometers).  \n\n- **Typical range:** When the dust is lofted high into the atmosphere by strong African easterly jets, it can be carried from the Sahara all the way to the eastern United States, the Caribbean, and even the western coast of South America.  \n- **Maximum distances:** In exceptional cases\u2014especially during the peak of the Saharan dust season (late spring to early summer)\u2014the particles have been tracked as far as the eastern coast of the United States, which is about 3,000\u20133,500\u202fmiles from the source.  \n- **Variability:** The exact distance depends on wind patterns, atmospheric stability, and the size of the dust particles. Smaller, lighter particles can stay aloft longer and travel farther, while larger grains settle more quickly and cover shorter distances.  \n\nSo, while the average journey is around 3,000\u20134,000 miles, the dust can occasionally reach even farther under favorable conditions.",
+"input_tokens": 84,
+"output_tokens": 255,
+"latency_ms": 616.9148859999041,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:3420ac088f73d55657d33056": {
+"text": "In Victoria, the political landscape is quite distinct between the two broad geographic areas you mentioned:\n\n| Region | Historically Strong Party | Why it\u2019s strong |\n|--------|--------------------------|-----------------|\n| **North\u2011western Victoria** (regional and rural areas \u2013 e.g., Ballarat, Bendigo, Mildura, Shepparton) | **Liberal Party of Australia** (often with a strong local \u201cCountry Liberal\u201d or \u201cNational\u201d presence) | \u2022 Rural and regional voters traditionally favour the Liberal/National coalition because of its focus on agriculture, regional infrastructure, and lower taxes.<br>\u2022 The Liberals have a long\u2011standing network of local branches and community ties in these areas.<br>\u2022 The Nationals also hold a significant share of the vote, but the Liberal Party usually leads the combined coalition. |\n| **Eastern Victoria** (inner\u2011city and outer\u2011suburban areas \u2013 e.g., Melbourne\u2019s eastern suburbs,",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 713.9101720003964,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8af6eb3c9cd2e418690361af": {
+"text": "In September\u202f1760, the capitulation of Montreal was negotiated by **General James\u202fMurray**. He secured the surrender of the French forces in Montreal on\u202f8\u202fSeptember\u202f1760.",
+"input_tokens": 84,
+"output_tokens": 119,
+"latency_ms": 512.8433129993937,
+"provider": "groq"
 }
 }

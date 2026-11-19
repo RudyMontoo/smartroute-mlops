@@ -11,13 +11,13 @@ import logging
 import time
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI, HTTPException
+from fastapi import Depends, FastAPI, Header, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
 from prometheus_client import CONTENT_TYPE_LATEST, generate_latest
 from pydantic import BaseModel, Field
 
-from gateway import cascade, db, drift_demo, metrics
+from gateway import cascade, db, drift_demo, metrics, security
 from gateway.config import settings
 from gateway.providers import ProviderPool
 from gateway.router_service import router_service
@@ -84,6 +84,8 @@ class RoutingInfo(BaseModel):
     reason: str
     escalated: bool = False
     cached: bool = False
+    redactions: int = 0
+    flagged: bool = False
     model_version: str
 
 
@@ -103,6 +105,26 @@ class ChatResponse(BaseModel):
     usage: UsageInfo
 
 
+# --------------------------------------------------------------------- auth
+
+
+async def require_api_key(x_api_key: str | None = Header(default=None)) -> str:
+    """Gate on a valid key, then rate-limit that key. Order matters: there is no
+    point spending rate-limit budget on a caller who was never authenticated."""
+    if not security.is_valid_key(x_api_key):
+        raise HTTPException(status_code=401, detail="missing or invalid X-API-Key")
+
+    key_id = security.hash_key(x_api_key)[:12]
+    allowed, retry_after = security.rate_limiter.check(key_id)
+    if not allowed:
+        raise HTTPException(
+            status_code=429,
+            detail="rate limit exceeded",
+            headers={"Retry-After": str(round(retry_after, 1))},
+        )
+    return key_id
+
+
 # --------------------------------------------------------------------- routes
 
 
@@ -117,7 +139,7 @@ async def health() -> dict:
 
 
 @app.post("/v1/chat", response_model=ChatResponse, tags=["gateway"])
-async def chat(request: ChatRequest) -> ChatResponse:
+async def chat(request: ChatRequest, _key: str = Depends(require_api_key)) -> ChatResponse:
     if pool is None or not router_service.ready:
         raise HTTPException(status_code=503, detail="gateway not ready")
     return await _handle_chat(request)
@@ -127,10 +149,22 @@ async def _handle_chat(request: ChatRequest) -> ChatResponse:
     started = time.perf_counter()
     threshold = request.threshold if request.threshold is not None else settings.router_threshold
 
-    label, confidence = router_service.predict(request.query)
+    # PII is masked before anything else happens: the redacted text is what gets
+    # classified, what gets sent to the provider, and what gets persisted to our own
+    # log, so a raw email or card number never exists outside this request's memory.
+    redaction = security.redact(request.query)
+    safe_query = redaction.text
+    flagged = security.check_injection(request.query)
+    if flagged:
+        metrics.INJECTION_FLAGS.inc()
+    for placeholder, _original in redaction.redacted:
+        kind = placeholder.strip("<>").rsplit("_", 1)[0]
+        metrics.PII_REDACTIONS.labels(kind=kind).inc()
+
+    label, confidence = router_service.predict(safe_query)
     decision = policy.decide(label, confidence, threshold)
 
-    completion = await pool.complete(decision.model, request.query)
+    completion = await pool.complete(decision.model, safe_query)
     served_model = decision.model
     reason = decision.reason
     total_cost = completion.cost_usd
@@ -139,10 +173,10 @@ async def _handle_chat(request: ChatRequest) -> ChatResponse:
     # Cascade: the routing decision was made before any answer existed, so check the
     # cheap model's output and retry on the large model if it looks like a failure.
     if decision.model == policy.CHEAP and not request.no_cascade:
-        verdict = cascade.verify(request.query, completion.text)
+        verdict = cascade.verify(safe_query, completion.text)
         if verdict.escalate:
             escalated = True
-            retry = await pool.complete(policy.EXPENSIVE, request.query)
+            retry = await pool.complete(policy.EXPENSIVE, safe_query)
             metrics.ESCALATIONS.labels(trigger=verdict.trigger).inc()
             # Both calls are billed. An escalation that fires too often will show up
             # as a drop in measured savings rather than being quietly absorbed.
@@ -150,6 +184,10 @@ async def _handle_chat(request: ChatRequest) -> ChatResponse:
             completion = retry
             served_model = policy.EXPENSIVE
             reason = f"{decision.reason} -> escalated ({verdict.reason})"
+
+    # The model only ever saw placeholders, so rehydrate before the answer reaches the
+    # user -- the redaction is invisible to them even though it protected the request.
+    answer_text = redaction.rehydrate(completion.text)
 
     # The counterfactual: what this exact request would have cost had we sent every
     # query to the large model. Measured per request, not extrapolated.
@@ -168,7 +206,7 @@ async def _handle_chat(request: ChatRequest) -> ChatResponse:
 
     await db.log_request(
         db.RequestRecord(
-            query=request.query,
+            query=safe_query,
             predicted_label=label,
             confidence=confidence,
             model=served_model,
@@ -181,17 +219,21 @@ async def _handle_chat(request: ChatRequest) -> ChatResponse:
             latency_ms=elapsed_ms,
             model_version=router_service.version,
             escalated=escalated,
+            redactions=redaction.count,
+            flagged=flagged,
         )
     )
 
     return ChatResponse(
-        answer=completion.text,
+        answer=answer_text,
         routing=RoutingInfo(
             predicted_label=label,
             confidence=confidence,
             model=served_model,
             reason=reason,
             escalated=escalated,
+            redactions=redaction.count,
+            flagged=flagged,
             model_version=router_service.version,
         ),
         usage=UsageInfo(
@@ -247,7 +289,7 @@ async def drift_status(window: int = 60) -> dict:
 
 
 @app.post("/admin/simulate-drift", tags=["admin"])
-async def simulate_drift(n: int = 30) -> dict:
+async def simulate_drift(n: int = 30, _key: str = Depends(require_api_key)) -> dict:
     """Inject synthetic out-of-distribution traffic so /drift has something to show
     without waiting for real traffic to shift. Rows are tagged `synthetic=True` so a
     demo reset can clear them without touching genuine history."""
@@ -276,7 +318,7 @@ async def simulate_drift(n: int = 30) -> dict:
 
 
 @app.post("/admin/retrain", tags=["admin"])
-async def retrain() -> dict:
+async def retrain(_key: str = Depends(require_api_key)) -> dict:
     """Retrain the router and promote it only if it earns the champion slot.
 
     Runs the real training entrypoint in a worker thread so a demo click doesn't block

@@ -25,6 +25,20 @@ from gateway.main import app  # noqa: E402
 
 @pytest.fixture(scope="session")
 def client():
-    """TestClient as a context manager so FastAPI's lifespan actually runs."""
+    """TestClient as a context manager so FastAPI's lifespan actually runs.
+
+    The demo API key is set once here as a default header, so every existing
+    `client.post("/v1/chat", ...)` call site authenticates without being rewritten.
+    """
     with TestClient(app) as test_client:
+        test_client.headers.update({"X-API-Key": "demo-key-smartroute"})
         yield test_client
+
+
+@pytest.fixture(scope="session")
+def client_no_auth(client):
+    """Same running app, but without the default auth header -- for tests that
+    specifically exercise rejection paths."""
+    bare = TestClient(app)
+    bare.headers.pop("X-API-Key", None)
+    return bare
