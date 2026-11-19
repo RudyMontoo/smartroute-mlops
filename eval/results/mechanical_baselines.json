@@ -1,0 +1,51 @@
+{
+  "n_mechanical": 92,
+  "strategies": {
+    "always-cheap": {
+      "mean_quality": 0.3804347826086957,
+      "total_cost_usd": 0.009462199999999999,
+      "pct_routed_cheap": 100.0,
+      "mean_latency_ms": 644.3383277825749,
+      "n": 92,
+      "quality_retained_pct": 94.59459459459461,
+      "cost_vs_expensive_pct": 63.17483208481889
+    },
+    "always-expensive": {
+      "mean_quality": 0.40217391304347827,
+      "total_cost_usd": 0.014977799999999993,
+      "pct_routed_cheap": 0.0,
+      "mean_latency_ms": 776.9534234999874,
+      "n": 92,
+      "quality_retained_pct": 100.0,
+      "cost_vs_expensive_pct": 100.0
+    },
+    "random-50/50": {
+      "mean_quality": 0.358695652173913,
+      "total_cost_usd": 0.011933,
+      "pct_routed_cheap": 54.34782608695652,
+      "mean_latency_ms": 700.1288080434668,
+      "n": 92,
+      "quality_retained_pct": 89.1891891891892,
+      "cost_vs_expensive_pct": 79.67124677856563
+    },
+    "length-heuristic": {
+      "mean_quality": 0.3695652173913043,
+      "total_cost_usd": 0.011837450000000001,
+      "pct_routed_cheap": 59.78260869565217,
+      "mean_latency_ms": 722.2628564238827,
+      "n": 92,
+      "quality_retained_pct": 91.89189189189187,
+      "cost_vs_expensive_pct": 79.03330262121277
+    },
+    "learned-router": {
+      "mean_quality": 0.33695652173913043,
+      "total_cost_usd": 0.011545149999999999,
+      "pct_routed_cheap": 61.95652173913044,
+      "mean_latency_ms": 706.1660750325851,
+      "n": 92,
+      "quality_retained_pct": 83.78378378378379,
+      "cost_vs_expensive_pct": 77.08174765319343
+    }
+  },
+  "mean_router_confidence": 0.8265996147951786
+}
