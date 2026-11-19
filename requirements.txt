@@ -1,0 +1,28 @@
+# --- serving ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.0
+httpx==0.28.1
+python-dotenv==1.0.1
+
+# --- ml ---
+scikit-learn==1.6.0
+pandas==2.2.3
+numpy==2.2.1
+scipy==1.15.0
+joblib==1.4.2
+
+# --- mlops ---
+mlflow==2.19.0
+# mlflow 2.19 imports FallbackAsyncAdaptedQueuePool, removed in SQLAlchemy 2.1
+sqlalchemy<2.1
+prometheus-client==0.21.1
+
+# --- plotting (eval artifacts) ---
+matplotlib==3.10.0
+
+# --- dev / test ---
+pytest==8.3.4
+pytest-asyncio==0.25.0
+ruff==0.8.6

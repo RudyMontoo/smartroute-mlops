@@ -1,0 +1,22 @@
+[project]
+name = "smartroute"
+version = "1.0.0"
+description = "LLM gateway with learned model routing, and the MLOps pipeline around it"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "C4"]
+ignore = [
+    "B008",  # FastAPI's Depends() in defaults is the documented idiom
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+filterwarnings = ["ignore::DeprecationWarning"]

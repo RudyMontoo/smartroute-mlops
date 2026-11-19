@@ -1,0 +1,25 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# secrets
+.env
+
+# raw dataset downloads: reproducible via `python -m router.prepare_data`
+data/raw/
+
+# runtime state
+data/gateway.db
+mlflow.db
+mlartifacts/
+mlruns/
+models/
+
+# frontend
+node_modules/
+frontend/dist/
+
+# load test output
+locust/report*.html
