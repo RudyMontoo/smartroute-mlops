@@ -1,0 +1,71 @@
+{
+  "threshold": 0.6,
+  "runs": [
+    {
+      "estimator": "linsvc",
+      "feature_set": "tfidf+numeric",
+      "macro_f1": 0.9285394265232975,
+      "accuracy": 0.9290780141843972,
+      "cost_savings_pct": 24.445879788525993,
+      "routed_cost_usd": 0.02147644,
+      "baseline_cost_usd": 0.028425240000000008,
+      "mean_confidence": 0.701523604674313,
+      "pct_routed_cheap": 52.4822695035461
+    },
+    {
+      "estimator": "logreg",
+      "feature_set": "tfidf+numeric",
+      "macro_f1": 0.9285394265232975,
+      "accuracy": 0.9290780141843972,
+      "cost_savings_pct": 31.37057066184843,
+      "routed_cost_usd": 0.01950808,
+      "baseline_cost_usd": 0.028425240000000008,
+      "mean_confidence": 0.8621856681382486,
+      "pct_routed_cheap": 60.99290780141844
+    },
+    {
+      "estimator": "nb",
+      "feature_set": "tfidf-only",
+      "macro_f1": 0.9145315211104684,
+      "accuracy": 0.9148936170212766,
+      "cost_savings_pct": 25.952558874700404,
+      "routed_cost_usd": 0.020650380000000006,
+      "baseline_cost_usd": 0.027888040000000006,
+      "mean_confidence": 0.8087407143191214,
+      "pct_routed_cheap": 55.319148936170215
+    },
+    {
+      "estimator": "linsvc",
+      "feature_set": "tfidf-only",
+      "macro_f1": 0.9065657296935532,
+      "accuracy": 0.9078014184397163,
+      "cost_savings_pct": 21.4375973329169,
+      "routed_cost_usd": 0.02193434,
+      "baseline_cost_usd": 0.027919640000000003,
+      "mean_confidence": 0.650102324693186,
+      "pct_routed_cheap": 50.354609929078016
+    },
+    {
+      "estimator": "logreg",
+      "feature_set": "tfidf-only",
+      "macro_f1": 0.8999682191031351,
+      "accuracy": 0.900709219858156,
+      "cost_savings_pct": 28.99167874062245,
+      "routed_cost_usd": 0.019623320000000007,
+      "baseline_cost_usd": 0.02763524,
+      "mean_confidence": 0.8044835380323088,
+      "pct_routed_cheap": 59.57446808510638
+    },
+    {
+      "estimator": "nb",
+      "feature_set": "tfidf+numeric",
+      "macro_f1": 0.892426283959515,
+      "accuracy": 0.8936170212765957,
+      "cost_savings_pct": 25.12682363888612,
+      "routed_cost_usd": 0.021306540000000002,
+      "baseline_cost_usd": 0.028456840000000004,
+      "mean_confidence": 0.8479854346647712,
+      "pct_routed_cheap": 53.90070921985816
+    }
+  ]
+}
