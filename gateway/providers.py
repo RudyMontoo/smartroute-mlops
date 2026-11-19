@@ -109,6 +109,11 @@ class GroqProvider:
                 "messages": [{"role": "user", "content": prompt}],
                 "max_tokens": max_tokens or settings.max_output_tokens,
                 "temperature": 0.2,
+                # gpt-oss is a reasoning model: by default it can spend the entire
+                # max_tokens budget on hidden chain-of-thought and return empty
+                # `content` with finish_reason="length". Capping reasoning effort
+                # keeps the budget for the answer that actually gets returned.
+                "reasoning_effort": "low",
             },
         )
         self.last_rate_limit = {

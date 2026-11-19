@@ -17,11 +17,12 @@ from fastapi.responses import Response
 from prometheus_client import CONTENT_TYPE_LATEST, generate_latest
 from pydantic import BaseModel, Field
 
-from gateway import cascade, db, metrics
+from gateway import cascade, db, drift_demo, metrics
 from gateway.config import settings
 from gateway.providers import ProviderPool
 from gateway.router_service import router_service
-from router import policy
+from router import drift, policy
+from router.drift import REFERENCE_PATH
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
 log = logging.getLogger("smartroute")
@@ -218,3 +219,96 @@ async def recent(limit: int = 25) -> list[dict]:
 @app.get("/metrics", tags=["ops"], include_in_schema=False)
 async def prometheus_metrics() -> Response:
     return Response(generate_latest(), media_type=CONTENT_TYPE_LATEST)
+
+
+@app.get("/drift", tags=["ops"])
+async def drift_status(window: int = 60) -> dict:
+    """Compare the last `window` live queries against the training distribution."""
+    if not REFERENCE_PATH.exists():
+        raise HTTPException(status_code=503, detail="no drift reference built yet")
+
+    recent_queries = db.recent_queries(limit=window)
+    if len(recent_queries) < 5:
+        return {
+            "status": "insufficient_data",
+            "n_current": len(recent_queries),
+            "message": "need at least 5 recent requests to compute drift",
+        }
+
+    report = drift.check_drift(recent_queries)
+    payload = drift.report_to_dict(report)
+
+    worst = max(report.features, key=lambda f: f.psi, default=None)
+    metrics.DRIFT_SCORE.labels(feature="max").set(report.max_psi)
+    if worst:
+        metrics.DRIFT_SCORE.labels(feature=worst.feature).set(worst.psi)
+
+    return payload
+
+
+@app.post("/admin/simulate-drift", tags=["admin"])
+async def simulate_drift(n: int = 30) -> dict:
+    """Inject synthetic out-of-distribution traffic so /drift has something to show
+    without waiting for real traffic to shift. Rows are tagged `synthetic=True` so a
+    demo reset can clear them without touching genuine history."""
+    queries = drift_demo.generate(n=n)
+    for query in queries:
+        label, confidence = router_service.predict(query)
+        decision = policy.decide(label, confidence, settings.router_threshold)
+        await db.log_request(
+            db.RequestRecord(
+                query=query,
+                predicted_label=label,
+                confidence=confidence,
+                model=decision.model,
+                reason=f"{decision.reason} [synthetic drift demo]",
+                provider="synthetic",
+                input_tokens=policy.estimate_tokens(query),
+                output_tokens=0,
+                cost_usd=0.0,
+                baseline_cost_usd=0.0,
+                latency_ms=0.0,
+                model_version=router_service.version,
+                synthetic=True,
+            )
+        )
+    return {"injected": len(queries)}
+
+
+@app.post("/admin/retrain", tags=["admin"])
+async def retrain() -> dict:
+    """Retrain the router and promote it only if it earns the champion slot.
+
+    Runs the real training entrypoint in a worker thread so a demo click doesn't block
+    the event loop, then reloads the serving model -- a successful promotion takes
+    effect immediately, with no gateway restart.
+    """
+    import asyncio
+    import contextlib
+
+    from router.train import main as train_main
+
+    # argparse calls sys.exit(0) on a clean run; that is not a failure here.
+    with contextlib.suppress(SystemExit):
+        await asyncio.to_thread(train_main, [])
+
+    previous_version = router_service.version
+    router_service.load()
+
+    import mlflow
+
+    mlflow.set_tracking_uri(settings.mlflow_tracking_uri)
+    client = mlflow.MlflowClient()
+    metrics_run = client.get_run(
+        client.get_model_version_by_alias(
+            settings.registered_model_name, settings.model_alias
+        ).run_id
+    )
+
+    return {
+        "version": router_service.version,
+        "previous_version": previous_version,
+        "promoted": router_service.version != previous_version,
+        "macro_f1": metrics_run.data.metrics.get("macro_f1"),
+        "cost_savings_pct": metrics_run.data.metrics.get("cost_savings_pct"),
+    }

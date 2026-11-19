@@ -127,7 +127,10 @@ def _current_champion_f1(client, name: str) -> float | None:
         return None
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> None:
+    """`argv=None` reads real CLI args (the command-line entrypoint); pass `[]` or a
+    specific list to call this programmatically, e.g. from /admin/retrain, without it
+    trying to parse the host process's own argv."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--estimator", default="logreg", choices=sorted(ESTIMATORS))
     parser.add_argument("--no-numeric", action="store_true", help="TF-IDF features only")
@@ -139,7 +142,7 @@ def main() -> None:
         action="store_true",
         help="register the version but never move the champion alias",
     )
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     use_numeric = not args.no_numeric
     X_train, X_val, y_train, y_val = load_split(seed=args.seed)
