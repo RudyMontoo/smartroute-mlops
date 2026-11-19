@@ -2091,5 +2091,495 @@
 "output_tokens": 256,
 "latency_ms": 1037.6484409998739,
 "provider": "groq"
+},
+"openai/gpt-oss-120b:90fcc334faa494f435e53b40": {
+"text": "## TL;DR\n\n| Question | Quick Answer |\n|----------|---------------|\n| **Should I use micro\u2011services?** | Only if **one or more** of the following are true for your project: clear bounded\u2011contexts, independent scaling or deployment needs, multiple teams that can own separate services, or a strong need for technology heterogeneity. If you\u2019re still in early\u2011stage, have a small team, or the domain is simple, a monolith (or a \u201cmodular monolith\u201d) is usually the safer, faster, cheaper choice. |\n| **How many micro\u2011services?** | There is **no fixed number**. Aim for **one service per bounded context** (or per business capability) and **no more than you can comfortably own**. In practice many teams start with **3\u201110 services** and let the count grow organically as new domains emerge or scaling pressures appear. |\n\nBelow is a deeper dive that",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 746.1128369996004,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:ba44a7363b9d625cb0567e5c": {
+"text": "### Top U.S. Golf\u2011Trip Destinations  \nBelow is a curated list of the most celebrated (and a few hidden\u2011gem) golf regions in the United States, along with the signature courses, nearby attractions, and why they\u2019re great for a golf\u2011focused vacation.\n\n| Region | Signature Courses | Why It\u2019s a Golf\u2011Trip Hotspot | Nearby Non\u2011Golf Activities |\n|--------|-------------------|------------------------------|----------------------------|\n| **California \u2013 Central Coast** | \u2022 **Pebble\u202fBeach Golf Links** (Pebble Beach)  <br>\u2022 **Spyglass Hill** (Pebble Beach)  <br>\u2022 **Cypress Point Club** (private) | \u2022 Ocean\u2011front layouts with dramatic cliffs and fog\u2011kissed fairways",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 946.1769059998915,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:be2aeb575039032d04271bbc": {
+"text": "Deserts are characterized by **dry, arid weather** with the following typical features:\n\n- **Very low precipitation:** Most deserts receive less than\u202f250\u202fmm (10\u202fin) of rain per year, and many go months or even years without measurable rain.\n- **High temperatures:** Daytime highs often soar above\u202f35\u202f\u00b0C (95\u202f\u00b0F) in hot deserts, while some cold deserts can be cooler.\n- **Large diurnal temperature swings:** Because of the clear, dry air, nights can cool dramatically\u2014sometimes dropping 15\u201320\u202f\u00b0C (30\u201335\u202f\u00b0F) or more from daytime highs.\n- **Clear skies and abundant sunshine:** Low humidity and minimal cloud cover let the sun shine almost continuously.\n- **Low humidity:** The air is very dry, which intensifies the feeling of heat during the day and the chill at night.\n- **Occasional wind events:** Strong, dry winds can lift sand and dust, creating sandstorms",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 869.5532670008106,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:f9a6a86fca621ed4040e78ab": {
+"text": "Here are some common things you\u2019ll often find inside a typical household refrigerator:\n\n| Category | Typical Items |\n|----------|----------------|\n| **Dairy & Eggs** | Milk, butter, cheese (slices, blocks, shredded), yogurt, sour cream, cream cheese, eggs |\n| **Fresh Produce** | Apples, grapes, berries, oranges, lemons, carrots, celery, bell peppers, cucumbers, lettuce, spinach, herbs (parsley, cilantro, mint) |\n| **Meats & Proteins** | Fresh chicken, beef, pork, turkey, fish, deli\u2011sliced ham, turkey, salami, tofu, tempeh, cooked leftovers (e.g., roasted chicken) |\n| **Condiments & Sauces** | Ketchup, mustard, mayonnaise, BBQ sauce, soy sauce, hot sauce, salad dressings, pickles, olives, salsa, jam/jelly |\n| **Beverages** | Water",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 959.7305540000889,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:cfa7c633ffdd1fb9e8cd1e13": {
+"text": "Below is a quick\u2011look at the episodes that consistently show up at the top of fan\u2011generated rating lists (IMDb, Rotten\u202fTomatoes \u201cAudience Score,\u201d TV\u2011Guide fan polls, and the annual \u201cX\u2011Files Top\u201110\u201d surveys on sites like Reddit and the official Fox\u2011X\u2011Files forum).\u202fThe numbers",
+"input_tokens": 91,
+"output_tokens": 256,
+"latency_ms": 992.3130360002688,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:e79f9af7d3c77d04ebdcd856": {
+"text": "The charging port on a Tesla Model\u202fY is located on the **driver\u2011side rear quarter panel**, just behind the rear wheel well. \n\n- **Exterior view:** When you\u2019re standing next to the car on the driver\u2019s side, look toward the back of the vehicle. The port is a small, rectangular opening with a cover that blends into the bodywork. It\u2019s positioned a few inches above the ground, roughly in line with the rear tire.\n- **How to open it:** Press the button on the charging handle (or use the touchscreen/phone app) and the cover will pop open automatically. You can also manually press the small recessed button on the cover itself if needed.\n- **Inside the car:** You can also open the port from the touchscreen. Go to **Controls \u2192 Charging \u2192 Open Charge Port**, and the cover will unlatch for you.\n\nSo, in short: driver\u2011side rear quarter panel, just behind the rear wheel, a few inches off the ground.",
+"input_tokens": 82,
+"output_tokens": 245,
+"latency_ms": 963.2376119998298,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:9020e7289ce46331caca122f": {
+"text": "Having children can be one of life\u2019s most rewarding experiences, and many parents point to a handful of especially meaningful aspects that make the journey feel worthwhile. While every family\u2019s story is unique, here are some of the most commonly celebrated \u201cbest parts\u201d of raising kids:\n\n| Aspect | Why It Feels So Special |\n|--------|------------------------|\n| **Unconditional love** | The bond that forms with a child often feels deeper and more instinctual than any other relationship. Their affection is pure, and the love you give and receive can be a steady source of comfort and joy. |\n| **Seeing the world anew** | Children have a natural curiosity and wonder that can reignite your own sense of awe. Their fresh perspective can turn ordinary moments\u2014like a walk in the park or a rainy day\u2014into adventures. |\n| **Personal growth** | Parenting pushes you to develop",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 858.6247539997203,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:b9ea979fa22596896831eb9b": {
+"text": "",
+"input_tokens": 104,
+"output_tokens": 256,
+"latency_ms": 999.5305590000498,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:2349606d7c8e578c062be94c": {
+"text": "",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 1009.8257460003879,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:64d490bd38b3955044d99e90": {
+"text": "**Traditional French Cr\u00eapes (Thin Pancakes)**  \n\n*Makes about 12\u201115\u202fcr\u00eapes (\u2248\u202f30\u202fcm/12\u2011inch diameter each).*\n\n---\n\n## Ingredients\n\n| Ingredient | Amount |\n|------------|--------|\n| All\u2011purpose flour | 250\u202fg (about 2\u202fcups) |\n| Granulated sugar (optional) | 1\u202f\u2013\u202f2\u202fTbsp (for a slightly sweet batter) |\n| Salt | \u00bc\u202ftsp |\n| Large eggs | 3 |\n| Milk (whole or 2\u202f% works best) | 500\u202fml (2\u202fcups) |\n| Unsalted butter, melted + a little extra for the pan | 30\u202fg (2\u202fTbsp) |\n| Vanilla extract (optional) | \u00bd\u202ftsp |\n| Light rum or orange blossom water (optional) | 1\u202ftsp (adds a classic aroma) |\n\n*Tip:* If you prefer a richer, more \u201cbatter\u2011like\u201d cr\u00eape, you can",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 1029.0041090001978,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:e69cc4629b5ebcd24d0f9b91": {
+"text": "**National Payments Corporation of India (NPCI)**  \n\n- **What it is:**  \n  The National Payments Corporation of India (NPCI) is a not\u2011for\u2011profit, umbrella organization that was created to develop and operate retail payment and settlement systems in India. It is owned by the Reserve Bank of India (RBI) and a consortium of major Indian banks.\n\n- **When & why it was formed:**  \n  - **Founded:** 2008 (operations began in 2009).  \n  - **Purpose:** To provide a unified, secure, and interoperable electronic payment infrastructure that can serve the entire country, especially the unbanked and under\u2011banked populations, and to reduce reliance on multiple, fragmented payment networks.\n\n- **Key responsibilities:**  \n ",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 966.6495749997921,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:0759ac1563f09e5963d18828": {
+"text": "King\u202fCharles\u202fIII\u2019s full name is **Charles\u202fPhilip\u202fArthur\u202fGeorge**.",
+"input_tokens": 85,
+"output_tokens": 123,
+"latency_ms": 592.9760369999713,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:073cb4b5734000b51b6076df": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 1086.4302990003125,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:8016a74643d6813d1cadf188": {
+"text": "Kim Stanley Robinson is one of the most celebrated voices in contemporary science\u2011fiction, known for his richly researched world\u2011building, thoughtful treatment of climate and politics, and a knack for weaving big ideas into compelling human stories. While \u201cbest\u201d can be subjective\u2014different readers prize his hard\u2011science epics, his near\u2011future social speculation, or his lyrical planetary romances\u2014there are five titles that consistently rise to the top of critics\u2019 lists, award nominations, and fan polls:\n\n| # | Title (Year) | Why It\u2019s Often Considered a \u201cBest\u201d | Notable Awards / Nominations |\n|---|--------------|-----------------------------------|------------------------------|\n| **1** | **_The Mars Trilogy_** (\u202f*Red Mars*\u202f1992,\u202f*Green Mars*\u202f1993,\u202f*Blue\u00a0Mars*\u202f1996\u202f) | A monumental, three\u2011book saga that follows the colonization and terraforming of Mars over centuries. It",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 852.6122139992367,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:ec8edad8928ccba870993a42": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 796.2030439994123,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:61003842c1cc09fedf4a474a": {
+"text": "The U.S. House of Representatives has **435 voting members**.  \n\nIn addition to those 435 representatives, the House also includes **six non\u2011voting delegates** (from the District of Columbia, Puerto Rico, Guam, the U.S. Virgin Islands, American Samoa, and the Northern Mariana Islands). These delegates can serve on committees and speak on the floor, but they do not have a vote on final passage of legislation.",
+"input_tokens": 81,
+"output_tokens": 165,
+"latency_ms": 808.3932090003145,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:36361044e4de36abea95f457": {
+"text": "The New England region of the United States consists of six states:\n\n1. **Connecticut**  \n2. **Maine**  \n3. **Massachusetts**  \n4. **New Hampshire**  \n5. **Rhode Island**  \n6. **Vermont**  \n\nThese states are located in the northeastern corner of the country and share a common historical and cultural heritage.",
+"input_tokens": 81,
+"output_tokens": 115,
+"latency_ms": 687.5413509997088,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:2265917492d9f463db602ff3": {
+"text": "",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 912.426888000482,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:4915ea618ddf7a13343836ca": {
+"text": "Cooking over a campfire is a classic way to enjoy the outdoors while feeding yourself (and your fellow campers). The heat, smoke, and open\u2011air vibe open up a lot of tasty possibilities\u2014from simple snacks to full\u2011blown meals. Below is a mix of classic campfire staples, creative twists, and a few tips to help you get the most out of your fire.\n\n---\n\n## 1\ufe0f\u20e3 Classic Campfire Foods\n\n| Food | How to Cook | Why It Works |\n|------|-------------|--------------|\n| **Hot Dogs & Sausages** | Skewer on a stick or use a grill grate; turn until browned. | Quick, forgiving, and everyone loves them. |\n| **Marshmallows** | Roast on a long stick over low heat, turning slowly. | Perfect for s\u2019mores or just a sweet treat. |\n| **S\u2019mores** | Sandwich toasted marshmallow & chocolate between two graham crackers. | The ultimate campfire dessert. |\n| **Bacon** | Lay strips on a foil",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 911.9704990007449,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:47b91fcf721ebde9df05fa15": {
+"text": "Traveling to the Moon is a highly specialized, tightly controlled mission, and every kilogram of payload must be justified with a clear, mission\u2011critical purpose.\u202fThat said, if you were to entertain the idea of bringing a firearm (or any projectile weapon) on a lunar expedition, a few niche scenarios could be imagined where it might serve a useful function\u2014though each comes with significant trade\u2011offs, safety concerns, and regulatory hurdles.\n\n---\n\n## 1. **Emergency Tool / Multi\u2011Purpose Utility**\n\n| Potential Use | How a gun could help | Practical considerations |\n|---------------|----------------------|---------------------------|\n| **Breaking or cutting** | A high\u2011energy projectile can fracture brittle materials (e.g., a stuck latch, a cracked solar",
+"input_tokens": 90,
+"output_tokens": 256,
+"latency_ms": 995.4569719993742,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:d90036c019776ae011f64468": {
+"text": "**The \u201chippest\u201d U.S. cities** tend to be places where cutting\u2011edge culture, food, music, art, and a youthful, open\u2011minded vibe intersect.  While \u201chip\u201d is subjective, the following cities consistently show up in travel magazines, lifestyle rankings, and the chatter of creatives, entrepreneurs, and trend\u2011setters.\n\n| Rank | City | Why It\u2019s Hip | Signature Neighborhoods / Hotspots |\n|------|------|--------------|-----------------------------------|\n| **1** | **Portland, Oregon** | Eco\u2011conscious, DIY culture, craft breweries, food\u2011truck scene, strong indie music & art community. | Alberta Arts District, Hawthorne, Mississippi Avenue. |\n| **2** | **Austin\u202fTX** | \u201cLive\u2011Music Capital of the World,\u201d",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 1018.7134150000929,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:57cd1cd8c659afcfaf4a4ab3": {
+"text": "Switching into a technology or computer\u2011programming career is absolutely doable\u2014even if you\u2019re coming from a completely different field. Below is a practical, step\u2011by\u2011step roadmap you can adapt to your own situation, plus resources and tips to keep you moving forward.\n\n---\n\n## 1\ufe0f\u20e3 Clarify Your Goal & Fit\n\n| Question | Why It Matters | How to Answer |\n|----------|----------------|---------------|\n| **What type of tech role excites you?** (e.g., front\u2011end web dev, data analysis, DevOps, AI/ML, cybersecurity, product management) | Different roles require different skill sets",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 808.0814249997275,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:d235e2a10c619eba9d50b4f7": {
+"text": "**Monopoly \u2013 a basic definition**\n\nIn economics, a **monopoly** is a market structure in which a **single firm (or a single entity)** is the **sole seller of a product or service that has no close substitutes**. Because there are no competing providers, the monopolist faces the **entire market demand curve** and can influence the price and quantity of the good it sells.\n\n---\n\n### Key Characteristics of a Monopoly\n\n| Characteristic | What it Means |\n|----------------|---------------|\n| **Single seller** | Only one firm supplies the product. |\n| **Unique product** | The good has no close substitutes; consumers cannot switch to a comparable alternative. |\n| **Price maker** | The firm sets price (or output) rather than taking the market price as given (as in perfect competition). |\n| **High barriers to entry** | Legal, technological, cost, or strategic obstacles prevent other firms from entering the market. |\n| **Control over supply** | The monopolist decides",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 794.2634629998793,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:1b16b1b8936bbee37f979268": {
+"text": "**Short answer:**\u202fYes\u2014many members of Gen\u202fZ (roughly those born between the mid\u20111990s and early\u20112010s) do appreciate Radiohead, though the degree of enthusiasm varies widely across the cohort, just as it does for any artist spanning multiple decades.\n\n---\n\n## Why Radiohead Still Resonates With Gen\u202fZ\n\n| Factor | How It Connects With Gen\u202fZ |\n|--------|---------------------------|\n| **Timeless Themes** | Radiohead\u2019s lyrics often explore alienation, technology, anxiety, and climate\u2011crisis concerns\u2014issues that feel especially immediate to a generation raised on social media, climate activism, and rapid tech change. |\n| **Innovative Sound** | Albums like *Kid A* and *In Rainbows* pushed the boundaries of rock, electronic, and experimental music. Gen\u202fZ listeners, who grew up with genre\u2011blending playlists on Spotify, Apple\u202fMusic",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 1064.1247970006589,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:3df09ce667f0f834c66375cb": {
+"text": "",
+"input_tokens": 111,
+"output_tokens": 256,
+"latency_ms": 1016.437856000266,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:fa47dc909a075d4071f358da": {
+"text": "Balancing the dynamism of capitalism with the goal of economic equality is one of the most enduring challenges in public policy.  The key is to keep the market mechanisms that generate wealth, innovation, and productivity while using democratic institutions to ensure that the benefits of that wealth are broadly shared and that basic needs are met for everyone. Below is a framework that combines institutional design, fiscal tools, and social policies to strike that balance.\n\n---\n\n## 1. Core Principles\n\n| Principle | What It Means in Practice | Why It Helps |\n|-----------|---------------------------|--------------|\n| **Inclusive Growth",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 1109.425654000006,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:8e9ceac0869f03e131c51e61": {
+"text": "Here are four compelling reasons to install solar panels\u202f+\u202fa Powerwall (or any home\u2011battery system) on your house:\n\n| # | Reason | What it means for you |\n|---|--------|-----------------------|\n| **1. Lower electricity bills** | Solar panels generate free electricity from the sun, and the Powerwall stores any excess for use when the sun isn\u2019t shining. By offsetting grid purchases\u2014especially during peak\u2011price periods\u2014you can dramatically cut or even eliminate your monthly utility bill. |\n| **2. Energy independence & resilience** | A Powerwall gives you backup power during outages, keeping essential loads (lights, fridge, medical equipment, home office, etc.) running. Over time you become less dependent on the utility\u2019s reliability and pricing policies. |\n| **3. Environmental impact** | One kilowatt\u2011hour (kWh) of solar electricity avoids roughly 0.7\u202flb (0.3\u202fkg) of CO\u2082 emissions. A typical residential system",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 834.9115909995817,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:ebb78eebeed15b1884d708e3": {
+"text": "I\u2019m sorry, but I can\u2019t help with that.",
+"input_tokens": 85,
+"output_tokens": 142,
+"latency_ms": 772.2845469997992,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:2d1075672a019238b9137454": {
+"text": "It\u2019s a **teddy bear** \u2013 the classic brown plush toy with its flat\u2011shouldered \u201cbody\u201d and oversized, floppy ears.",
+"input_tokens": 98,
+"output_tokens": 198,
+"latency_ms": 867.452718000095,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:60f2c58f0e78bac12399ab47": {
+"text": "**Compostable** means that a material can break down naturally in a composting environment\u2014turning into stable, nutrient\u2011rich organic matter (compost) that can be used to improve soil. For something to be truly compostable, it must meet several scientific and practical criteria:\n\n---\n\n## 1. The Core Definition\nA compostable item **decomposes** through the action of microorganisms (bacteria, fungi, actinomycetes, etc.) into:\n\n| End Product | Typical Composition |\n|-------------|----------------------|\n| **Carbon dioxide (CO\u2082)** | Gaseous by\u2011product of microbial respiration |\n| **Water (H\u2082O)** | Released as moisture |\n| **Biomass (microbial cells)** | New microbial growth |\n| **Humus/Organic Matter** | Stable, humified material that enriches soil |\n\nThe process should happen **without leaving toxic residues** (e.g., heavy metals, persistent chemicals) that could harm plants, soil life",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 1045.8460439995179,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:6cc5917834fa1d1d6a00c1ee": {
+"text": "The idea of \u201cthe best\u201d guitarist is inevitably subjective\u2014different players excel in different styles, eras, and musical contexts. Still, a handful of names keep showing up on critics\u2019 lists, musicians\u2019 polls, and fans\u2019 \u201cgreatest\u2011of\u2011all\u2011time\u201d rankings. Below is a broad, cross\u2011genre overview that highlights why each of these artists is often cited as a benchmark of guitar mastery.\n\n---\n\n## 1. **Jimi Hendrix (1942\u20111970) \u2013 Rock / Psychedelic**\n- **Why he\u2019s iconic:** Revolutionized electric\u2011guitar tone with feedback, wah\u2011wah, and over\u2011driven amps; turned the instrument into a true voice for the counter\u2011culture.\n- **Signature tracks:** \u201cPurple Haze,\u201d \u201cAll\u202fAlong\u202fthe\u202fWatchtower,\u201d \u201cVoodoo Child (Slight Return).\u201d\n\n## 2. **Eric Clapton (b.\u202f1945) \u2013 Blues\u2011Rock**\n- **Why he",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 931.0119860001578,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:2b92a485e04be071e13b1d69": {
+"text": "House\u202fTeague, the ancient and once\u2011great house of the Riverlands, traces its origins back to **Lord Teague the First**. According to the lore in *A\u202fSong of Ice and Fire* (and the companion histories such as *The World of Ice & Fire*), Teague the First was a legendary Riverlander chieftain who rose to prominence during the Age of Heroes and founded the house that would later become the ruling family of the Riverlands before the Tullys supplanted them. His name has been passed down through the generations, and the house\u2019s motto, \u201c**We are the River**,\u201d reflects that early claim to dominion over the river\u2011rich lands.",
+"input_tokens": 90,
+"output_tokens": 196,
+"latency_ms": 908.3634540002095,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:6ea23790800a74750b26bb31": {
+"text": "",
+"input_tokens": 94,
+"output_tokens": 256,
+"latency_ms": 1003.4961450000992,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:610206bedab40c0950eaec49": {
+"text": "",
+"input_tokens": 91,
+"output_tokens": 256,
+"latency_ms": 1035.3874900001756,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:599c390ed210ff328f5726e2": {
+"text": "Here are a variety of birthday\u2011gift ideas that play to each of his favorite hobbies\u2014travel, reading, cooking, and painting. I\u2019ve grouped them by interest and added a few \u201ccombo\u201d or experience ideas that let him enjoy more than one passion at a time. Feel free to mix\u2011and\u2011match or adjust the price range to fit your budget.\n\n---\n\n## 1. Travel\u2011Inspired Gifts  \n\n| Idea | Why He\u2019ll Love It | Approx. Cost | Where to Find |\n|------|-------------------|--------------|---------------|\n| **Scratch\u2011off world map** (or a push\u2011pin \u201ctravel map\u201d) | He can visually track the places he\u2019s visited and plan future trips. | $20\u2011$40 | Amazon, UncommonGoods |\n| **Portable travel journal + high\u2011quality pen** | Perfect for jotting down notes, sketches, or recipes he discovers on the road. | $25\u2011$60 | Moleskine",
+"input_tokens": 104,
+"output_tokens": 256,
+"latency_ms": 1046.230698000727,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:65acef76b57741310c65da41": {
+"text": "The disease that caused the medieval pandemic known as the Black Death is referred to in Latin as **_Pestis bubonica_** (the \u201cbubonic plague\u201d).\u202fIn medieval texts the term \u201c_pestis_\u201d (plague) was also used on its own, but the full Latin name that distinguishes it from other forms of plague is **_Pestis bubonica_**.",
+"input_tokens": 80,
+"output_tokens": 222,
+"latency_ms": 954.5435290001478,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:2d81626a64740396731b65b2": {
+"text": "The city is **Melbourne**, Victoria",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 777.6338690000557,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:7c69bd4d24a26fa2834998c5": {
+"text": "Civil disobedience is a deliberate, non\u2011violent violation of law intended to bring about social or political change. One of its core strategies is to **accept the legal consequences**\u2014often imprisonment\u2014to achieve several inter\u2011related goals:\n\n| Goal of Civil Disobedience | How Going to Jail Serves It |\n|---------------------------|-----------------------------|\n| **1. Demonstrate Moral Conviction** | By willingly serving a sentence, the protester shows that the cause is worth personal sacrifice. This signals to observers that the law being broken is perceived as unjust, not merely a convenience. |\n| **2. Highlight Injustice of the Law** | Imprisonment creates a stark, visible contrast between the law\u2019s demands and the protester\u2019s conscience. It forces the public and the state to confront the moral inconsistency: \u201cWhy punish someone for doing what many consider right?\u201d |\n| **3. Generate Public Sympathy & Media",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 827.9352859999562,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:55e04728373f7d31eaf6316d": {
+"text": "### How the U.S. Air Force (and most modern air forces) Deliver Messages  \n\nThe Air Force moves information the same way any large, high\u2011tempo organization does\u2014through a layered mix of **voice, data, and visual systems** that are built for speed, reliability, and security. Below is a high\u2011level overview of the major channels, the technology that underpins them, and the processes that ensure a message gets from the sender to the intended receiver safely and on time.\n\n---\n\n## 1.  Core Communication Networks  \n\n| Network | Primary Use | Typical Message Types | Key Characteristics |\n|---------|-------------|-----------------------|----------------------|\n| **Tactical Air Command System (TACS)** | Ground\u2011to\u2011air and air\u2011",
+"input_tokens": 77,
+"output_tokens": 256,
+"latency_ms": 971.2392259998524,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:ff024723b8b7a5fd5078ee81": {
+"text": "",
+"input_tokens": 86,
+"output_tokens": 256,
+"latency_ms": 1044.8658539999087,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:69f4ceb0c8ee79dc1c3f9f45": {
+"text": "The Ottoman Empire reached its greatest territorial, political, and cultural height under **Sultan\u202fSuleiman\u202fI**, commonly known as **Suleiman the Magnificent**.  \n\n- **Reign:** 1520\u202f\u2013\u202f1566  \n- **Key achievements:**  \n  - Expanded the empire to its largest extent, stretching from the gates of Vienna in the west to the Persian Gulf in the east, and from the Crimean Peninsula in the north to the Red Sea and the Horn of Africa in the south.  \n  - Victories such as the Battle of Moh\u00e1cs (1526), the capture of Belgrade (1521), the conquest of Rhodes (1522), the decisive win at the Battle of\u202fPreveza (1538), and the successful siege of Baghdad (1534).  \n  - Established a sophisticated legal and administrative system (the \u201c",
+"input_tokens": 86,
+"output_tokens": 256,
+"latency_ms": 995.8580510001411,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:76d7032a4fd3336322c37b73": {
+"text": "",
+"input_tokens": 78,
+"output_tokens": 256,
+"latency_ms": 1018.8524530003633,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:ae15d2c6afca4727a640d519": {
+"text": "I\u2019m sorry, but I can\u2019t help with that.",
+"input_tokens": 85,
+"output_tokens": 147,
+"latency_ms": 827.3343480004769,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:065c5d4e01d4e7559afaf2bb": {
+"text": "",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 929.3923440000071,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:59433c616fdbdd0cb737918b": {
+"text": "**Cilia are tiny, hair\u2011like projections that extend from the surface of many eukaryotic cells.**  \nDepending on their structure and location, they serve two main categories of functions:\n\n---\n\n## 1. Motile (moving) cilia  \n**Structure:** 9\u202f+\u202f2 arrangement of microtubules (nine outer doublets surrounding a central pair) with dynein motor proteins that generate a coordinated \u201cbeat.\u201d  \n\n**Primary roles**\n\n| Tissue / Organ | What the cilia do | Why it matters |\n|----------------|-------------------|----------------|\n| **Respiratory epithelium** (trachea, bronchi, nasal passages) | Beat rhythmically to push mucus, trapped dust, microbes, and debris toward the throat (mucociliary clearance). | Keeps airways clear; failure leads to infections, chronic",
+"input_tokens": 78,
+"output_tokens": 256,
+"latency_ms": 1010.3037019998737,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:9e1b8370aafb440efa9bb0ef": {
+"text": "The students who finish in roughly the top\u202f4\u20115\u202fpercent of their class are usually recognized with the highest level of **Latin honors**\u2014**\u201csumma\u202fcum\u202flaude.\u201d**  \n\nHere\u2019s how most U.S. colleges and universities break the honor\u2011ranking down (the exact percentages can vary a bit from school to school, but the pattern is common):\n\n|",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 1862.495145000139,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:bbe9ceb7e27c07a7afeb0e16": {
+"text": "",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 994.0737489996536,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:da948436b3db55eca765874b": {
+"text": "The basic unit of territorial division in Poland is the **gmina** (plural: **gminy**).  \n\nA gmina is comparable to a municipality or commune and serves as the lowest level of local government administration. It can be:\n\n- **Urban gmina** \u2013 a city or town that functions as a single municipality.  \n- **Rural gmina** \u2013 a collection of villages and countryside areas.  \n- **Urban\u2011rural gmina** \u2013 a town together with its surrounding villages and rural territory.\n\nGminy are responsible for a range of local services such as education (primary schools), infrastructure (local roads, water supply), social welfare, public safety, and spatial planning. They are governed by an elected council (rada gminy) and an executive head (w\u00f3jt for rural gminy, burmistrz for towns, or prezydent miasta for larger cities).",
+"input_tokens": 82,
+"output_tokens": 242,
+"latency_ms": 921.493300000293,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:fcf038c134cd37cb68d06062": {
+"text": "",
+"input_tokens": 91,
+"output_tokens": 256,
+"latency_ms": 1104.1968710005676,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:cd7499b7ed6e102019ea4882": {
+"text": "**In short:**  \nBoth the **Botanic Garden of the University of Warsaw** and the **University Library Garden** are classified as **urban green spaces** \u2013 but they belong to two slightly different sub\u2011categories:\n\n| Site | Primary classification | Sub\u2011type / specific function | Typical",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 1025.9183130001475,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:606150f1cab1747bbf3b8ee2": {
+"text": "**Short answer:**  \nThe \u201cOld Britons\u201d (the Celtic peoples who spoke Brittonic languages) called the island of **Britain**\u2014roughly the land that is today England, Wales, and southern Scotland\u2014their home. In their own terms they referred to it as *Prydain* (or similar Celtic forms), while the Romans called it *Britannia*.\n\n---\n\n## A bit more",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 999.7312599998622,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:577f8481808fa7dc22a647ed": {
+"text": "Warsaw\u2019s National Museum (Muzeum Narodowe w\u202fWarszawie) is widely regarded as **one of the most important museums in Poland**\u2014both in terms of the size and quality of its collections and its role as a cultural landmark. It\u2019s also among the country\u2019s most\u2011visited museums, drawing hundreds of thousands of visitors each year.",
+"input_tokens": 83,
+"output_tokens": 251,
+"latency_ms": 911.5550810001878,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:f8ae52ec90e003d8a9f7ae07": {
+"text": "",
+"input_tokens": 95,
+"output_tokens": 256,
+"latency_ms": 1017.7484530004222,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:51ef90c3a8e6b6face35691c": {
+"text": "**The dominant ship\u2011propulsion power plants of the 20th\u202fcentury**\n\n| Time period (approx.) | Main engine type(s) | How it worked / key features | Typical vessels that used it |\n|-----------------------|---------------------|------------------------------|------------------------------|\n| **1900\u202f\u2013\u202f1910s** | \u2022 **Reciprocating (piston) steam engines**  <br>\u2022 **Early steam turbines** (rare) | \u2022 Coal\u2011fired boilers produced high\u2011pressure steam that drove large double\u2011acting pistons. <br>\u2022 Turbines (e.g., the *Turbinia* 1901) used steam to spin a rotor directly coupled to the propeller shaft. | Ocean liners, cargo ships, naval warships, riverboats. |\n| **1910\u202f\u2013",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 1021.2359149991244,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:ed5f489992eca24b93cc1cbf": {
+"text": "The Dutch name for the Rhine River is **\u201cde Rijn.\u201d**",
+"input_tokens": 80,
+"output_tokens": 62,
+"latency_ms": 517.6342700005989,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:0131d5ebe51d4a37fc277bf2": {
+"text": "The Ispah Rebellion (also known as the **Ispah\u202fRebellion**) was a 1979 uprising in the **Kurdistan Region of Iraq**. It was led by **Kurdish insurgents**\u2014primarily members of the **Kurdistan Democratic Party (KDP)** and other Kurdish nationalist groups\u2014who rose against the newly established Iraqi Ba'athist government. The revolt was part of a broader Kurdish struggle for autonomy and rights within Iraq.",
+"input_tokens": 82,
+"output_tokens": 146,
+"latency_ms": 700.075690999256,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:e03d8d627813fc01bc20bda8": {
+"text": "The sieve of Eratosthenes relies on the fact that **every composite integer has a prime divisor that is \u2264\u202f\u221a\u202fn** (i.e., a composite number is always divisible by some smaller prime).",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 1022.6122340000074,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:ffffb7166899a2b13797154c": {
+"text": "The drop in demand for rental housing is usually the result of a mix of macro\u2011economic, demographic, and market\u2011specific forces. Below is a breakdown of the most common drivers, grouped by category, along with examples of how they tend to play out in practice.\n\n---\n\n## 1. Economic & Financial Factors  \n\n| Factor | How it suppresses rental demand | Typical evidence |\n|--------|--------------------------------|-------------------|\n| **Higher interest rates** | Mortgage rates rise \u2192 buying a home becomes relatively cheaper (in terms of monthly cash\u2011flow) than renting, especially for price\u2011sensitive renters. | A 1\u2011percentage\u2011point jump in the 30\u2011year mortgage rate often coincides with a 2\u20115\u202f% dip in rental\u2011market vacancy rates. |\n| **Improving employment & wages** | When people earn more and feel financially secure, they are more willing to take on a mortgage and the long",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 966.4907269998366,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:5391751ad3de4d8cf1815540": {
+"text": "Auckland.",
+"input_tokens": 91,
+"output_tokens": 74,
+"latency_ms": 764.7552199996426,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:a7ae033b92f82b6d70afdc3b": {
+"text": "In a **progressive tax system**, the **tax rate (especially the marginal tax rate)** rises as the taxable base\u2014typically income or wealth\u2014gets larger. In other words, the higher your taxable amount, the higher the percentage of that amount you\u2019re required to pay in tax.",
+"input_tokens": 85,
+"output_tokens": 150,
+"latency_ms": 888.7782199999492,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:f12dbdfdb9f467cf91aef5e1": {
+"text": "**The first formal English declaration of war on France was made in 1337**, when King\u202fEdward\u202fIII officially declared hostilities against King\u202fPhilip\u202fVI of France.  \n\n| Date | Event | Significance |\n|------|-------|--------------|\n| **24\u202fMay\u202f1337** | The English Parliament, at the urging of Edward\u202fIII, passed a formal declaration of war against France. | This act marked the official start of the **Hundred Years\u2019 War** (",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 1117.2595289999663,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:88f2e373dac1490b976468cd": {
+"text": "### In the EU legal system \u2013 what happens **",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 782.3125719996824,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:1b0533f843f901b65c9ece9a": {
+"text": "",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 1011.9549159999224,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:3dead0535cfb59dc1bc73e8d": {
+"text": "",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 805.1288919996296,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:dc579e274cb65177cb0e792c": {
+"text": "BSkyB\u2019s digital satellite television service, known as **Sky Digital**, was officially launched on **1\u202fOctober\u202f1998**. This marked the start of the company\u2019s fully digital TV offering in the United Kingdom.",
+"input_tokens": 81,
+"output_tokens": 124,
+"latency_ms": 768.1874769996284,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:04944650aedba2b9cedfa747": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 1096.493484000348,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:0e3e5972fe4b402b3c00a9a2": {
+"text": "Warsaw\u202fSummer\u202fJazz\u202fDays is one of the many **music festivals** that the city of Warsaw hosts. It joins a rich calendar of cultural and artistic events\u2014ranging from classical concerts and rock shows to film festivals and street art fairs\u2014that make Warsaw a vibrant hub for live music and the arts.",
+"input_tokens": 86,
+"output_tokens": 149,
+"latency_ms": 825.0520279998454,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:86e34ceb544c274bae368896": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 917.2229890000381,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:e666b051b1da1b1a770e4227": {
+"text": "Saharan dust can cross the entire Atlantic Ocean, traveling on the order of **3,000\u202f\u2013\u202f4,000 miles (\u22485,000\u202f\u2013\u202f6,500\u202fkm)** from its source in North\u2011Africa to the Caribbean, the Gulf of Mexico, and even the southeastern United States.  \n\n**Why the range?**  \n- **Seasonal wind patterns:** The strongest dust\u2011laden trade winds occur in the spring and summer, pushing particles farther west.  \n- **Particle size:** Larger sand grains settle after a few hundred miles, while finer clay\u2011sized particles stay aloft for weeks and can be carried the full distance.  \n- **Atmospheric conditions:** High\u2011altitude jet streams and tropical cyclones can accelerate transport, sometimes delivering dust to the Caribbean in 2\u20133\u202fdays and",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 942.006718999437,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:8af6eb3c9cd2e418690361af": {
+"text": "",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 975.1006860005873,
+"provider": "groq"
 }
 }
