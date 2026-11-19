@@ -44,3 +44,23 @@ stages:
       hash: md5
       md5: ea44ce4f42fce50c7a20523aaf1e0a15
       size: 93553
+  build_drift_reference:
+    cmd: python -m router.drift
+    deps:
+    - path: data/queries.csv
+      hash: md5
+      md5: 2301e3785c3b4b4f757e17819ed896d2
+      size: 177266
+    - path: router/drift.py
+      hash: md5
+      md5: 0cf1ed996469cc1b9ab40f911c349410
+      size: 5341
+    - path: router/features.py
+      hash: md5
+      md5: d6238c8433fb385f4a3bab50d0b16533
+      size: 3724
+    outs:
+    - path: data/reference_features.json
+      hash: md5
+      md5: 135143a6146fa7d45cbf9c81836ec973
+      size: 42381

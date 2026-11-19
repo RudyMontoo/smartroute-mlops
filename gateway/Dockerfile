@@ -16,12 +16,19 @@ RUN python -m venv /opt/venv \
 # the MLflow registry, but baking an artifact in means the container still starts
 # and serves if the registry is unreachable -- which is exactly the situation where
 # you least want your gateway refusing to boot.
+#
+# data/queries.csv is DVC-tracked, not committed to git, so a fresh checkout (this
+# build, CI, Render) never has it on disk. Rather than wiring DVC remote credentials
+# into every build environment, the build regenerates the dataset from the same public
+# sources prepare_data.py always uses -- which is the point of a reproducible pipeline:
+# the data doesn't need to travel with the code, it needs to be re-derivable from it.
 FROM builder AS model
 
 WORKDIR /build
 COPY router/ router/
-COPY data/queries.csv data/
-RUN /opt/venv/bin/python -m router.train --no-mlflow
+RUN /opt/venv/bin/python -m router.prepare_data \
+ && /opt/venv/bin/python -m router.train --no-mlflow \
+ && /opt/venv/bin/python -m router.drift
 
 
 # --- runtime -----------------------------------------------------------------
@@ -36,10 +43,10 @@ WORKDIR /app
 
 COPY --from=builder /opt/venv /opt/venv
 COPY --from=model /build/models /app/models
+COPY --from=model /build/data/reference_features.json /app/data/reference_features.json
 
 COPY router/ router/
 COPY gateway/ gateway/
-COPY data/queries.csv data/holdout.csv data/
 
 RUN mkdir -p /app/data && chown -R app:app /app
 USER app

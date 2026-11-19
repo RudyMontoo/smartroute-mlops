@@ -37,8 +37,13 @@ jobs:
       # The tests serve the locally trained artifact, so the model has to exist before
       # they run. Training on every CI run is affordable precisely because the model is
       # small -- and it means CI validates the training code too, not just the server.
-      - name: Train router
-        run: python -m router.train --no-mlflow
+      # data/queries.csv is DVC-tracked, not committed, so a fresh checkout here
+      # regenerates it from the same public sources rather than needing DVC remote
+      # credentials wired into CI.
+      - name: Prepare data and train router
+        run: |
+          python -m router.prepare_data
+          python -m router.train --no-mlflow
 
       - name: Run tests
         run: pytest
