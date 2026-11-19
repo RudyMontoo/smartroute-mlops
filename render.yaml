@@ -1,0 +1,29 @@
+# Render blueprint for the public deploy (Phase 5).
+#
+# Render's free tier runs one web service, not a multi-container stack, so this
+# deploys the gateway API alone -- MLflow, Prometheus, Grafana and the dashboard stay
+# in local Docker Compose. That split is the normal production shape (a stateless API
+# behind a public endpoint, infra services kept internal) and is a better viva answer
+# than pretending otherwise.
+#
+# The gateway's Dockerfile already bakes a locally-trained model artifact in as a
+# fallback (see gateway/Dockerfile's `model` stage), so MODEL_SOURCE=local here means
+# the deployed service works standalone with no MLflow dependency.
+
+services:
+  - type: web
+    name: smartroute-gateway
+    runtime: docker
+    dockerfilePath: ./gateway/Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: MODEL_SOURCE
+        value: local
+      - key: GROQ_API_KEY
+        sync: false # set manually in the Render dashboard; never committed
+      - key: ROUTER_THRESHOLD
+        value: "0.60"
+      - key: DB_PATH
+        value: /app/data/gateway.db
