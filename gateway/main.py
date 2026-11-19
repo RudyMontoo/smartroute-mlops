@@ -17,7 +17,7 @@ from fastapi.responses import Response
 from prometheus_client import CONTENT_TYPE_LATEST, generate_latest
 from pydantic import BaseModel, Field
 
-from gateway import db, metrics
+from gateway import cascade, db, metrics
 from gateway.config import settings
 from gateway.providers import ProviderPool
 from gateway.router_service import router_service
@@ -69,6 +69,10 @@ class ChatRequest(BaseModel):
         ge=0.0,
         le=1.0,
         description="Override the confidence threshold for this request.",
+    )
+    no_cascade: bool = Field(
+        default=False,
+        description="Skip cascade verification. Used by the A/B comparison in eval.",
     )
 
 
@@ -126,6 +130,25 @@ async def _handle_chat(request: ChatRequest) -> ChatResponse:
     decision = policy.decide(label, confidence, threshold)
 
     completion = await pool.complete(decision.model, request.query)
+    served_model = decision.model
+    reason = decision.reason
+    total_cost = completion.cost_usd
+    escalated = False
+
+    # Cascade: the routing decision was made before any answer existed, so check the
+    # cheap model's output and retry on the large model if it looks like a failure.
+    if decision.model == policy.CHEAP and not request.no_cascade:
+        verdict = cascade.verify(request.query, completion.text)
+        if verdict.escalate:
+            escalated = True
+            retry = await pool.complete(policy.EXPENSIVE, request.query)
+            metrics.ESCALATIONS.labels(trigger=verdict.trigger).inc()
+            # Both calls are billed. An escalation that fires too often will show up
+            # as a drop in measured savings rather than being quietly absorbed.
+            total_cost += retry.cost_usd
+            completion = retry
+            served_model = policy.EXPENSIVE
+            reason = f"{decision.reason} -> escalated ({verdict.reason})"
 
     # The counterfactual: what this exact request would have cost had we sent every
     # query to the large model. Measured per request, not extrapolated.
@@ -134,10 +157,10 @@ async def _handle_chat(request: ChatRequest) -> ChatResponse:
     )
     elapsed_ms = (time.perf_counter() - started) * 1000
 
-    metrics.REQUESTS.labels(model=decision.model, provider=completion.provider).inc()
-    metrics.ROUTING_DECISIONS.labels(predicted_label=label, model=decision.model).inc()
-    metrics.LATENCY.labels(model=decision.model).observe(elapsed_ms / 1000)
-    metrics.COST.labels(kind="actual").inc(completion.cost_usd)
+    metrics.REQUESTS.labels(model=served_model, provider=completion.provider).inc()
+    metrics.ROUTING_DECISIONS.labels(predicted_label=label, model=served_model).inc()
+    metrics.LATENCY.labels(model=served_model).observe(elapsed_ms / 1000)
+    metrics.COST.labels(kind="actual").inc(total_cost)
     metrics.COST.labels(kind="baseline").inc(baseline_cost)
     if completion.provider == "mock" and pool.mode == "groq":
         metrics.PROVIDER_FALLBACKS.inc()
@@ -147,15 +170,16 @@ async def _handle_chat(request: ChatRequest) -> ChatResponse:
             query=request.query,
             predicted_label=label,
             confidence=confidence,
-            model=decision.model,
-            reason=decision.reason,
+            model=served_model,
+            reason=reason,
             provider=completion.provider,
             input_tokens=completion.input_tokens,
             output_tokens=completion.output_tokens,
-            cost_usd=completion.cost_usd,
+            cost_usd=total_cost,
             baseline_cost_usd=baseline_cost,
             latency_ms=elapsed_ms,
             model_version=router_service.version,
+            escalated=escalated,
         )
     )
 
@@ -164,16 +188,17 @@ async def _handle_chat(request: ChatRequest) -> ChatResponse:
         routing=RoutingInfo(
             predicted_label=label,
             confidence=confidence,
-            model=decision.model,
-            reason=decision.reason,
+            model=served_model,
+            reason=reason,
+            escalated=escalated,
             model_version=router_service.version,
         ),
         usage=UsageInfo(
             input_tokens=completion.input_tokens,
             output_tokens=completion.output_tokens,
-            cost_usd=completion.cost_usd,
+            cost_usd=total_cost,
             baseline_cost_usd=baseline_cost,
-            saved_usd=baseline_cost - completion.cost_usd,
+            saved_usd=baseline_cost - total_cost,
             latency_ms=elapsed_ms,
             provider=completion.provider,
         ),

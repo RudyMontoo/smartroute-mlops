@@ -22,9 +22,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 METRICS = ROOT / "models" / "metrics.json"
 
-# Baseline at the time of writing: macro_f1 0.9285, cost savings 31.4%.
+# Baseline at the time of writing: macro_f1 0.9285, cost savings ~11.5% under the
+# current gpt-oss-20b/120b placeholder pricing in router/policy.py (the two models
+# are only ~1.5x apart in price, far narrower than the old llama 8b/70b spread, so
+# routing has much less room to save money regardless of classifier quality). Revisit
+# this floor once real prices are confirmed -- see RESULTS.md for the caveat.
 MIN_MACRO_F1 = 0.85
-MIN_COST_SAVINGS_PCT = 25.0
+MIN_COST_SAVINGS_PCT = 8.0
 MIN_ACCURACY = 0.85
 
 

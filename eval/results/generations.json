@@ -551,5 +551,1545 @@
 "output_tokens": 256,
 "latency_ms": 715.5609280002864,
 "provider": "groq"
+},
+"openai/gpt-oss-20b:e1e36bf831ec5de96b6beb8b": {
+"text": "",
+"input_tokens": 90,
+"output_tokens": 256,
+"latency_ms": 918.706426999961,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ccbc7b0dbf3cdcefd236b1f1": {
+"text": "Below is a **Python** implementation of Counting Sort that works for any list of integers (including negative values).  \nCounting Sort is a linear\u2011time, stable sorting algorithm that works by counting the occurrences of each distinct value in the input.\n\n```python\ndef counting_sort(arr):\n    \"\"\"\n    Sorts a list of integers (positive, zero, or negative) using Counting Sort.\n\n    Parameters\n    ----------\n    arr : list[int]\n        The list to be sorted.\n\n    Returns\n    -------\n    list[int]\n        A new list containing the sorted elements.\n\n    Notes\n    -----\n    * Time complexity: O(n + k) where n = len(arr) and k = range of input values.\n    * Space complexity: O(n + k).\n    * The algorithm is stable",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 825.036777999685,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:bd7556e5e4f85745e104d72b": {
+"text": "Below is a small, self\u2011contained Python helper that counts how many elements in a list fall inside a given numeric range.  \nFeel free to drop it into any script or module \u2013 it works with any iterable of numbers (int, float, Decimal, \u2026) and is fully documented.\n\n```python\nfrom typing import Iterable, TypeVar, Callable\n\nT = TypeVar(\"T\", int, float)   # extendable to any numeric type\n\ndef count_in_range(\n    data",
+"input_tokens": 90,
+"output_tokens": 256,
+"latency_ms": 714.8127179998482,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f8fc73f303ad37ca920987cd": {
+"text": "Jack had $100, and Sophia gave him \\( \\frac{1}{5}\\) of her $100, which is \\( \\frac{1}{5}\\times100 = 20\\) dollars.  \nSo Jack\u2019s new total is  \n\n\\[\n100 + 20 = 120.\n\\]\n\n**Jack now has $120.**",
+"input_tokens": 96,
+"output_tokens": 160,
+"latency_ms": 721.5653660000498,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f9f8c22051fb964319620d4b": {
+"text": "Below is a **Python** implementation that turns a snake\u2011case string into camel\u2011case using a single regular\u2011expression substitution.  \nIf you\u2019re working in another language (e.g. JavaScript, Java, C#) the idea is the same \u2013 use a regex that finds an underscore followed by a letter and replace it with the uppercase version of that letter.\n\n---\n\n## Python version\n\n```python\nimport re\n\ndef snake_to_camel(s: str) -> str:\n    \"\"\"\n    Convert a snake_case string to camelCase.\n\n    Parameters\n    ----------\n    s : str\n        The input string in snake_case (e.g. 'my_variable_name').\n\n    Returns\n    -------\n    str\n        The string converted to camelCase (e.g. 'myVariableName').\n\n    Notes\n    -----\n    * Leading/trailing underscores are",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 497.9579040000317,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:7aad89ca93ce9188e4ea13a9": {
+"text": "Below is a compact, well\u2011documented Python implementation that rotates a list **to the right** by a given number of positions.  \nIt works for any iterable that supports slicing (lists, tuples, etc.) and gracefully handles:\n\n* Rotations larger than the list length (via modulo).\n* Negative rotations (treated as left\u2011rotations).\n* Empty lists.\n\n```python\nfrom typing import List,",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 695.9210009999879,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:e25f37ac1e43c2abc4b4c285": {
+"text": "Adrianne received:\n\n- 20 beads from her mother  \n- \\(20 + 10 = 30\\) beads from her sister  \n- \\(2 \\times 20 = 40\\) beads from her friend  \n\nAdding them together:  \n\\(20 + 30 + 40 = 90\\).\n\n**Adrianne had 90 beads in total.**",
+"input_tokens": 126,
+"output_tokens": 155,
+"latency_ms": 543.9065339996887,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:b03a404f690052ca9b148570": {
+"text": "Let  \n\n- \\(L\\) = cost of the lot  \n- \\(H\\) = cost of the house  \n\nWe\u2019re told:\n\n1. \\(H + L = 120{,}000\\)  \n2. \\(H = 3L\\)\n\nSubstitute the second equation into the first:\n\n\\[\n3L + L = 120{,}000 \\;\\;\\Longrightarrow\\;\\; 4L = 120{,}000\n\\]\n\nSolve for \\(L\\):\n\n\\[\nL = \\frac{120{,}000}{4} = 30{,}000\n\\]\n\nNow find the house price:\n\n\\[\nH = 3L = 3 \\times 30{,}000 = 90{,}000\n\\]\n\n**The house",
+"input_tokens": 101,
+"output_tokens": 256,
+"latency_ms": 714.8484029999054,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:535bde2edc01b1a318b4158b": {
+"text": "",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 511.62789399995745,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:97ce0a53823c73f1623a9f5d": {
+"text": "",
+"input_tokens": 152,
+"output_tokens": 256,
+"latency_ms": 834.5582000001741,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8a08e60bfea43f038d236062": {
+"text": "",
+"input_tokens": 92,
+"output_tokens": 256,
+"latency_ms": 759.327728000244,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:25ec02c9ceb870ce04ab2c1a": {
+"text": "Below is a small, self\u2011contained Python function that returns the perimeter of a regular polygon.  \nIt includes a brief docstring, basic input validation, and a quick example of how to use it.\n\n```python\ndef perimeter_regular_polygon(n_sides: int, side_length: float) -> float:\n    \"\"\"\n    Calculate the perimeter of a regular polygon.\n\n    Parameters\n    ----------\n    n_sides : int\n        Number of sides of the polygon. Must be an integer >= 3.\n    side_length : float\n        Length of one side. Must be a non\u2011negative number.\n\n    Returns\n    -------\n    float\n        The perimeter of the polygon.\n\n    Raises\n    ------\n    ValueError\n        If n_sides < 3 or side_length < ",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 383.74888399994234,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:76faa618a3d910aa961028df": {
+"text": "Each blouse costs $20, and a 30\u202f% discount removes $6 from that price:\n\n\\[\n20 \\times 0.30 = 6 \\quad\\text{so}\\quad 20 - 6 = 14 \\text{ per blouse.}\n\\]\n\nFor 4 blouses:\n\n\\[\n4 \\times 14 = 56.\n\\]\n\n**Total cost: $56.**",
+"input_tokens": 109,
+"output_tokens": 164,
+"latency_ms": 681.7154109999137,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:c8aa7593bf521617dafa9ae8": {
+"text": "John\u2019s week\u2019s finances break down like this:\n\n| Item | Cost |\n|------|------|\n| Earnings (50\u202f$/hr \u00d7 6\u202fhrs) | **$300** |\n| Gas | \u2013$50 |\n| Bank deposit | \u2013",
+"input_tokens": 128,
+"output_tokens": 256,
+"latency_ms": 819.4850849999966,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d01bab71cf2003251a0b1d47": {
+"text": "Below is a compact, well\u2011documented helper that tells you whether every element in a list appears only once.\n\n```python\nfrom typing import Iterable, Any\n\ndef are_elements_unique(seq: Iterable[Any]) -> bool:\n    \"\"\"\n    Return True if all elements in *seq* are unique, otherwise False.\n\n    Parameters\n    ----------\n    seq : Iterable[Any]\n        Any iterable (list, tuple, set, generator, \u2026) whose elements you want to test.\n\n    Returns\n    -------\n    bool\n        True if no element is repeated, False otherwise.\n\n    Notes\n    -----\n    * The implementation uses a set to keep track of seen items.\n      This gives an average\u2011case time complexity of O(n",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 617.3369279999861,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:a6d3a04eaa27136fb27acc18": {
+"text": "",
+"input_tokens": 150,
+"output_tokens": 256,
+"latency_ms": 816.6695660002006,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:47484d317509112369ed2917": {
+"text": "She\u2019s already saved \\(10 \\times 12 = 120\\) toothpicks.  \nThe sculpture needs 200, so she still needs \\(200 - 120 = 80\\) toothpicks.  \n\nAt a rate of 10 per week, the time required is  \n\n\\[\n\\frac{80}{10} = 8 \\text{ weeks}.\n\\]\n\n**Answer: 8 more weeks.**",
+"input_tokens": 161,
+"output_tokens": 244,
+"latency_ms": 613.8129569999364,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:fc3b2a2e5481c61788c9a974": {
+"text": "Below is a compact, well\u2011documented Python helper that counts **unique** bidirectional pairs in a list of tuples.\n\n```python\nfrom typing import Iterable, Tuple, Set\n\ndef count_bidirectional_pairs(pairs: Iterable[Tuple[int",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 818.4908349999205,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:4124ee3d3777ee50b706d3cb": {
+"text": "Below is a small, self\u2011contained helper that will round any numeric value to the nearest multiple of a given step.  \nIt works for integers, floats, and even `Decimal` objects, and it lets you choose the rounding policy you prefer.\n\n```python\nfrom __future__ import annotations\nimport math\nfrom decimal import Decimal, ROUND_HALF_UP, ROUND_HALF_EVEN\nfrom typing import Union",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 709.0741659999367,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:145fabfb6a9ca8f0d7d568aa": {
+"text": "",
+"input_tokens": 97,
+"output_tokens": 256,
+"latency_ms": 827.0567049999045,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:e8ea75f42956ece14fcaf546": {
+"text": "",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 509.0376000002834,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:07b8f0af40edc22b34b37f33": {
+"text": "",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 689.5536719998745,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ebbe97b8f66b7d3912c3b86f": {
+"text": "",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 630.5164310001601,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8fa2d34b689d8e36cf68054f": {
+"text": "Here are five of the most iconic archaeological sites in Mexico that are must\u2011visits for any history or culture enthusiast:\n\n| # | Site | Location | Why It\u2019s Famous |\n|---|------|----------|-----------------|\n| 1 | **Teotihuacan** | Near Mexico City | The city\u2019s massive pyramids (Pyramid of the Sun, Pyramid of the Moon) and the Avenue of the Dead showcase one of the largest pre\u2011Columbian urban centers in the Americas. |\n| 2 | **Chich\u00e9n\u202fItz\u00e1** | Yucat\u00e1n Peninsula | A UNESCO World Heritage site, it\u2019s best known for the El Castillo pyramid, the Great Ball Court, and the intricate astronomical alignments of its structures. |\n| 3 | **Palenque** | Chiapas | A",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 631.1301769997044,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:645caf61efd28ffa81e6fd6f": {
+"text": "I\u2019m sorry, but I can\u2019t help with that.",
+"input_tokens": 87,
+"output_tokens": 54,
+"latency_ms": 363.92788199964343,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:e3c9002cb012ad831f1c30b7": {
+"text": "The hottest planet in our solar system is **Venus**.\n\n- **Surface temperature:** About **462\u202f\u00b0C (864\u202f\u00b0F)** on average, making it hotter than Mercury despite being farther from the Sun.\n- **Why:** Venus has a thick atmosphere rich in carbon\u2011dioxide (CO\u2082) and a dense cloud layer that traps heat through a runaway greenhouse effect, keeping the surface extremely hot.",
+"input_tokens": 81,
+"output_tokens": 154,
+"latency_ms": 806.2678380001671,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d5777edf399d8e1ce6e50566": {
+"text": "### Why Education Matters Beyond the Job Market\n\nWhile a degree or certificate often opens doors to a specific career, the value of education stretches far beyond the r\u00e9sum\u00e9. Think of learning as a *toolset* that equips you to navigate life, contribute to society, and grow as a person. Below are the key ways education",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 614.6578719999525,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:379de7b0cc3ab0e14215135c": {
+"text": "",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 511.7031299996597,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:fc2be30389e4a6c6d40c13a6": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 516.5014459998929,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:584c809be466600fc35e97e9": {
+"text": "Belize was granted independence on **21\u202fSeptember\u202f1981**.",
+"input_tokens": 82,
+"output_tokens": 74,
+"latency_ms": 506.80130000000645,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:03ef6d309c10832e7c79df8c": {
+"text": "**Disclaimer**  \nI\u2019m not a registered dietitian, certified personal trainer, or medical professional. The information below is a general guide and should not replace individualized advice from a qualified health professional. If you have any medical conditions, injuries, or special dietary needs, please consult a doctor, dietitian, or certified trainer before starting any new nutrition or exercise program.\n\n---\n\n## 1. Quick Self\u2011",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 714.7613869997258,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d6cc66779f7e5f26430683e0": {
+"text": "",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 486.99308699997346,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:c5614122fc840d9e0033fb82": {
+"text": "In English, people from the Netherlands are most commonly called **Dutch**.  \n- **Dutch** \u2013 the standard demonym (e.g., \u201cDutch people,\u201d \u201cDutch culture\u201d).  \n- **Netherlanders** \u2013 a less\u2011used, more formal term that literally means \u201cpeople of the Netherlands.\u201d  \n\nSo if you\u2019re referring to the citizens of the Netherlands, say \u201cDutch.\u201d",
+"input_tokens": 82,
+"output_tokens": 195,
+"latency_ms": 639.2822779998824,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:3311e9b0232120765d3202b3": {
+"text": "**Three key disadvantages of CRISPR\u2011based genetic modification technologies**\n\n| # | Disadvantage | Why it matters |\n|---|--------------|----------------|\n| 1 | **Off\u2011target mutations** | CRISPR\u2019s guide RNA can sometimes bind to sequences that are similar but not identical to the intended target. This can introduce unintended edits elsewhere in the genome, potentially disrupting essential genes or creating harmful mutations. In therapeutic or agricultural settings, such off\u2011target effects raise safety concerns and complicate regulatory approval. |\n| 2 | **Ethical and societal concerns** | Editing genomes\u2014especially human embryos or germline cells\u2014raises profound ethical questions about \u201cdesigner babies,\u201d equity of access, and the potential for social stratification. Public mistrust can slow",
+"input_tokens": 86,
+"output_tokens": 256,
+"latency_ms": 631.5776520000327,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:601a35b26fc17cf3d179c6c4": {
+"text": "",
+"input_tokens": 90,
+"output_tokens": 256,
+"latency_ms": 701.6326170000866,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:6c112f019543ad2f89c6c2c1": {
+"text": "",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 716.2107819999619,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2a38ecd9e217f17e07bcda88": {
+"text": "",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 715.1417830000355,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:0d997f5ed6b0c8dcaf48329c": {
+"text": "**Why kids take tests in school**\n\n| Purpose | What it looks like | Why it matters |\n|---------|--------------------|----------------|\n| **Check what\u2019s been learned** | A quiz, mid\u2011term, or final exam | It tells teachers and parents whether the student has understood the material. |\n| **Spot gaps early** | A test that reveals a weak spot | If a student struggles with fractions, the teacher can give extra help before the next unit. |\n| **Give feedback to the student** | Scores, comments, or grades | Knowing how they did helps the student see what they did well and what needs improvement. |\n| **Hold teachers and schools accountable** | Standardized tests, state assessments | They show whether the school is meeting educational goals and help improve teaching methods. |\n| **Prepare for the future** | College entrance exams, job\u2011related tests | Tests",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 509.6367289997943,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d4c27956417a20d9b0fcbad6": {
+"text": "",
+"input_tokens": 86,
+"output_tokens": 256,
+"latency_ms": 717.6677929996913,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:495b5eb8ce0f7a8172b6a02d": {
+"text": "**European Union (EU) Member States \u2013 2024**\n\n| # | Country |\n|---|---------|\n| 1 | Austria |\n| 2 | Belgium |\n| 3 | Bulgaria |\n| 4 | Croatia |\n| 5 | Cyprus |\n| 6 | Czech Republic |\n| 7 | Denmark |\n| 8 | Estonia |\n| 9 | Finland |\n|10 | France |\n|11 | Germany |\n|12 | Greece |\n|13 | Hungary |\n|14 | Ireland |\n|15 | Italy |\n|16 | Latvia |\n|17 | Lithuania |\n|18 | Luxembourg |\n|19 | Malta |\n|20 | Netherlands |\n|21 | Poland |\n|22 | Portugal |\n|23 | Romania |\n|24 | Slovakia |\n|25 | Slovenia |\n|26 | Spain |\n|27 | Sweden |\n\n> **Note:** The United Kingdom was an EU member until 31 January\u202f2020, after which it formally exited the Union (Brexit). No other countries have joined or left the EU since the",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 598.9281859997391,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8801cdbb3ab68e0015a66b4f": {
+"text": "",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 702.5705420001032,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:5addf406126c3fc7c48371e4": {
+"text": "Here\u2019s a quick \u201cask\u2011out\u2011location\u201d playbook. Pick the vibe that feels most natural to you and your partner, and tweak the details to match their interests.  \n\n| # | Location | Why it works | Quick \u201cask\u2011out\u201d set\u2011up | Extra touch |\n|---|----------|--------------|",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 544.6173699997416,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:02b2db6bb6b569c70eeaebea": {
+"text": "",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 645.8330760001445,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:28adb7e7083ab7a21c7b1418": {
+"text": "",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 388.0287460001455,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f129a0daf835d872dbb501dc": {
+"text": "The title \u201cgreatest NFL quarterback of all time\u201d is one of the most debated topics in sports, and there\u2019s no single answer that satisfies everyone.  The debate usually boils down to a handful of criteria\u2014championships, individual statistics, era\u2011adjusted performance, leadership, and the impact on the game\u2014and each of those criteria can point to a different candidate.  Below is a balanced look at the most frequently mentioned quarterbacks, the arguments for each, and why many people still lean toward Tom\u202fBrady as the consensus \u201cgreatest\u201d (while acknowledging that the discussion is far from settled).\n\n---\n\n## 1. Tom\u202fBrady (2000\u20112022)\n\n| Category | Highlights |\n|----------|------------|\n| **Champ",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 402.9490309999346,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:1708a9724fb321ddf8b43ecb": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 710.8096819997627,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:86ad3abd215aeef10312e4d3": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 713.8683230000424,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:90fcc334faa494f435e53b40": {
+"text": "### Short answer  \n- **Use micro\u2011services only if** the benefits (independent scaling, team autonomy, technology diversity, fault isolation) outweigh the added operational complexity.  \n- **Start small**\u2014usually 3\u202f\u2013\u202f5 services for a new project.  \n- **Scale the number** as the domain grows, but keep each service bounded, independently deployable, and well\u2011defined.\n\nBelow is a practical decision framework and some \u201crule\u2011of",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 511.827569000161,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ba44a7363b9d625cb0567e5c": {
+"text": "### The Ultimate U.S. Golf Trip Guide  \n*(A mix of world\u2011class courses, stunning scenery, and unforgettable experiences)*  \n\n| # | Destination | Why It\u2019s a Must\u2011Visit | Signature Courses | Travel Tips |\n|---|-------------|-----------------------|-------------------|-------------|\n| 1 | **Pebble Beach, California** | Iconic 18\u2011hole links on the Pacific, legendary history, and breathtaking ocean views. | Pebble Beach Golf Links, Spyglass Hill, Cypress Point | Book early (especially for Pebble Beach). Stay at the Pebble Beach Resorts or nearby Carmel\u2011by\u2011the\u2011Sea for luxury. |\n| 2 | **Scottsdale, Arizona** | Desert paradise with a high concentration of top\u2011rated courses and year\u2011round sunshine. | TPC Scottsdale (home of the Phoenix",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 790.1836840001124,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:be2aeb575039032d04271bbc": {
+"text": "Deserts are characterized by **arid, dry weather**\u2014very low rainfall, high sunshine, and large temperature swings (hot days, cool nights).  Humidity is typically low, and the air is clear, with occasional dust or sandstorms.",
+"input_tokens": 82,
+"output_tokens": 122,
+"latency_ms": 645.6325590002052,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f9a6a86fca621ed4040e78ab": {
+"text": "Here\u2019s a quick snapshot of the kinds of things you\u2019ll often find tucked away in a typical refrigerator:\n\n| Category | Common Items | Why They\u2019re There |\n|----------|--------------|-------------------|\n| **Dairy** | Milk, cheese (cheddar, mozzarella, feta), yogurt, butter, cream | Keeps them fresh and prevents spoilage. |\n| **Produce** | Lettuce, spinach, carrots, cucumbers, bell peppers, tomatoes, onions, garlic | Fresh veggies stay crisp and safe from bacteria. |\n| **Meat & Seafood** | Raw chicken, ground beef, pork chops, salmon, shrimp | Cold temperatures slow bacterial growth. |\n| **Condiments & Sauces** | Ketchup, mustard, mayonnaise, soy sauce, hot sauce, salad dressings | Many are perishable or benefit from refrigeration. |\n| **Eggs** | Fresh eggs | Keeps",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 719.1231349997906,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:cfa7c633ffdd1fb9e8cd1e13": {
+"text": "",
+"input_tokens": 91,
+"output_tokens": 256,
+"latency_ms": 811.5333890000329,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:e79f9af7d3c77d04ebdcd856": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 722.4567019998176,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:9020e7289ce46331caca122f": {
+"text": "The \u201cbest\u201d part of having children really depends on what you value most, but most parents find a handful of themes that keep coming up:\n\n| What parents often cherish | Why it feels special |\n|---------------------------|----------------------|\n| **Unconditional love** | Children give you a love that\u2019s not tied to performance or circumstances. It\u2019s a pure, often surprising, emotional connection that can feel like a new kind of family. |\n| **Seeing the world through fresh eyes** | Kids remind you of the wonder in everyday moments\u2014whether it\u2019s a new word, a first step, or a simple game. Their curiosity can reignite your own sense of discovery. |\n| **Growth and learning** | Raising children is a two\u2011way street. You teach them, but they also teach you\u2014about patience, resilience, empathy, and",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 668.442672999845,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:b9ea979fa22596896831eb9b": {
+"text": "one dollar and thirty five cents",
+"input_tokens": 104,
+"output_tokens": 220,
+"latency_ms": 717.5165459998425,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2349606d7c8e578c062be94c": {
+"text": "",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 761.4785230002781,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2da14c56447aaf8ddf8261c8": {
+"text": "Here are five of the most effective ways to keep your houseplants thriving:\n\n1. **Choose the Right Light**  \n   - **Match plant to spot:** Most houseplants prefer bright, indirect light. If you\u2019re unsure, place the plant near a north\u2011 or east\u2011facing window; if it\u2019s a shade\u2011tolerant species, a south\u2011 or west\u2011facing spot works too.  \n   - **Rotate regularly:** Turn the pot every 2\u20134 weeks so all sides receive equal light and prevent uneven growth.\n\n2. **Water Wisely**  \n   - **Check the soil first:** Stick your finger 1\u20132\u202finches into the pot; if it feels dry, water.  \n   - **Use room\u2011temperature water:** Cold water can shock roots.  \n   - **Avoid overwatering:** Let the top 1\u20132\u202finches dry out between waterings; most houseplants prefer slightly drier soil than you might think.\n\n3. **Maintain Proper Humidity**  \n   - **Group",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 621.1632320000717,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:64d490bd38b3955044d99e90": {
+"text": "## Classic French Cr\u00eape Recipe  \n*(Makes about 12\u201315 thin, delicate cr\u00eapes \u2013 enough for 4 people as a light meal or dessert)*\n\n| **Ingredient** | **Amount** | **Notes** |\n|-----------------|------------|-----------|\n| All\u2011purpose flour | 125\u202fg (\u22481\u202fcup) | Sifted for a silky batter |\n| Milk | 300\u202fml (\u22481\u202f\u00bc\u202fcups) | Whole milk gives richer flavor; use 2% or skim if you prefer lighter |\n| Water | 75\u202fml (\u2248\u2153\u202fcup) | Keeps the batter thin and prevents clumping |\n| Eggs | 2 large | Fresh, at room temperature |\n| Butter | 30\u202fg (\u22482\u202fTbsp) + extra for the pan | Melted, then cooled slightly |\n| Sugar | 1\u202fTbsp | Optional \u2013 for sweet cr\u00eapes |\n| Salt | Pinch | Enhances flavor |\n| Vanilla extract | \u00bd\u202ft",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 696.4775120000013,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:e69cc4629b5ebcd24d0f9b91": {
+"text": "**National Payments Corporation of India (NPCI)** is the umbrella organization that operates the country\u2019s retail payments infrastructure. It was incorporated in 2008 as a non\u2011profit, self\u2011sustaining entity under the Companies Act, 2013, and is headquartered in Mumbai, India.\n\n### Core Functions\n\n| Function | What it does |\n|----------|--------------|\n| **Payments Network Operator** | Runs the national payment systems such as UPI (Unified Payments Interface), BHIM, IMPS, RuPay, and the National Electronic Funds Transfer (NEFT) and Real\u2011Time Gross Settlement (RTGS) systems. |\n| **Standard Setting & Regulation** | Sets technical and operational standards for payment systems, and works with the Reserve Bank of India (RBI) to ensure compliance and safety. |\n| **Innovation & Product Development** | Develops new payment products (e.g., UPI\u2011based QR codes, instant credit, and debit card schemes) and promotes digital financial inclusion. |\n| **Risk Management",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 811.0269419998986,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:0759ac1563f09e5963d18828": {
+"text": "King\u202fCharles\u202fIII\u2019s full name is **Charles Philip Arthur George**.",
+"input_tokens": 85,
+"output_tokens": 212,
+"latency_ms": 387.8406260000702,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:073cb4b5734000b51b6076df": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 673.6412519999249,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8016a74643d6813d1cadf188": {
+"text": "",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 712.5268750000942,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ec8edad8928ccba870993a42": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 613.5048420001112,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:61003842c1cc09fedf4a474a": {
+"text": "The U.S. House of Representatives is composed of **435 voting members**.  \nThese seats are apportioned among the 50 states based on population, with each state guaranteed at least one representative.  \n\nIn addition to those 435 voting seats, the House also includes **6 non\u2011voting delegates** who represent U.S. territories and the District of Columbia:\n\n| Territory / District | Delegate |\n|-----------------------|----------|\n| District of Columbia  | 1 |\n| Puerto Rico           | 1 |\n| Guam                  | 1 |\n| American Samoa        | 1 |\n| Northern Mariana Islands | 1 |\n| U.S. Virgin Islands  | 1",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 767.635127000176,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:36361044e4de36abea95f457": {
+"text": "New England is the northeastern region of the United States and is composed of six states:\n\n1. **Connecticut**  \n2. **Maine**  \n3. **Massachusetts**  \n4. **New Hampshire**  \n5. **Rhode Island**  \n6. **Vermont**  \n\nThese states are often grouped together for cultural, historical, and economic reasons, and they share a common New England identity.",
+"input_tokens": 81,
+"output_tokens": 176,
+"latency_ms": 825.7281850001164,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2265917492d9f463db602ff3": {
+"text": "",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 437.9297009995753,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:4915ea618ddf7a13343836ca": {
+"text": "",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 466.9424460003029,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:47b91fcf721ebde9df05fa15": {
+"text": "",
+"input_tokens": 90,
+"output_tokens": 256,
+"latency_ms": 735.3245599997535,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d90036c019776ae011f64468": {
+"text": "### The \u201cHip\u201d Cities of the United States  \n*(\u201cHip\u201d is a moving target\u2014these places are known for their creative energy, cultural diversity, food scenes, nightlife, and a sense that something fresh is always happening.)*\n\n| # | City | Why It\u2019s Hip | What You\u2019ll Find |\n|---|------|--------------|------------------|\n| 1 | **Austin,",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 680.5737070003488,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:57cd1cd8c659afcfaf4a4ab3": {
+"text": "",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 665.6991500003642,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d235e2a10c619eba9d50b4f7": {
+"text": "",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 744.3714740002179,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:1b16b1b8936bbee37f979268": {
+"text": "",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 564.3280140002389,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:3df09ce667f0f834c66375cb": {
+"text": "Roger\u2019s preferences rank the three fruits as:\n\n- **Bananas** are liked the most (they\u2019re preferred over both apples and strawberries).  \n- **Apples** are liked next (they\u2019re preferred over strawberries).  \n- **Strawberries** are liked the least.\n\nSo among bananas, strawberries, and apples, Roger likes **strawberries** the least.",
+"input_tokens": 111,
+"output_tokens": 234,
+"latency_ms": 756.8068209998273,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:fa47dc909a075d4071f358da": {
+"text": "**Balancing Capitalism and Economic Equality: A Practical Roadmap**\n\nCapitalism\u2014its dynamism, innovation, and efficiency\u2014has lifted billions out of poverty. Yet, in its purest form it can generate stark disparities in income, wealth, and opportunity. The challenge is not to abandon the market engine but to temper it with institutions that spread the gains more fairly.",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 797.3326349997478,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:da18b09b73cc6c17e523cebf": {
+"text": "I\u2019m sorry, but I can\u2019t help with that.",
+"input_tokens": 94,
+"output_tokens": 247,
+"latency_ms": 639.8562749996017,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8e9ceac0869f03e131c51e61": {
+"text": "Here are four solid reasons to install solar panels **plus** a Tesla Powerwall (or any home battery) on your house:\n\n| # | Reason | Why it matters for you | Practical take\u2011away |\n|---|--------|------------------------|---------------------|\n| **1** | **Long\u2011term cost savings** | Solar turns the sun into free electricity. A battery lets you store that free power for use when the sun isn\u2019t shining, so you can shave off a large chunk of your monthly electric bill. | \u2022 10\u201115\u202f% average reduction in utility costs after the first 3\u20135\u202fyears.<br>\u2022 Payback period is often 5\u20138\u202fyears for a typical U.S. home (longer in some states, shorter in others). |\n| **2** | **Energy independence & grid resilience** | A battery gives you a backup power source during outages and",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 759.5013459999791,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2d1075672a019238b9137454": {
+"text": "The description matches a **brown bear (Ursus arctos",
+"input_tokens": 98,
+"output_tokens": 256,
+"latency_ms": 1067.1300110002448,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:60f2c58f0e78bac12399ab47": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 908.7026970000807,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:6cc5917834fa1d1d6a00c1ee": {
+"text": "",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 663.6154180000631,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2b92a485e04be071e13b1d69": {
+"text": "",
+"input_tokens": 90,
+"output_tokens": 256,
+"latency_ms": 770.5625400003555,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:6ea23790800a74750b26bb31": {
+"text": "",
+"input_tokens": 94,
+"output_tokens": 256,
+"latency_ms": 851.4243190002162,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:610206bedab40c0950eaec49": {
+"text": "",
+"input_tokens": 91,
+"output_tokens": 256,
+"latency_ms": 769.8133779999807,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:599c390ed210ff328f5726e2": {
+"text": "Here\u2019s a quick \u201cbucket\u2011list\u201d of gift ideas that hit all the things he loves\u2014travel, books, cooking, and painting\u2014plus a few cross\u2011category treats that blend two or more of those passions. I\u2019ve grouped them by theme and added a note on why each one would resonate, plus a rough price range so you can pick what fits your budget.\n\n---\n\n## 1. Travel\u2011Inspired Gifts\n\n| Gift | Why It Works | Price Range |\n|------|--------------|-------------|\n",
+"input_tokens": 104,
+"output_tokens": 256,
+"latency_ms": 425.1447750002626,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:65acef76b57741310c65da41": {
+"text": "",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 718.5519999998178,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2d81626a64740396731b65b2": {
+"text": "Melbourne.",
+"input_tokens": 83,
+"output_tokens": 74,
+"latency_ms": 582.0633650000673,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:7c69bd4d24a26fa2834998c5": {
+"text": "",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 752.0656510000663,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:55e04728373f7d31eaf6316d": {
+"text": "",
+"input_tokens": 77,
+"output_tokens": 256,
+"latency_ms": 651.4912699999513,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ff024723b8b7a5fd5078ee81": {
+"text": "",
+"input_tokens": 86,
+"output_tokens": 256,
+"latency_ms": 728.9102159998038,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:69f4ceb0c8ee79dc1c3f9f45": {
+"text": "The Ottoman Empire reached its zenith under **Sultan\u202fSuleiman\u202fthe\u202fMagnificent** (reigned 1520\u202f\u2013\u202f1566).  \n\nDuring his reign the empire:\n\n- **Expanded territorially** to its greatest extent, stretching from the gates of Vienna in the west to the Persian Gulf in the east, and from the Black Sea in the north to the Mediterranean and beyond in the south.\n- **Reformed its legal and administrative systems**, creating a sophisticated bureaucracy that could manage such a vast realm.\n- **Fostered a golden age",
+"input_tokens": 86,
+"output_tokens": 256,
+"latency_ms": 808.295779999753,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:76d7032a4fd3336322c37b73": {
+"text": "",
+"input_tokens": 78,
+"output_tokens": 256,
+"latency_ms": 1119.9985470002503,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ae15d2c6afca4727a640d519": {
+"text": "",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 814.8207320000438,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:c8382cf54a1955220cda5807": {
+"text": "",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 698.4853880003357,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:065c5d4e01d4e7559afaf2bb": {
+"text": "",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 635.3078420002021,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:59433c616fdbdd0cb737918b": {
+"text": "**Cilia** are microscopic, hair\u2011like projections that extend from the surface of many eukaryotic cells. They come in two main types\u2014**motile** and **primary (non\u2011motile)**\u2014and each serves distinct roles in physiology and development.\n\n---\n\n## 1. Motile Cilia  \nThese cilia beat in coordinated waves to move fluids, cells, or particles.\n\n| Location | Function | Key Points |\n|----------|----------|------------|\n| **Respiratory tract (trachea, bronchi)** | Traps and clears inhaled debris, mucus, and pathogens. | Beat directionally to push mucus upward toward the throat. |\n| **Eustachian tube** | Helps equal",
+"input_tokens": 78,
+"output_tokens": 256,
+"latency_ms": 814.0344020002885,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:9e1b8370aafb440efa9bb0ef": {
+"text": "",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 1223.148112999752,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:bbe9ceb7e27c07a7afeb0e16": {
+"text": "",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 607.2211999999126,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:da948436b3db55eca765874b": {
+"text": "The basic unit of territorial division in Poland is the **gmina** (plural: *gminy*).  \nA gmina is the lowest-level administrative entity, comparable to a municipality or commune. It can be urban, rural, or a mix (urban\u2011rural), and it is responsible for local governance, public services, and community development.",
+"input_tokens": 82,
+"output_tokens": 168,
+"latency_ms": 713.1814539998231,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:fcf038c134cd37cb68d06062": {
+"text": "",
+"input_tokens": 91,
+"output_tokens": 256,
+"latency_ms": 778.4459149997929,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:cd7499b7ed6e102019ea4882": {
+"text": "",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 834.9636809998628,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:606150f1cab1747bbf3b8ee2": {
+"text": "",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 707.7002070000162,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:577f8481808fa7dc22a647ed": {
+"text": "",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 1119.3690290001541,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f8ae52ec90e003d8a9f7ae07": {
+"text": "",
+"input_tokens": 95,
+"output_tokens": 256,
+"latency_ms": 505.67244600006234,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:51ef90c3a8e6b6face35691c": {
+"text": "",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 710.3443130004052,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ed5f489992eca24b93cc1cbf": {
+"text": "In Dutch, the Rhine is called **de\u202fRijn**.",
+"input_tokens": 80,
+"output_tokens": 70,
+"latency_ms": 916.9130609998319,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:0131d5ebe51d4a37fc277bf2": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 603.2933999999841,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:e03d8d627813fc01bc20bda8": {
+"text": "",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 610.343746000126,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ffffb7166899a2b13797154c": {
+"text": "The drop in rental demand can stem from a mix of economic, demographic, and market\u2011specific factors. Below are the most common drivers, grouped by category, that tend to push renters toward buying, moving out, or simply staying put:\n\n| Category | Typical Drivers | How They Reduce Rental Demand |\n|----------|-----------------|------------------------------|\n| **Housing Affordability & Ownership Incentives** | \u2022 Lower mortgage rates or aggressive lender programs<br>\u2022 First\u2011time\u2011buyer grants",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 581.9522729998425,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:5391751ad3de4d8cf1815540": {
+"text": "Auckland.",
+"input_tokens": 91,
+"output_tokens": 135,
+"latency_ms": 631.303372000275,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:a7ae033b92f82b6d70afdc3b": {
+"text": "In a progressive tax system, the **tax rate (specifically the marginal tax rate)** rises as the taxable base amount increases. This means that higher income brackets are taxed at higher rates.",
+"input_tokens": 85,
+"output_tokens": 158,
+"latency_ms": 582.3564459997215,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:7ce80923512d2b75e04e541d": {
+"text": "The Rhine runs through the western part of North\u202fRhine",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 668.5439500001849,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f12dbdfdb9f467cf91aef5e1": {
+"text": "",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 784.1660710000724,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:88f2e373dac1490b976468cd": {
+"text": "",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 799.645411000256,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:1b0533f843f901b65c9ece9a": {
+"text": "",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 649.4597830001112,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:3dead0535cfb59dc1bc73e8d": {
+"text": "The armed protest you\u2019re referring to is the **Eureka Stockade** \u2013 a miners\u2019 uprising in Ballarat, Victoria, Australia. It took place on **3\u202fDecember\u202f1854**.  \n\nDuring the gold rush, miners were required to",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 560.4677299998002,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:dc579e274cb65177cb0e792c": {
+"text": "BSkyB\u2019s first fully\u2011digital satellite TV service \u2013 **Sky Digital** \u2013 was launched on **1\u202fSeptember\u202f1998**. This marked the company\u2019s transition from analogue to digital broadcasting, offering a wider range of channels and interactive features to subscribers.",
+"input_tokens": 81,
+"output_tokens": 231,
+"latency_ms": 865.4473330002475,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:04944650aedba2b9cedfa747": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 863.1357369999932,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:0e3e5972fe4b402b3c00a9a2": {
+"text": "Warsaw Summer Jazz Days is one of the",
+"input_tokens": 86,
+"output_tokens": 256,
+"latency_ms": 711.8858449998697,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:86e34ceb544c274bae368896": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 672.5077940000119,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:e666b051b1da1b1a770e4227": {
+"text": "",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 738.0766579999545,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:3420ac088f73d55657d33056": {
+"text": "I\u2019m sorry, but I can\u2019t help with that.",
+"input_tokens": 84,
+"output_tokens": 161,
+"latency_ms": 565.4636320000463,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8af6eb3c9cd2e418690361af": {
+"text": "In September\u202f1760, the capitulation of Montreal was negotiated by **Pierre de Rigaud, the Marquis de\u202f",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 752.5445000001127,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f6daaeb449f176df9a6d0bcc": {
+"text": "Sky\u202fUK\u202fLimited was formerly known as **British Sky Broadcasting (BSky",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 681.9130419999055,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:064f4d508aee87e662163ceb": {
+"text": "",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 513.285294999605,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:4c23e21d56449d8ba28529b4": {
+"text": "",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 509.04045800007225,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d78579acb9dbd024adfc7e52": {
+"text": "",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 921.4073200000712,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:18ffacff36ee11dccab96a95": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 756.5994989995488,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f1004a418613f7d9a89cc21c": {
+"text": "When a phagocyte engulfs a pathogen, the particle is enclosed within a membrane\u2011bound vesicle called a **phagosome**. This phagosome then typically fuses with a lysosome to form a phagolysosome, where the pathogen is degraded.",
+"input_tokens": 90,
+"output_tokens": 172,
+"latency_ms": 649.4201089999478,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f55c64243c0822eb6f9e3099": {
+"text": "The theorem that captures the *essential* role of primes in number theory is the **Fundamental Theorem of Arithmetic**.\n\n---\n\n## Fundamental Theorem of Arithmetic  \n\n> **Statement**  \n> Every integer \\(n > 1\\) can be written as a product of prime numbers, and this factorization is unique up to the order of the factors.\n\nFormally, for any \\(n > 1\\) there exist primes \\(p_1, p_2, \\dots, p_k\\) and positive integers \\(e_1, e_2, \\dots, e_k\\) such that  \n\n\\[\nn = p_1^{\\,e_1}\\,p_2^{\\,e_2}\\cdots p_k^{",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 482.4085819996071,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:31ce1f1e2d32fb6f3644f179": {
+"text": "",
+"input_tokens": 86,
+"output_tokens": 256,
+"latency_ms": 779.1390269999283,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2b667a4153d1247ec2f5ac03": {
+"text": "",
+"input_tokens": 86,
+"output_tokens": 256,
+"latency_ms": 647.9349450000882,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:0ad52736f872324da4a8e2ad": {
+"text": "During the British withdrawal from Fort\u202fWilliam\u202fHenry in 1757, some of the French\u2019s Indian allies turned on the retreating column.  They launched a surprise attack on the British troops and civilians moving back to the fort, killing many, taking captives, and pl",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 433.8222220003445,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:49fc6d574dae75ee84e1c3eb": {
+"text": "I\u2019m not sure who you\u2019re referring to. Could you let me know which person you mean?",
+"input_tokens": 77,
+"output_tokens": 118,
+"latency_ms": 561.0193299999082,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:d88787513d2aa78f3bac241f": {
+"text": "",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 808.4261389999483,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2daba63dd75aec76ecff45a8": {
+"text": "",
+"input_tokens": 77,
+"output_tokens": 256,
+"latency_ms": 770.7589520000511,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:90c786917d5ba1e1ab0a55d9": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 691.1869599998681,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:efb5bf74817e05ad15170e98": {
+"text": "**Short answer:**  \nThe Amazon rainforest\u2019s vegetation has changed mainly because of human activities\u2014especially deforestation for agriculture, cattle ranching, logging, mining, and infrastructure\u2014combined with climate\u2011driven shifts (warmer temperatures, altered rainfall, more frequent droughts and fires). Natural disturbances (lightning, floods, disease) also play a role, but the scale and speed of change are overwhelmingly anthropogenic.\n\n---\n\n",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 453.84908100004395,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:b6652029f789fcee86dc2a9f": {
+"text": "",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 683.7688670002535,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:acaa4d025b61a4c4b07eb869": {
+"text": "### How Indigenous Tribes Use Google\u202fEarth and GPS\n\n| Purpose | What it looks like in practice | Why it matters |\n|---------|--------------------------------|----------------|\n| **Mapping ancestral territories** | Digitally overlaying traditional boundaries onto satellite imagery. | Provides a visual, shareable record that can be used in land\u2011claim negotiations, treaty reviews, and community planning. |\n| **Documenting sacred and cultural sites** | Pinpointing burial grounds, ceremonial sites, and culturally significant landscapes. | Helps protect these places from development, mining, or other encroachments and supports cultural preservation",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 496.0285209999711,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:2965e6f7f88594785d6c7dcf": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 809.9811720003345,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:f19c812d4a2c7ad4806eeca2": {
+"text": "",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 711.0897769998701,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:9dc260432e8b2fb18226f78f": {
+"text": "The main tributary you\u2019re thinking of is the **Meuse (Maas)**.  \n\n- **Course**: It rises in the French Vosges, flows eastward through northeastern France, then turns north into Belgium, and finally joins the Rhine at the Dutch border.  \n- **Significance**: The Meuse is one of the Rhine\u2019s largest tributaries, contributing a substantial volume of water and playing a key role in the hydrology and navigation of the Rhine basin.",
+"input_tokens": 91,
+"output_tokens": 233,
+"latency_ms": 466.84957500019664,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:ce7237c71729096af9dc8e27": {
+"text": "",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 845.585291000134,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:8588d7a7a499a995db0b7b6b": {
+"text": "**Short answer:**  \nThe most significant direct conflict between France and",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 704.5555069998954,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:7c795e936901ca13f0d4ec09": {
+"text": "",
+"input_tokens": 90,
+"output_tokens": 256,
+"latency_ms": 730.1545989998885,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:622a757cd9450ecfe8badbdb": {
+"text": "",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 702.4011809999138,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:b90d1266c62acc778dead8f1": {
+"text": "**CD40 Ligand (CD154)**  \n\n- **What it is:** CD40 ligand (also called CD154) is a type\u2011I transmembrane protein that belongs to the tumor necrosis factor (TNF) family.  \n- **Where it is expressed:** It is expressed on the surface of activated CD4\u207a helper T cells (and to a lesser extent on activated CD8\u207a T cells and some other immune cells).  \n- **Why it matters:** Upon activation of a helper T cell (e.g., by antigen presentation via MHC\u2011II), CD40L is rapidly up\u2011regulated and presented on the T\u2011cell surface. It engages CD40 on antigen\u2011present",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 733.1651470003635,
+"provider": "groq"
+},
+"openai/gpt-oss-20b:7205b687304755fb596a52ac": {
+"text": "",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 485.93472199991083,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:d74c52a87e06166e1b137c16": {
+"text": "",
+"input_tokens": 117,
+"output_tokens": 256,
+"latency_ms": 990.2793790001851,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:f912d325b50ee2538f449078": {
+"text": "Jordan needs a total of  \n\n- 20\u202fmin (batter)  \n- 30\u202fmin (bake)  \n- 2\u202fh\u202f=\u202f120\u202fmin (cool)  \n- 10\u202fmin (frost)\n\nThat\u2019s \\(20 + 30 + 120 + 10 = 180\\)\u202fminutes, i.e., **3\u202fhours**.\n\nTo have the cake ready by 5:00\u202fPM, she must finish all steps by then, so she should start **3\u202fhours earlier**:\n\n\\[\n5{:}00\\ \\text{PM} - 3\\ \\text{hours} = 2{:}00\\ \\text{PM}\n\\]\n\n**Latest start time:** **2:00\u202fPM**.",
+"input_tokens": 170,
+"output_tokens": 251,
+"latency_ms": 956.0869290003211,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:6ffa4a5a2ff87906ae8ad038": {
+"text": "Below is a compact, well\u2011documented Python solution that works for **any** iterable of tuples (or other iterables) that contain numeric values.  \n\nIt provides two useful helpers",
+"input_tokens": 92,
+"output_tokens": 256,
+"latency_ms": 1021.191228999669,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:f50cc0f50fe23d3408ad718d": {
+"text": "The hat cost \\$70.  \nThea paid with four \\$20 bills, which total:\n\n\\[\n4 \\times \\$20 = \\$80\n\\]\n\nThe change she receives is the amount she paid minus the cost:\n\n\\[\n\\$80 - \\$70 = \\$10\n\\]\n\n**Thea got \\$10 in change.**",
+"input_tokens": 108,
+"output_tokens": 108,
+"latency_ms": 610.7774869997229,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:85653199a0dddf2375b6df95": {
+"text": "First, find how much money Ali starts with.\n\n\\[\n\\text{Total} = 4 \\times \\$10 + 6 \\times \\$20 = \\$40 + \\$120 = \\$160\n\\]\n\n---\n\n### 1. Money given to his sister  \nHe gives his sister half of the total amount:\n\n\\[\n\\frac12 \\times \\$160 = \\$80\n\\]\n\nSo after this gift, Ali still has\n\n",
+"input_tokens": 134,
+"output_tokens": 256,
+"latency_ms": 896.4476169999216,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:29496b94a95603af12daad2a": {
+"text": "Here\u2019s a simple, reusable Python function that returns the larger of two numbers (or, more generally, the larger of any two comparable objects).\n\n```python\ndef max_of_two(a, b):\n    \"\"\"\n    Return the maximum of two values.\n\n    Parameters\n    ----------\n    a, b : any comparable type\n        The two values to compare. They must support the > (greater\u2011than) operator\n        (e.g., int, float, Decimal, Fraction, strings, etc.).\n\n    Returns\n    -------\n    The larger of `a` and `b`. If the values are equal, `a` (or `b`) is returned.\n\n    Examples\n    --------\n    >>> max_of_two(3, 7)\n    7\n    >>> max_of_two(-2.5, -2.5)\n    -2.5\n    >>> max_of_two('apple', 'banana')\n    'banana'\n    \"\"\"\n    # Using the built\u2011in comparison operator",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 2792.630460000055,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:5dc76d774bd01a74954bc2ac": {
+"text": "Alexandra raises \\$430.  \nKim raises \\$320 more than Alexandra:  \n\n\\[\n\\text{Kim}=430+320=750\n\\]\n\nSarah raises \\$300.  \nMaryam raises \\$400 more than Sarah:  \n\n\\[\n\\text{Maryam}=300+400=700\n\\]\n\nNow add all four amounts:\n\n\\[\n430 + 750 + 300 + 700 = 2180\n\\]\n\n\\[\n\\boxed{2180}\n\\]",
+"input_tokens": 124,
+"output_tokens": 249,
+"latency_ms": 755.0128709999626,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:692db99fc7438c97fd3ee1ac": {
+"text": "",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 992.3642489998201,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:9572ca84d4afcb2b7a00e335": {
+"text": "The school\u2019s overall pass rate is  \n\n\\[\n\\frac{\\text{total passed}}{\\text{total students}}.\n\\]\n\n- Third\u2011graders: \\(340\\) passed out of \\(500\\).  \n- Fourth\u2011graders: \\(40\\) passed out of \\(100\\) \u2192 pass rate \\(=40\\%.\\)  \n- Fifth\u2011graders: pass rate is twice the fourth\u2011grade rate, so \\(2 \\times",
+"input_tokens": 136,
+"output_tokens": 256,
+"latency_ms": 1019.466545999876,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:fd16f6f6c74a4875271a3085": {
+"text": "Below is a small, self\u2011contained example that shows how to locate **lower\u2011case\u2011letter sequences that are joined by a single underscore** (e.g. `foo_bar`, `abc_xyz`, `a_b`).  \nThe core of the solution is a regular\u2011expression pattern; the surrounding function simply applies it to a given input string and returns every match it finds.\n\n---\n\n## 1. The regex pattern\n\n```regex\n",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 1029.2789599998287,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:e3950d3fd72cfdcac1773a65": {
+"text": "Below is a **self\u2011contained, well\u2011documented Python implementation** that\n\n1. **Accepts any iterable of tuples** (e.g. `list`, `tuple`, generator, \u2026).  \n2. **Counts how many times each *unique* tuple appears**, **ignoring the order of the tuples in the input list** (i.e. the result does not depend on the original ordering of the list).  \n3. **Optionally treats the *elements",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 1120.1505809999617,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:2e0145f069f7862bf5526730": {
+"text": "**Solution Overview**\n\nWe need a function that receives a *list of lists* where each inner list contains strings.  \nFor every inner list we will sort its strings in alphabetical order.  \nThe sorting itself will be performed with a **lambda** expression \u2013 this satisfies the \u201cusing lambda function\u201d requirement.\n\nBelow is a compact, well\u2011documented implementation in Python.\n\n---\n\n## Code\n\n```python\nfrom typing import List\n\ndef sort_sublists(strings_matrix: List[List[str]]) -> List[List[str]]:\n    \"\"\"\n    Return a new list\u2011of\u2011lists where each inner list of strings is sorted\n    alphabetically (case\u2011insensitive) using a lambda as the",
+"input_tokens": 91,
+"output_tokens": 256,
+"latency_ms": 969.1690340000605,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:76893d2e42b98878514e009c": {
+"text": "Below is a compact, well\u2011commented implementation of the classic **coin\u2011change counting** problem.\n\n* **Goal** \u2013 Given a target amount `n` and a list of coin denominations `coins`, return the number of distinct ways to make exactly `n` using any number of those coins (order of coins does **not** matter).\n* **Complexity** \u2013 `O(n\u202f\u00b7\u202fm)` time and `O(n)` space, where `m = len(coins)`.\n* **Language** \u2013 Python 3 (but the same DP idea works in any language).\n\n```python\ndef count_coin_change(amount: int, coins: list[int]) -> int:\n    \"\"\"\n    Count the number of ways to make `amount` using the given `coins`.\n\n    Parameters\n    ----------\n    amount : int\n        The target sum (must be non\u2011negative).\n    coins : list[int]\n       ",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 1078.667717999906,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:18becb25c8a05be72a1e2e95": {
+"text": "Each flagstone weighs  \n\n\\[\n75\\text{ lb}\n\\]\n\nFor 80 flagstones the total weight is  \n\n\\[\n80 \\times 75 = 6000\\text{ lb}\n\\]\n\nA single truck can carry at most  \n\n\\[\n2000\\text{ lb}\n\\]\n\nThe number of trucks required is the ceiling of the total weight divided by the truck capacity:\n\n\\[\n\\text{Trucks} = \\left\\lceil \\frac{6000}{2000} \\right\\rceil = \\left\\lceil 3 \\right\\rceil = 3\n\\]\n\n**Therefore, 3 trucks are needed to transport the 80 flagstones in one trip.**",
+"input_tokens": 123,
+"output_tokens": 223,
+"latency_ms": 1019.2612399996506,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:793a34c05c5eddf18044e9ad": {
+"text": "The horse runs  \n\n\\[\n32\\text{ miles/hour} \\times \\tfrac{1}{2}\\text{ hour}=16\\text{ miles}.\n\\]\n\nFor each mile the horse eats \\(\\tfrac12\\) bail of hay, so the total hay needed is  \n\n\\[\n16\\text{ miles}\\times \\tfrac12\\text{ bail/mile}=8\\text{ bails}.\n\\]\n\nEach bail costs \\$3, thus the total cost is",
+"input_tokens": 140,
+"output_tokens": 256,
+"latency_ms": 819.6127130004243,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:8c0bb115ed1bd33d48bbba0d": {
+"text": "",
+"input_tokens": 182,
+"output_tokens": 256,
+"latency_ms": 1024.293132999901,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:c0eefac05d0cb3d1daab792d": {
+"text": "The bakery\u2019s stock is \u201c40 less than seven times\u201d Sam\u2019s amount.\n\n1. Seven times Sam\u2019s loaves:\u2003\\(7 \\times 70 = 490\\).\n2. Subtract 40:\u2003\\(490 - 40 = 450\\).\n\n**The bakery has 450 loaves of bread.**",
+"input_tokens": 114,
+"output_tokens": 161,
+"latency_ms": 820.4991560000963,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:60344a1dd742ef9071852ff2": {
+"text": "Below is a compact, well\u2011documented implementation in **Python** that takes any iterable (list, tuple, string, \u2026) and \u201cpacks\u201d each run of equal, **consecutive** elements into its own sub\u2011list.\n\n```python\nfrom typing import Iterable, List, TypeVar\n\nT = TypeVar(\"T\")          # generic element type\n\n\ndef pack_consecutive(iterable: Iterable[T]) -> List[List[T]]:\n    \"\"\"\n    Group consecutive duplicate elements of *iterable* into sub\u2011lists.\n\n    Parameters\n    ----------\n    iterable :",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 1021.7273260000184,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:5655fe19c585f99fcb2664d6": {
+"text": "Below is a small, self\u2011contained Python module that shows a few common ways to compute the *difference* between two lists.  \nYou can pick the version that best matches what you need:\n\n| Variant | Meaning |\n|---------|---------|\n| **list\u2011difference** | Elements that appear in `a` **but not** in `b`. |\n| **symmetric\u2011difference** | Elements that appear in **either** list, but **not** in both. |\n| **multiset\u2011difference** | Takes element counts into account (like `collections.Counter`). |\n\n```python\nfrom collections import Counter\nfrom typing import List, Any, Iterable\n\ndef list_difference(a: Iterable[Any], b: Iterable[Any]) -> List[Any]:\n    \"\"\"\n    Return a new list with items that are in `a`",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 972.0209050001358,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:b0f085ddef8d14750ca41b7c": {
+"text": "Below is a self\u2011contained, well\u2011documented Python implementation that tells you whether **list\u202f`small` appears as a *contiguous* sub\u2011array* of **list\u202f`big`**.\n\n```python\nfrom typing import List, Sequence, Any\n\ndef is_subarray(big: Sequence[Any], small: Sequence[Any]) -> bool:\n    \"\"\"\n    Return True if `small` occurs as a contiguous sub\u2011array of `big`.\n\n    Parameters\n    ----------\n    big : Sequence[Any]\n        The array that may contain `small`.\n    small : Sequence[Any]\n        The candidate sub\u2011array.\n\n    Returns\n    -------\n",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 972.7471279998099,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:6590d4492d61fd1932b100e8": {
+"text": "",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 963.1785369997488,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:f6b5ea1822952cbc224eec70": {
+"text": "Below is a compact, reusable solution that uses a regular\u2011expression to strip **any contiguous sequence of lowercase letters** from a string.  \nThe implementation is shown in Python, but the same pattern works in most regex\u2011flavored languages (JavaScript, Java, C#, PHP, etc.).\n\n---\n\n## 1. The core idea  \n\n* **Pattern** \u2013 `r'[a-z]+'`  \n  * `[a-z]`  matches any single lowercase ASCII letter.  \n  * `+`      means \u201cone or more\u201d, so the whole pattern matches a *substring* consisting only of lowercase letters (e.g. `\"abc\"`, `\"hello\"`, `\"xyz123\"` \u2192 only the `\"xyz\"` part is matched).  \n\n* **Replacement** \u2013 an",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 880.3553190000457,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:8eb95bfddb03ad1c6272eb7b": {
+"text": "**Problem statement**\n\nYou are given a collection of tuples (e.g. a list or any iterable of tuples) and an integer `k`.  \nYou need a function that returns the **product of the elements that appear at index `k` in every tuple**.\n\n* If a tuple does not have an element at position `k` the function should raise a clear `IndexError`.\n* If the collection is empty the product is defined as `1` (the neutral element of multiplication).\n\n---\n\n## Solution Overview\n\n1. **Validate the input** \u2013 make sure `k` is a non\u2011negative integer.\n2. **Iterate** over the tuples and pick the `k`\u2011th element from each.\n3. **Multiply** those elements together",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 1026.6356669999368,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:7b14e69209bbd92cca4bb2df": {
+"text": "",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 917.7188470002875,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:cbf0e9e214fe1c5c6ba1547e": {
+"text": "Below is a simple, reusable implementation in Python that takes a list of numbers and returns a new list containing the difference between each pair of consecutive elements.\n\n```python\ndef consecutive_differences(seq):\n    \"\"\"\n    Return a list of differences between consecutive numbers in `seq`.\n\n    Parameters\n    ----------\n    seq : list or iterable of numbers\n        The input sequence. Must contain at least two elements.\n\n    Returns\n    -------\n    list\n        A list where the i\u2011th element is seq[i+1] - seq[i].\n\n    Examples\n    --------\n    >>> consecutive_differences([10, 7, 12, 12, 5])\n    [-3, 5, 0, -7]\n\n    >>> consecutive_differences([1, 2, 3, 4])\n    [1, 1, 1]\n    \"\"\"\n    # Convert to a list in",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 1023.5720720002064,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:75e1abc9bbacdb540af0bc3a": {
+"text": "",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 767.0831710001949,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:caee9465f1b169ccdfeb853b": {
+"text": "Below is a **self\u2011contained, well\u2011documented implementation** that rounds a number **up** (i.e. \u201cceil\u201d) to a user\u2011specified number of digits.  \nIt works for:\n\n* Positive `digits` \u2192 round up to that many **decimal places** (`2.123 \u2192 2.13` when `digits = 2`).  \n* Zero `digits` \u2192 round up to the nearest **integer** (`2.01 \u2192 3`).  \n* Negative `digits` \u2192 round up to the nearest **10, 100, 1\u202f000 \u2026** (`1234 \u2192 1300` when `digits = -2`).  \n\nThe code is written in",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 948.8791929998115,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:2c20f2439feabe3891271918": {
+"text": "First, count the total days in the period:\n\n- March has 31 days.\n- April 1\u202f\u2013\u202f19 adds 19 days.\n\nTotal days = 31\u202f+\u202f19 = **50 days**.\n\nBilly takes 20\u202f% of those days off:\n\n- 20\u202f% of 50 days = 0.20\u202f\u00d7\u202f50 = **10 days** off.\n- Days he actually works = 50\u202f\u2013\u202f10 = **40",
+"input_tokens": 145,
+"output_tokens": 256,
+"latency_ms": 1027.3185629998807,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:e1e36bf831ec5de96b6beb8b": {
+"text": "",
+"input_tokens": 90,
+"output_tokens": 256,
+"latency_ms": 927.7344299998731,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:ccbc7b0dbf3cdcefd236b1f1": {
+"text": "Below is a **stand\u2011alone implementation of Counting Sort** in three popular languages (Python, C++, and Java).  \nThe algorithm works for any list/array of **integers** (including negative values) and runs in **O(n\u202f+\u202fk)** time, where  \n\n*\u202fn\u202f=\u202fnumber of elements,  \n*\u202fk\u202f=\u202frange of the input values (max\u202f\u2212\u202fmin\u202f+\u202f1).\n\n---\n\n## 1. Python\n\n```python\ndef counting_sort(arr):\n    \"\"\"\n    Sorts a list of integers using Counting Sort.\n    Works for negative numbers as well.\n\n    Parameters\n    ----------\n    arr : list[int]\n        The list to be sorted.\n\n    Returns\n    -------\n    list[int]\n        A new list containing the sorted elements.\n    \"\"\"\n    if not arr:                     # empty input \u2192 nothing",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 833.1583310000497,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:bd7556e5e4f85745e104d72b": {
+"text": "Here\u2019s a compact, reusable function (Python) that counts how many items in a list fall inside a given inclusive range\u202f`[low, high]`.  \nIt works for any sequence of comparable items (numbers, dates, etc.) and lets you choose whether the bounds are inclusive or exclusive.\n\n```python\nfrom typing import Iterable, Any, Callable, Optional\n\ndef count_in_range(\n    data: Iterable,\n    low: Any,\n    high: Any,\n    *,\n    inclusive_low: bool = True,\n    inclusive_high: bool = True,\n    key: Optional[Callable[[Any], Any]] = None,\n) -> int:\n    \"\"\"\n    Count elements of *data* that lie within the interval defined by *low* and *high*.\n\n    Parameters\n    ----------\n    data : Iterable\n        The collection of items to examine.\n    low, high : Any\n        The lower and upper bounds of the interval.  They must be comparable\n        with",
+"input_tokens": 90,
+"output_tokens": 256,
+"latency_ms": 1024.6989700003724,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:f8fc73f303ad37ca920987cd": {
+"text": "Jack originally had \\$100.  \nSophia gave him \\(\\frac{1}{5}\\) of her \\$100:\n\n\\[\n\\frac{1}{5} \\times 100 = 20 \\text{ dollars}\n\\]\n\nAdding this to Jack\u2019s original amount:\n\n\\[\n100 + 20 = 120 \\text{ dollars}\n\\]\n\n**Jack now has \\$120.**",
+"input_tokens": 96,
+"output_tokens": 136,
+"latency_ms": 772.0334579998962,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:f9f8c22051fb964319620d4b": {
+"text": "Below is a **stand\u2011alone** implementation that does the conversion with a **single regular\u2011expression call**.  \nYou can copy\u2011paste it into your project (Python, JavaScript, Java, or C#) and run the supplied test cases.\n\n---\n\n## 1. Python\n\n```python\nimport re\n\ndef snake_to_camel(snake: str) -> str:\n    \"\"\"\n    Convert a snake_case string to camelCase using a regular expression.\n\n    Parameters\n    ----------\n    snake: str\n        The input string in snake_case (e.g. \"my_long_variable_name\").\n\n    Returns\n    -------\n    str\n        The same identifier in camelCase (e.g. \"myLongVariableName\").\n    \"\"\"\n    # `_(.)` finds an underscore followed by any",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 821.0448650002036,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:7aad89ca93ce9188e4ea13a9": {
+"text": "Here\u2019s a clean, reusable implementation in Python that rotates a list (or any sequence that supports slicing)\u202f**to the right** by a given number of positions.\n\n```python\ndef rotate_right(seq, k):\n    \"\"\"\n    Return a new list that is the original sequence rotated to the right\n    by `k` positions.\n\n    Parameters\n    ----------\n    seq : list (or any slice\u2011able sequence)\n        The sequence to rotate.\n    k : int\n        Number of positions to rotate to the right.  If `k` is larger than\n        the length of the sequence it is taken modulo the length.\n        Negative values rotate to the left.\n\n    Returns\n    -------\n    list\n        A new list containing the rotated elements.\n\n    Examples\n    --------\n    >>> rotate_right([1, 2, 3, 4, 5], 2)\n    [4, 5, ",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 966.8433560000267,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:e25f37ac1e43c2abc4b4c285": {
+"text": "Her mother gave her **20** beads.  \nHer sister gave her ten more than her mother: \\(20 + 10 = 30\\) beads.  \nHer friend gave her twice as many as her mother: \\(2 \\times 20 = 40\\) beads.\n\nTotal beads:\n\\[\n20 + 30 + 40 = 90\n\\]\n\n**Adrianne had 90 beads altogether.**",
+"input_tokens": 126,
+"output_tokens": 175,
+"latency_ms": 873.0313010000827,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:b03a404f690052ca9b148570": {
+"text": "Let the cost of the lot be \\(L\\) dollars.  \nThen the cost of the house is three times that amount:\n\n\\[\n\\text{House} = 3L\n\\]\n\nTogether they total $120,000:\n\n\\[\n3L + L = 120{,}000 \\\\\n4L = 120{,}000\n\\]\n\nSolve for \\(L\\):\n\n\\[\nL = \\frac{120{,}000}{4} = 30{,}000\n\\]\n\nSo the house costs:\n\n\\[\n\\text{House} = 3L = 3 \\times 30{,}000 = 90{,}000\n\\]\n\n\\[\n\\boxed{\\$90{,}000}\n\\]",
+"input_tokens": 101,
+"output_tokens": 237,
+"latency_ms": 875.0989539998955,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:535bde2edc01b1a318b4158b": {
+"text": "",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 1069.3301489995974,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:97ce0a53823c73f1623a9f5d": {
+"text": "",
+"input_tokens": 152,
+"output_tokens": 256,
+"latency_ms": 963.0542649997551,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:8a08e60bfea43f038d236062": {
+"text": "",
+"input_tokens": 92,
+"output_tokens": 256,
+"latency_ms": 1001.9526250002855,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:25ec02c9ceb870ce04ab2c1a": {
+"text": "Below is a compact, well\u2011documented implementation in **Python** that computes the perimeter of a regular polygon.\n\n```python\ndef regular_polygon_perimeter(num_sides: int, side_length: float) -> float:\n    \"\"\"\n    Calculate the perimeter of a regular polygon.\n\n    A regular polygon has all sides of equal length and all interior angles equal.\n    The perimeter is simply the number of sides multiplied by the length of one side.\n\n    Parameters\n    ----------\n    num_sides : int\n        The number of sides (must be \u2265 3).  Typical values are 3 (triangle),\n        4 (square), 5 (pentagon), \u2026.\n    side_length : float\n        Length of a single side.  Must be a non\u2011negative number.\n\n    Returns\n",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 781.2739229998442,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:76faa618a3d910aa961028df": {
+"text": "Each blouse costs \\(20\\) dollars before the discount.  \nA 30\u202f% discount reduces the price by  \n\n\\[\n0.30 \\times 20 = 6 \\text{ dollars}.\n\\]\n\nSo the sale price of one blouse is  \n\n\\[\n20 - 6 = 14 \\text{ dollars}.\n\\]\n\nFor 4 blouses:\n\n\\[\n4 \\times 14 = 56 \\text{ dollars}.\n\\]\n\n\\[\n\\boxed{\\$56}\n\\]",
+"input_tokens": 109,
+"output_tokens": 170,
+"latency_ms": 730.2957749998313,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:c8aa7593bf521617dafa9ae8": {
+"text": "John\u2019s total earnings for the week are  \n\n\\[\n50\\text{ dollars/hour} \\times",
+"input_tokens": 128,
+"output_tokens": 256,
+"latency_ms": 757.6677990000462,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:d01bab71cf2003251a0b1d47": {
+"text": "Here\u2019s a compact, well\u2011documented implementation that works for any iterable (list, tuple, etc.) and returns **True** only when every element appears exactly once.\n\n```python\nfrom typing import Iterable, Any\n\ndef are_elements_unique(seq: Iterable[Any]) -> bool:\n    \"\"\"\n    Return True if all elements in *seq* are unique, False otherwise.\n\n    The function stops as soon as a duplicate is found, so it runs in O(n)\n    time on average (where n = len(seq)) and uses O(n) extra space for the\n    seen\u2011elements set.\n\n    Parameters\n    ----------\n    seq : Iterable[Any]\n        The collection whose elements you want to test for uniqueness.\n\n    Returns\n    -------\n    bool\n",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 958.2302799999525,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:a6d3a04eaa27136fb27acc18": {
+"text": "",
+"input_tokens": 150,
+"output_tokens": 256,
+"latency_ms": 998.8824910001313,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:47484d317509112369ed2917": {
+"text": "Melanie has already saved  \n\n\\(10 \\text{ toothpicks/week} \\times 12 \\text{ weeks} = 120\\) toothpicks.\n\nShe needs a total of 200 toothpicks, so she still needs  \n\n\\(200 - 120 = 80\\) toothpicks.\n\nAt the same rate of 10 toothpicks per week, the additional time required is  \n\n\\(\\dfrac{80}{10} = 8\\) weeks.\n\n**Answer: 8 more weeks.**",
+"input_tokens": 161,
+"output_tokens": 200,
+"latency_ms": 642.8963710000062,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:4124ee3d3777ee50b706d3cb": {
+"text": "Below is a small, self\u2011contained utility that rounds any numeric value to the nearest multiple of a user\u2011supplied divisor.  \nThe core idea is the same in every language:\n\n```\nrounded = round(value / divisor) * divisor\n```\n\n`value / divisor` tells us how many \u201cchunks\u201d of the divisor fit into the number.  \n`round(...)` picks the nearest integer count of those chunks, and finally we multiply back by the divisor to get the rounded result.\n\n---\n\n## 1. Python\n\n```python\ndef round_to_multiple(value: float, multiple: float) -> float:\n    \"\"\"\n    Round `value` to the nearest multiple of `multiple`.\n\n    Parameters\n    ----------\n    value : float\n        The number you want to round.\n    multiple : float\n        The step size you want to round to. Must be non\u2011zero.\n\n    Returns\n    -------\n    float\n        `value`",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 990.4414269999506,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:145fabfb6a9ca8f0d7d568aa": {
+"text": "",
+"input_tokens": 97,
+"output_tokens": 256,
+"latency_ms": 989.8953260003509,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:e8ea75f42956ece14fcaf546": {
+"text": "",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 984.3926339999598,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:07b8f0af40edc22b34b37f33": {
+"text": "**Short answer:**  \nCamels are built to lose, conserve, and recycle water far more efficiently than most mammals. Their bodies combine anatomical \u201creservoirs,\u201d metabolic tricks, and extreme physiological tolerance so that they can go many days\u2014or even weeks\u2014without drinking.\n\n---\n\n## 1.  What the myth *doesn\u2019t* mean  \nThe popular image that a camel \u201cstores water in its hump\u201d is **incorrect**. The hump is a **fat depot**, not a water tank. The real water\u2011saving tricks are spread throughout the camel\u2019s whole physiology.\n\n---\n\n## 2.  Key adaptations that let a camel go without water\n\n| Adaptation | How it works | Why it matters |\n|------------|--------------|----------------|\n| **Fat\u2011filled humps** | The humps store up to ~80\u202fkg of fat. When metabolized, the fat yields water (\u2248\u202f1\u202fg",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 752.1645370002261,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:ebbe97b8f66b7d3912c3b86f": {
+"text": "Here are several notable rap/hip\u2011hop albums that dropped in\u202f2022 (listed alphabetically by artist).  I\u2019ve included the release date and a quick note about each one so you can decide which might be worth a listen.\n\n| Artist | Album | Release Date | Quick Note |\n|--------|-------|--------------|------------|\n| 21\u202fSavage | **\u201cI\u2019m Good (HIII)\u201d** (mixtape) |\u202fMay\u202f20\u202f2022 | Short, hard\u2011hitting",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 974.8040410004251,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:8fa2d34b689d8e36cf68054f": {
+"text": "Here are five of the most famous archaeological sites in Mexico that are well worth a visit, along with a short note on what makes each one special:\n\n| # | Site | Location (State) | Highlights |\n|---|------|------------------|------------|\n| 1 | **Chich\u00e9n Itz\u00e1** | Yucat\u00e1n | One of the New\u202fSeven Wonders of the World. The iconic Pyramid of Kukulc\u00e1n (El\u202fCastillo), the Great Ball Court, the Temple of the Warriors, and the Sacred Cenote showcase the height of Classic Maya architecture and astronomy. |\n| 2 | **Teotihuacan** | State of Mexico (near Mexico City) | Known as the \u201cCity of the Gods.\u201d Its massive Avenue of the Dead leads to the Sun Pyramid, Moon Pyramid, and the Temple of the Feathered Serpent (Quetzalcoatl). The site dates to roughly 100\u202fBC\u2013650\u202fAD and was once the largest city in the pre\u2011Columbian Americas. |\n| 3 | **Palenque**",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 1065.40536600005,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:645caf61efd28ffa81e6fd6f": {
+"text": "I\u2019m sorry, but I can\u2019t help with that.",
+"input_tokens": 87,
+"output_tokens": 191,
+"latency_ms": 778.1219180001244,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:8ad0e019ed5286d97ca82b7d": {
+"text": "The short answer is: **there isn\u2019t a single, universally\u2011agreed\u2011upon \u201cbest\u201d football team in history**\u2014the title depends on the criteria you use (trophies, style of play, dominance over a period, cultural impact, etc.). Below is a rundown of the squads that most fans, analysts, and historians point to when the conversation turns to \u201cthe greatest ever,\u201d along with the reasons they\u2019re often cited.\n\n---\n\n## 1. Club Teams\n\n| Team | Era | Key Achievements | Why They\u2019re Considered Great |\n|------|------|------------------|------------------------------|\n| **Real Madrid (1950s\u20111960s)** | 1955\u20111960 (the \u201cGal\u00e1cticos\u201d of the early era) | 5 consecutive European Cups (1956\u20111960), 3 La\u202fLiga titles | First team to dominate",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 1031.664792000356,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:e3c9002cb012ad831f1c30b7": {
+"text": "The hottest planet in our Solar System is **Venus**.\n\nEven though Mercury is the closest planet to the Sun, Venus has a surface temperature that averages about **465\u202f\u00b0C (\u2248\u202f869\u202f\u00b0F)**, which is hotter than Mercury\u2019s average of around 167\u202f\u00b0C (\u2248\u202f333\u202f\u00b0F).  \n\n**Why Venus is hotter:**\n\n1. **Thick atmosphere:** Venus is wrapped in a dense atmosphere that is about 92 times the pressure of Earth\u2019s at sea level.  \n2. **Carbon\u2011dioxide greenhouse effect:** Roughly 96\u202f% of the atmosphere is CO\u2082, a powerful greenhouse gas. Sunlight penetrates the clouds and warms the surface, but the infrared radiation emitted by the planet is trapped by the CO\u2082, causing heat to build up.  \n3. **Clouds of sulfuric acid:** The reflective clouds reflect a lot of sunlight, but they also prevent heat from escaping, reinforcing the greenhouse effect.  \n\nThe combination of these factors creates an extreme runaway greenhouse effect, making",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 802.8672049999841,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:d5777edf399d8e1ce6e50566": {
+"text": "**Education matters for far more than just landing a job.**  \nIt shapes individuals, families, communities, and societies in ways that ripple across every aspect of life. Below are the major dimensions in which education makes a profound difference, even when career prospects are set aside.\n\n---\n\n## 1. Personal Growth & Self\u2011Understanding  \n\n| Aspect | Why It Matters |\n|--------|----------------|\n| **Critical thinking** | Teaches you to evaluate evidence, spot bias, and solve problems creatively\u2014not just in the workplace, but in everyday decisions (e.g., health choices, financial planning, voting). |\n| **Self\u2011awareness** | Exposure to diverse subjects (philosophy, literature, science) helps you discover your interests, values, and strengths, guiding a more authentic life path. |\n| **Lifelong",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 961.2409779997506,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:379de7b0cc3ab0e14215135c": {
+"text": "If you can\u2019t (or don\u2019t want to) fill a pool with water, you have a surprisingly wide menu of alternatives\u2014some practical, some whimsical, some even a little experimental. Below are several categories, each with a few concrete ideas, plus a quick rundown of the pros, cons, and best\u2011fit scenarios for each.\n\n---\n\n## 1. **Solid or Granular Fillers**\n\n| Option | What it is | Why you might choose it | Key considerations |\n|--------|------------|------------------------|---------------------|\n| **Sand** | Fine, washed silica (or a mix of sand and gravel) | Great for a \u201cbeach\u2011vibe\u201d backyard, excellent for kids to play in, easy to level and compact | Needs a liner to keep it from seeping into the pool shell; heavy, so structural support may be required |\n|",
+"input_tokens": 88,
+"output_tokens": 256,
+"latency_ms": 817.4300639998364,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:fc2be30389e4a6c6d40c13a6": {
+"text": "**The \u201cright\u201d time to work out or practice yoga isn\u2019t a one\u2011size\u2011fits\u2011all answer\u2014it depends on your goals, lifestyle, body clock, and personal preferences.** Below is a practical framework that helps you decide when to schedule your sessions, plus the pros and cons of each time\u2011slot so you can pick what works best for you.\n\n---\n\n## 1. The Science Behind Timing\n\n| Physiological factor | Morning (6\u202fam\u201110\u202fam) | Mid\u2011day (11\u202fam\u20112\u202fpm) | Late afternoon/evening (4\u202fpm\u20117\u202fpm) |\n|----------------------|----------------------|----------------------|------------------------------------|\n| **Core body temperature** | Lowest \u2192 muscles a bit stiffer",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 912.3623370001042,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:584c809be466600fc35e97e9": {
+"text": "Belize gained its independence on **September\u202f21,\u202f1981**.",
+"input_tokens": 82,
+"output_tokens": 69,
+"latency_ms": 867.5516850003078,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:03ef6d309c10832e7c79df8c": {
+"text": "Below is a **general, evidence\u2011based framework** you can use as a starting point for getting in shape. It\u2019s designed to be adaptable to most healthy adults, but remember that individual needs vary (age, sex, medical history, injuries, schedule, food preferences, etc.). The safest way to begin is to **talk with a registered dietitian (RD) and a certified personal trainer or your primary\u2011care provider** to tailor the plan to you.\n\n---\n\n## 1\ufe0f\u20e3 Set Clear, Realistic Goals\n\n| Goal Type | Example | How to Measure |\n|-----------|---------|----------------|\n| **Weight** | Lose 0.5\u20131\u202flb (0.2\u20130.5\u202fkg) per week | Weekly weigh\u2011ins (same time, same scale) |\n| **Body composition** | Reduce body fat % by 3\u20135\u202f% in 12\u202fweeks | Skinfold calipers, bio\u2011impedance, or DEXA (if available)",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 775.6628119996094,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:d6cc66779f7e5f26430683e0": {
+"text": "Here are a variety of ideas\u2014ranging practical to artistic\u2014for giving old books a second life. Feel free to mix and match or adapt them to your style, space, and the condition of the books you have.\n\n---\n\n## 1. **Donate, Share, or Trade**\n\n| Option | How to do it | Best for |\n|--------|--------------|----------|\n| **Public libraries** | Many libraries accept gently\u2011used books for their \u201cshelf\u2011read\u201d or \u201cdonation\u201d sections. Call ahead to confirm guidelines. | Books in decent condition that are still readable. |\n| **Schools & classrooms** | Contact teachers, school libraries, or after\u2011school programs. They often need reading material, especially for younger grades. | Children\u2019s picture books, classic novels, textbooks. |\n| **Charity shops & thrift stores** | Goodwill, Salvation Army, local nonprofit resale shops. | Any books in readable condition; they\u2019ll be sold to fund the charity.",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 1063.6846010002046,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:3311e9b0232120765d3202b3": {
+"text": "Sure! While CRISPR and other genetic\u2011modification tools hold tremendous promise, they also come with several notable drawbacks and concerns. Here are three key disadvantages:\n\n| # | Disadvantage | Why It Matters |\n|---|--------------|----------------|\n| **1. Off\u2011target effects & unintended mutations** | CRISPR works by guiding a nuclease to a specific DNA sequence, but the guide RNA can sometimes bind to similar (but not identical) sequences elsewhere in the genome. This can cause cuts and mutations at unintended sites. | \u2022 May disrupt essential genes or regulatory regions, leading to cell dysfunction, disease, or developmental defects.<br>\u2022 In therapeutic contexts, off\u2011target edits could create new health risks for patients.<br>\u2022 Detecting and quantifying off\u2011target events is technically challenging, especially in large genomes. |\n| **2. Ethical, social, and regulatory challenges** | The ability to edit germline cells (sperm, eggs, embryos) or create gene drives that spread through",
+"input_tokens": 86,
+"output_tokens": 256,
+"latency_ms": 759.5171940001819,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:601a35b26fc17cf3d179c6c4": {
+"text": "### Solar Power vs. Hydrogen Fuel Cells \u2013 A Quick Comparison  \n\n| Aspect | Solar Power (Photovoltaics) | Hydrogen Fuel Cells |\n|--------|-----------------------------|---------------------|\n| **Primary Energy Source** | Sunlight (photons) | Hydrogen gas (chemical energy) |\n| **How It Generates Electricity** | Solar cells convert photons directly into electricity via the photovoltaic effect. | A fuel\u2011cell stack combines hydrogen (fuel) with oxygen (usually from air) in an electrochemical reaction that produces electricity, heat, and water. |\n| **Typical Form Factor** | Rooftop panels, solar farms, building\u2011integrated PV, portable panels. | Stationary power units, vehicle powertrains, portable generators, backup power systems. |\n| **Energy Storage Needs** | Requires batteries or other storage (e.g., pumped hydro, thermal) to provide power when the sun isn",
+"input_tokens": 90,
+"output_tokens": 256,
+"latency_ms": 1011.7313139999169,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:6c112f019543ad2f89c6c2c1": {
+"text": "### The Ultimate Bolognese (Rag\u00f9 alla Bolognese) \u2013 Tips for a Sauce That\u2019s Rich, Deep, and Absolutely Delicious\n\nBelow is a step\u2011by\u2011step guide peppered with pro\u2011level tips that will take a classic Bolognese from \u201cgood\u201d to \u201cshow\u2011stopper.\u201d Feel free to adapt the quantities to the size of your family or the amount you want to freeze for later.\n\n---\n\n## 1. Choose the Right Meat (or Mix)\n\n| Meat | Why It Works | Tips |\n|------|--------------|------|\n| **Ground beef (80\u202f% lean)** | Provides the classic beefy backbone. | Keep some fat (\u224820\u202f%) for flavor and moisture. |\n| **Ground pork** | Adds sweetness and a silky texture. | Use about 25\u202f% of the total meat weight. |\n| **Ground veal** (optional) | Gives a delicate, slightly sweet note. | Use sparingly (10\u201315\u202f% of the mix). |\n| **Italian sausage (removed from casing)** | Adds subtle fennel",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 923.6836280006173,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:2a38ecd9e217f17e07bcda88": {
+"text": "**Short answer:**  \nThere are virtually no *perfect* single\u2011word rhymes for **orange** in standard English, but poets, lyricists, and word\u2011nerds have found a handful of near\u2011rhymes, multi\u2011word phrases, and proper\u2011names that work surprisingly well.\n\n---\n\n## 1. \u201cTrue\u201d (single\u2011word) rhymes \u2013 the ultra\u2011rare ones",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 994.1784900001949,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:0d997f5ed6b0c8dcaf48329c": {
+"text": "**Because tests serve several important purposes in education.**  \nBelow is a concise overview of why schools use tests, followed by a deeper look at each reason and some practical tips for students and teachers.\n\n---\n\n## 1. Measure Learning and Knowledge\n\n| Goal | How a test helps |\n|------|-------------------|\n| **Check what students know** | Gives a snapshot of what concepts, facts, or skills have been mastered. |\n| **Identify gaps** | Highlights topics that need more review or a different teaching approach. |\n| **Track progress over time** | Re\u2011administering similar tests lets teachers see growth (or regression). |\n\n### Why it matters\n- **Students** can see where they stand and focus their study efforts.  \n- **Teachers** can adjust lessons to address common misunderstandings.  \n- **Parents & administrators** get objective data about school\u2011wide achievement.\n\n---\n\n## 2. Provide Feedback\n\n- **Immediate feedback",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 1017.0169419998274,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:d4c27956417a20d9b0fcbad6": {
+"text": "Here are a variety of birthday\u2011gift ideas that can suit different interests, budgets, and personalities. Feel free to mix and match or personalize any of them to make the gift feel extra special for your sister!\n\n---\n\n## 1. **Personalized & Sentimental Gifts**\n| Idea | Why It Works | How to Personalize |\n|------|--------------|--------------------|\n| Custom name necklace or bracelet | A piece of jewelry she can wear every day | Choose her favorite metal (gold, silver, rose gold) and add a small charm that represents a hobby or inside joke |\n| Photo book or scrapbook | Captures shared memories | Include captions, ticket stubs, and handwritten notes |\n| Star map of a special date (e.g., her birthdate) | Unique d\u00e9cor with a story | Add a custom frame and a short message on the back |\n| Hand\u2011written letter in a beautiful box | Shows effort and love | Pair with a scented candle or a small plant |\n\n---\n\n## 2. **Beauty & Self\u2011Care**\n| Idea | Why It Works | Tips |\n|------|--------------|",
+"input_tokens": 86,
+"output_tokens": 256,
+"latency_ms": 972.8844749997734,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:8801cdbb3ab68e0015a66b4f": {
+"text": "### Classic Neapolitan Pizza Dough (Pizza Napoletana)\n\n**What makes it \u201cgreat\u201d?**  \n- **High\u2011protein \u201c00\u201d flour** (or a blend of 00 + a bit of bread flour) gives the dough its soft, tender crumb and chewy edge.  \n- **Cold fermentation** (24\u201172\u202fh) develops flavor and a light, airy structure.  \n- **Very high hydration** (\u2248\u202f65\u202f% water) keeps the dough supple and helps the crust puff up.  \n- **A short, gentle knead** preserves the gluten network without over\u2011working it.  \n\nBelow is a step\u2011by\u2011step guide that works for a home kitchen, even if you don\u2019t have a professional pizza oven. The recipe yields **4\u202f\u2013\u202f5 medium\u2011sized (\u2248\u202f30\u202fcm / 12\u2011inch) pizzas**.\n\n---\n\n## Ingredients (for 4\u20135 pizzas)\n\n| Ingredient | Amount (weight) | % of flour (baker\u2019s %)* |\n|------------|----------------|------------------------|\n| \u201c00\u201d flour (or 00 + 20\u202f",
+"input_tokens": 84,
+"output_tokens": 256,
+"latency_ms": 907.6711729994713,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:5addf406126c3fc7c48371e4": {
+"text": "Here are a variety of fun, romantic, and memorable spots (and a few low\u2011key options) where you can pop the question. Feel free to mix and match elements to suit your personalities, the season, and the vibe you want to create.\n\n---\n\n## 1. Classic & Timeless\n\n| Setting | Why It Works | Tips to Make It Special |\n|---------|--------------|--------------------------|\n| **Rooftop terrace at sunset** | The city lights and golden hour create a cinematic backdrop. | Bring a portable speaker for a soft song, and have a small blanket or a few cozy pillows ready. |\n| **Elegant restaurant with a view** | A private table, great food, and attentive service set a polished tone. | Ask the staff to bring a dessert with \u201cWill you\u2026?\u201d written in chocolate or on a plate. |\n| **Botanical garden\u2019s hidden gazebo** | Surrounded by flowers and greenery, it feels intimate yet open. | Choose a spot near a blooming section that matches your partner\u2019s favorite color. |\n\n---\n\n## 2.",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 1103.3904680007254,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:02b2db6bb6b569c70eeaebea": {
+"text": "## Quick Take\u2011away\n\n**For most modern RV owners the \u201cbest\u201d electrical system is a hybrid that combines:**\n\n| Component | Why it\u2019s a good choice | Typical spec |\n|-----------|-----------------------|--------------|\n| **Lithium\u2011ion (LiFePO\u2084) battery bank** | Light, deep\u2011cycle, 10\u201115\u202fyears life, can be discharged to 80\u201190\u202f% without damage, fast charge | 12\u202fV, 200\u2011400\u202fAh (2\u20114\u202f\u00d7\u202f100\u2011200\u202fAh modules) |\n| **Solar array + MP",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 865.731009999763,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:28adb7e7083ab7a21c7b1418": {
+"text": "",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 1028.2570890003626,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:f129a0daf835d872dbb501dc": {
+"text": "The short answer is **Tom\u202fBrady**\u2014by most statistical measures and championship totals, he\u2019s the front\u2011runner for \u201cgreatest quarterback of all time.\u201d  \nBut the debate is far from settled, and many fans and analysts make compelling cases for several other legends. Below is a quick rundown of the top\u2011contenders, the criteria people usually weigh, and why the conversation stays lively.\n\n---\n\n## 1. Tom\u202fBrady (2000\u20112023)\n\n| Category | Highlights |\n|----------|-------------|\n| **Super Bowls** | 7 titles (2002, 2004, 2005, 2015, 2017, 2019, 2021) \u2013 the most by any player in any sport. |\n| **Super Bowl MVPs** | 5 (most ever). |\n| **Career Wins** | 251 regular\u2011season wins (most",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 996.5948230001231,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:1708a9724fb321ddf8b43ecb": {
+"text": "### Edible Weeds That Thrive in Maryland  \n*(A quick guide for foragers, gardeners, and anyone curious about \u201cwild\u201d food in the Mid\u2011Atlantic.)*\n\n| Common Name | Scientific Name | Typical Habitat in Maryland | Season & When to Harvest | Edible Parts | Taste / Culinary Uses | Quick ID Tips |\n|-------------|----------------|----------------------------|--------------------------|--------------|----------------------|----------------|\n| **Dandelion** | *Taraxacum officinale* | Lawns, fields, disturbed soil, roadside ditches | Early spring \u2192 early summer (young leaves) ; flower heads in late spring; roots in fall | Leaves, flowers, taproot | Slightly bitter greens (salads, saut\u00e9s), honey\u2011sweet blossoms (wine, tea), roasted root (coffee\u2011like) | Bright yellow",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 835.9318840002743,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:86ad3abd215aeef10312e4d3": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 1037.6484409998739,
+"provider": "groq"
 }
 }
