@@ -42,8 +42,8 @@ stages:
       size: 429
     - path: models/router.joblib
       hash: md5
-      md5: ea44ce4f42fce50c7a20523aaf1e0a15
-      size: 93553
+      md5: b18d663f7610576892a6a6a42dd7dc93
+      size: 93825
   build_drift_reference:
     cmd: python -m router.drift
     deps:
