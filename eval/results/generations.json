@@ -2581,5 +2581,194 @@
 "output_tokens": 256,
 "latency_ms": 975.1006860005873,
 "provider": "groq"
+},
+"openai/gpt-oss-120b:f6daaeb449f176df9a6d0bcc": {
+"text": "Sky\u202fUK\u202fLimited was previously known as **British Sky Broadcasting**, commonly abbreviated **BSkyB**. The company operated under the BSkyB name from its formation in 1990 (following the merger of Sky Television and British Satellite Broadcasting) until it was re\u2011branded to Sky\u202fUK\u202fLimited in 201",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 773.794806999831,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:064f4d508aee87e662163ceb": {
+"text": "",
+"input_tokens": 79,
+"output_tokens": 256,
+"latency_ms": 1062.905378999858,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:4c23e21d56449d8ba28529b4": {
+"text": "**Short answer:**  \nAt the height of its power (mid",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 926.777112000309,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:d78579acb9dbd024adfc7e52": {
+"text": "People who take part in protests often try to stay on the right side of the law for a variety of practical, moral, and strategic reasons. Here are some of the most common motivations for avoiding criminal behavior while demonstrating:\n\n| **Category** | **Reason** | **Explanation / Example** |\n|--------------|------------|----------------------------|\n| **Legal consequences** | **Avoid arrest, fines, or imprisonment** | Engaging in vandalism, assault, or other illegal acts can lead to criminal charges, a permanent record, and loss of freedom. |\n| | **Protect future opportunities** | A criminal record can make it harder to get a job, rent an apartment, travel abroad, or obtain professional licenses. |\n| | **Preserve voting rights** | In many jurisdictions, certain convictions can temporarily or permanently strip a person of the right to vote. |\n| **Strategic effectiveness** | **Maintain public sympathy** | Peaceful, law\u2011abiding protests are more",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 1012.4480140002561,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:18ffacff36ee11dccab96a95": {
+"text": "",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 831.4509140000155,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:7d41f71c5b7d8e769151c8c3": {
+"text": "The region where one tectonic plate dives beneath another is called a **subduction zone** (often associated with a **subduction trench** at the surface). It\u2019s a type of convergent plate boundary where the descending plate (the \u201csubducting slab\u201d) sinks into the mantle beneath the overriding plate.",
+"input_tokens": 85,
+"output_tokens": 195,
+"latency_ms": 685.3046030000769,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:f1004a418613f7d9a89cc21c": {
+"text": "The pathogen is enclosed in a **phagosome** \u2013 the membrane\u2011bound vesicle that forms when a phagocyte engulfs a particle. (After the phagosome fuses with lysosomes, it becomes a phagolysosome for digestion.)",
+"input_tokens": 90,
+"output_tokens": 130,
+"latency_ms": 495.8585519998451,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:f55c64243c0822eb6f9e3099": {
+"text": "The theorem that most clearly captures the **central role of prime numbers in number theory** is the **Fundamental Theorem of Arithmetic**.\n\n---\n\n### Fundamental Theorem of Arithmetic  \n**Statement:**  \nEvery integer \\( n > 1 \\) can be written as a product of prime numbers, and this factorization is unique up to the order of the factors.\n\nFormally, for each \\( n > 1 \\) there exist primes \\( p_1, p_2, \\dots, p_k \\) and positive integers \\( a_1, a_2, \\dots, a_k \\) such that  \n\n\\[\nn = p_1^{\\,a_1} \\, p_2^{\\,a_2} \\cdots p",
+"input_tokens": 83,
+"output_tokens": 256,
+"latency_ms": 1015.2984559999823,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:31ce1f1e2d32fb6f3644f179": {
+"text": "The first two places that received the bulk of the Huguenot refugees after the revocation of the Edict of Nantes in 1685 were:\n\n1. **The Dutch Republic (the United Provinces)**",
+"input_tokens": 86,
+"output_tokens": 256,
+"latency_ms": 1008.9856940003301,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:2b667a4153d1247ec2f5ac03": {
+"text": "",
+"input_tokens": 86,
+"output_tokens": 256,
+"latency_ms": 934.3147009994937,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:0ad52736f872324da4a8e2ad": {
+"text": "When the French\u2011British garrison at Fort\u202fWilliam\u202fHenry finally capitulated on 9\u202fAugust\u202f1757, the French commander, the Marquis de\u202fMontcalm, formally granted the British the right to withdraw \u201cwith all the honors of war.\u201d  He ordered his troops to escort the defeated column to the river and then to the French\u2011controlled fort at Crown Point, where the British would be allowed to board",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 779.3828670000948,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:49fc6d574dae75ee84e1c3eb": {
+"text": "I\u2019m not sure who you\u2019re referring to\u2014could you let me know which person you mean? Once I know who \u201che\u201d is, I can tell you where he began teaching.",
+"input_tokens": 77,
+"output_tokens": 111,
+"latency_ms": 669.78678400028,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:d88787513d2aa78f3bac241f": {
+"text": "## Overview  \n\nIn the",
+"input_tokens": 87,
+"output_tokens": 256,
+"latency_ms": 826.8915119997473,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:2daba63dd75aec76ecff45a8": {
+"text": "**Alexander\u202fI of Russia (1777\u202f\u2013\u202f1825)** was married to **Elizabeth\u202fAlexeievna**, who was born **Princess Louise of Baden**.  \n\n- **Marriage date:** 6\u202fOctober\u202f1793 (according to the Julian calendar then used in Russia; 17\u202fOctober\u202f1793 in the Gregorian calendar).  \n- **Background of his wife:** Louise was the daughter of Charles\u202fLouis, Hereditary Prince of Baden, and Amalie of Hesse\u2011Darmstadt. After converting to Orthodoxy, she took the name **Elizabeth\u202fAlexeievna** and became Empress consort of Russia.  \n\nThe couple had no surviving children,",
+"input_tokens": 77,
+"output_tokens": 256,
+"latency_ms": 918.2512529996529,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:90c786917d5ba1e1ab0a55d9": {
+"text": "**Short answer:**  \nWarsaw (the capital city and its surrounding metropolitan area) accounts for roughly **20\u202f%\u201322\u202f% of Poland\u2019s total Gross Domestic Product (GDP)**.\n\n---\n\n### Why the figure is around 20\u202f%\n\n| Year | Source | Share of Poland\u2019s GDP |\n|------|--------|-----------------------|\n| 2021 | Polish Central Statistical Office (GUS) \u2013 *Regional Accounts* | 20.2\u202f% |\n| 2022 | GUS \u2013 *Regional Accounts* (pre\u2011pandemic revision",
+"input_tokens": 82,
+"output_tokens": 256,
+"latency_ms": 989.8313829999097,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:b6652029f789fcee86dc2a9f": {
+"text": "**Victorian farmland used for grain production (2022\u201123 season)**  \n\n| Metric | Value | Source |\n|--------|-------|--------|\n| Total land area of Victoria (incl. all uses) | **23.9\u202fmillion\u202fha** | Australian Bureau of Statistics (ABS) \u2013 \u201cLand Use, Australia\u201d 2022 |\n| Total agricultural land (farm\u2011managed) | **5.5\u202fmillion\u202fha** | ABS Agricultural Census 2022 |\n| Land used for grain crops (wheat, barley, oats, triticale, sorghum, millet, rye, etc.) | **1.2\u202fmillion",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 869.9387990000105,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:acaa4d025b61a4c4b07eb869": {
+"text": "**How Indigenous Communities (often referred to as \u201ctribes\u201d) Use Google\u202fEarth and GPS**\n\nIndigenous peoples around the world have adopted satellite\u2011mapping tools such as Google\u202fEarth and Global Positioning System (GPS) devices for a wide range of practical, cultural, and political purposes.  Below is a synthesis of the most common ways these technologies are being used, drawn from case studies, academic research, and reports from NGOs that work with tribal groups.\n\n---\n\n## 1. Land\u2011Rights Documentation & Advocacy  \n\n| Goal | How Google\u202fEarth / GPS Helps | Example |\n|------|------------------------------|---------|\n| **Mapping traditional territories** | GPS points are collected on the ground (e.g., hunting routes, sacred sites) and then over\u2011laid on Google\u202fEarth imagery to produce clear, visual boundary maps. | The **Yurok Tribe** (California, USA) used GPS\u2011tracked",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 1017.1379160001379,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:2965e6f7f88594785d6c7dcf": {
+"text": "The Dutch river **Nederrijn** keeps the name \u201cNederrijn\u201d until it reaches the town of **Wijk\u202fbij\u202fDuurstede**. From that point downstream it is called the **Lek**.  \n\nSo, the Nederrijn changes its name to the **Lek**.",
+"input_tokens": 82,
+"output_tokens": 246,
+"latency_ms": 859.4245169997521,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:f19c812d4a2c7ad4806eeca2": {
+"text": "The question of who\u2014or what\u2014ultimately decides what is right and what is wrong has been debated by philosophers, theologians, legal scholars, and everyday people for millennia.  There isn\u2019t a single, universally accepted \u201cfinal judge,\u201d but several major perspectives have emerged, each offering its own answer:\n\n---\n\n## 1. **Divine or Transcendent Authority**\n- **Religious traditions** (e.g., Christianity, Islam, Judaism, Hinduism, Buddhism) often hold that a deity or cosmic order is the ultimate source of moral law.  \n- **Key idea:** Human beings are accountable to a higher power that defines right and wrong, and that power will render final judgment (e.g., afterlife, karma, reincarnation).  \n- **Implication:** Moral standards are absolute, immutable, and grounded in revelation or sacred texts.\n\n### Pros\n- Provides a clear, objective anchor for morality.\n- Offers a sense of ultimate justice beyond human",
+"input_tokens": 81,
+"output_tokens": 256,
+"latency_ms": 1007.4342430007164,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:9dc260432e8b2fb18226f78f": {
+"text": "",
+"input_tokens": 91,
+"output_tokens": 256,
+"latency_ms": 960.2363610001703,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:ce7237c71729096af9dc8e27": {
+"text": "Isiah\u202fBowman was popularly known by the nickname **\u201cThe\u202fBow.\u201d**  \n\nThe moniker was a simple play on his last name and was used by teammates, fans, and media when referring to the former NFL defensive",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 909.2154339996341,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:8588d7a7a499a995db0b7b6b": {
+"text": "",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 1081.876750000447,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:7c795e936901ca13f0d4ec09": {
+"text": "",
+"input_tokens": 90,
+"output_tokens": 256,
+"latency_ms": 975.5950790004135,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:622a757cd9450ecfe8badbdb": {
+"text": "**The IJssel (also spelled \u201cIjssel\u201d) is a major northern branch of the River\u202fRhine in the Netherlands.**  \n\nBelow is a concise overview of where it flows, from its split off the Rhine to its mouth:\n\n| Segment | Location | Key Points |\n|---------|----------|------------|\n| **Source (branch point)** | **Westervoort**, Gelderland | The IJssel separates from the Rhine\u2019s **Waal** (the main distributary) just east of the city of **Arnhem**. A weir\u2011controlled split directs water northward into the IJssel. |\n| **Upper stretch** | **Gelderland** |",
+"input_tokens": 80,
+"output_tokens": 256,
+"latency_ms": 959.6473269994021,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:b90d1266c62acc778dead8f1": {
+"text": "One of the best\u2011known surface ligands that is dramatically up\u2011regulated on CD4\u207a helper T cells after they become activated is **CD40 ligand (CD40L, also called CD154)**.\n\n**Key points about CD40L:**\n\n| Feature | Details |\n|---------|----------",
+"input_tokens": 89,
+"output_tokens": 256,
+"latency_ms": 887.31649500005,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:7205b687304755fb596a52ac": {
+"text": "",
+"input_tokens": 85,
+"output_tokens": 256,
+"latency_ms": 954.234699999688,
+"provider": "groq"
+},
+"openai/gpt-oss-120b:e31ae0a2344e854351248573": {
+"text": "**Short answer:**  \nYou date the sedimentary package indirectly, by measuring something that *is* radioactive (or that records a time\u2011dependent physical signal) and that is either (a) interbedded with the sediment, (b) contained as a detrital grain, or (c) a physical/chemical \u201cclock",
+"input_tokens": 91,
+"output_tokens": 256,
+"latency_ms": 964.7948709998673,
+"provider": "groq"
 }
 }

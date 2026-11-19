@@ -63,6 +63,16 @@ services:
       - gateway_data:/app/data
     restart: unless-stopped
 
+  frontend:
+    build:
+      context: ./frontend
+    container_name: smartroute-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - gateway
+    restart: unless-stopped
+
 volumes:
   mlflow_data:
   gateway_data:
