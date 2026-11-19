@@ -1,0 +1,46 @@
+schema: '2.0'
+stages:
+  prepare_data:
+    cmd: python -m router.prepare_data
+    deps:
+    - path: router/prepare_data.py
+      hash: md5
+      md5: 4ddae9853f538e68ffe18553fd51c992
+      size: 8379
+    outs:
+    - path: data/holdout.csv
+      hash: md5
+      md5: 4cc1ce7921d4c2b78ee53156c632682b
+      size: 46885
+    - path: data/queries.csv
+      hash: md5
+      md5: 2301e3785c3b4b4f757e17819ed896d2
+      size: 177266
+  train:
+    cmd: python -m router.train --no-mlflow
+    deps:
+    - path: data/queries.csv
+      hash: md5
+      md5: 2301e3785c3b4b4f757e17819ed896d2
+      size: 177266
+    - path: router/features.py
+      hash: md5
+      md5: d6238c8433fb385f4a3bab50d0b16533
+      size: 3724
+    - path: router/policy.py
+      hash: md5
+      md5: 5a0e5669fa50beada440df7fe8e3c75c
+      size: 4193
+    - path: router/train.py
+      hash: md5
+      md5: 5bdcdcc781803663f3a76d2066158a00
+      size: 8948
+    outs:
+    - path: models/metrics.json
+      hash: md5
+      md5: 8adfa86a165f9294a83dab9386d81425
+      size: 429
+    - path: models/router.joblib
+      hash: md5
+      md5: ea44ce4f42fce50c7a20523aaf1e0a15
+      size: 93553

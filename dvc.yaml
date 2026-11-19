@@ -1,0 +1,45 @@
+stages:
+  prepare_data:
+    cmd: python -m router.prepare_data
+    deps:
+      - router/prepare_data.py
+    outs:
+      - data/queries.csv
+      - data/holdout.csv
+
+  build_drift_reference:
+    cmd: python -m router.drift
+    deps:
+      - router/drift.py
+      - router/features.py
+      - data/queries.csv
+    outs:
+      - data/reference_features.json
+
+  train:
+    cmd: python -m router.train --no-mlflow
+    deps:
+      - router/train.py
+      - router/features.py
+      - router/policy.py
+      - data/queries.csv
+    outs:
+      - models/router.joblib
+    metrics:
+      - models/metrics.json:
+          cache: false
+
+  evaluate_baselines:
+    cmd: python -m eval.run_baselines
+    deps:
+      - eval/run_baselines.py
+      - eval/judge.py
+      - eval/client.py
+      - data/holdout.csv
+      - models/router.joblib
+    outs:
+      - eval/results/baselines.json:
+          cache: false
+    # Reads the cached generations/judgments committed to the repo; add --live
+    # (and a GROQ_API_KEY) to regenerate from scratch instead of reusing them.
+    always_changed: false

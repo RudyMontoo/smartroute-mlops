@@ -1,0 +1,58 @@
+# Production-style stack: pulls the gateway image cd.yml publishes to GHCR instead of
+# building it locally. Proves the registry -> deploy loop end to end on one machine
+# without needing a paid cloud VM for the demo.
+#
+#   docker compose -f docker-compose.prod.yml up
+
+services:
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.19.0
+    container_name: smartroute-mlflow
+    ports:
+      - "5000:5000"
+    volumes:
+      - mlflow_data:/mlflow
+    command: >
+      mlflow server
+      --backend-store-uri sqlite:////mlflow/mlflow.db
+      --artifacts-destination /mlflow/artifacts
+      --serve-artifacts
+      --host 0.0.0.0
+      --port 5000
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  gateway:
+    image: ghcr.io/${GITHUB_REPOSITORY_OWNER:-rudymontoo}/smartroute-gateway:latest
+    container_name: smartroute-gateway
+    ports:
+      - "8000:8000"
+    depends_on:
+      mlflow:
+        condition: service_healthy
+    environment:
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+      MODEL_SOURCE: local
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      ROUTER_THRESHOLD: ${ROUTER_THRESHOLD:-0.60}
+      DB_PATH: /app/data/gateway.db
+    volumes:
+      - gateway_data:/app/data
+    restart: unless-stopped
+
+  frontend:
+    image: ghcr.io/${GITHUB_REPOSITORY_OWNER:-rudymontoo}/smartroute-frontend:latest
+    container_name: smartroute-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - gateway
+    restart: unless-stopped
+
+volumes:
+  mlflow_data:
+  gateway_data:
