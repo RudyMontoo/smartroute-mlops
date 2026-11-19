@@ -38,7 +38,10 @@ services:
         condition: service_healthy
     environment:
       MLFLOW_TRACKING_URI: http://mlflow:5000
-    command: ["python", "-m", "router.train"]
+    # data/queries.csv is DVC-tracked, not baked into the runtime image, so this
+    # has to regenerate it before training -- same reasoning as gateway/Dockerfile's
+    # model stage.
+    command: ["sh", "-c", "python -m router.prepare_data && python -m router.train"]
     restart: "no"
 
   gateway:
