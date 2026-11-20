@@ -1,0 +1,11 @@
+{
+  "source": "/home/rudra/dev/playground/MLOPSMSE2/data/holdout.csv",
+  "n_rows": 198,
+  "n_rows_dropped_missing": 0,
+  "n_rows_dropped_duplicate": 0,
+  "label_distribution": {
+    "simple": 66,
+    "complex": 66,
+    "moderate": 66
+  }
+}

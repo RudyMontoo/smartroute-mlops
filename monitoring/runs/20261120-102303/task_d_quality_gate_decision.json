@@ -1,0 +1,55 @@
+{
+  "timestamp": "2026-11-20T04:53:08.593227+00:00",
+  "metric": "f1_macro",
+  "metric_rationale": "macro_f1 on a shared held-out slice: equal weight per class, and the same metric already used by scripts/quality_gate.py and router/train.py's champion/challenger promotion rule.",
+  "champion_score": 0.9552699824025191,
+  "candidate_score": 0.8815457906877008,
+  "decision": "retain_champion",
+  "champion_metrics": {
+    "accuracy": 0.9555555555555556,
+    "precision_macro": 0.9553392658509455,
+    "recall_macro": 0.9555555555555554,
+    "f1_macro": 0.9552699824025191,
+    "confusion_matrix": [
+      [
+        57,
+        3,
+        0
+      ],
+      [
+        3,
+        55,
+        2
+      ],
+      [
+        0,
+        0,
+        60
+      ]
+    ]
+  },
+  "candidate_metrics": {
+    "accuracy": 0.8833333333333333,
+    "precision_macro": 0.8815014903129658,
+    "recall_macro": 0.8833333333333333,
+    "f1_macro": 0.8815457906877008,
+    "confusion_matrix": [
+      [
+        52,
+        8,
+        0
+      ],
+      [
+        9,
+        47,
+        4
+      ],
+      [
+        0,
+        0,
+        60
+      ]
+    ]
+  },
+  "mlflow_run_id": "a52db52264834c54a55fc33450a6b9ba"
+}
